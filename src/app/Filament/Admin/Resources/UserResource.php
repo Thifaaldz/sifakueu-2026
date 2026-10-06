@@ -3,6 +3,7 @@
 namespace App\Filament\Admin\Resources;
 
 use App\Filament\Admin\Resources\UserResource\Pages;
+use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\User;
 use Filament\Forms;
 use Filament\Forms\Form;
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\Hash;
 
 class UserResource extends Resource
 {
+    use AppliesSifakResourceScope;
+
     protected static ?string $model = User::class;
 
     protected static ?string $navigationIcon = 'heroicon-o-user-group';
@@ -54,6 +57,13 @@ class UserResource extends Resource
                             ->maxLength(255)
                             ->columnSpan('full')
                             ->required(),
+                        Forms\Components\Select::make('tenant_id')
+                            ->relationship('tenant', 'name')
+                            ->searchable()
+                            ->preload()
+                            ->label('Tenant')
+                            ->helperText('Kosongkan untuk akun platform seperti Super Admin.')
+                            ->columnSpan('full'),
                         Forms\Components\FileUpload::make('avatar_url')
                             ->label('Avatar')
                             ->image()
@@ -112,6 +122,11 @@ class UserResource extends Resource
                 Tables\Columns\TextColumn::make('email')
                     ->sortable()
                     ->searchable(),
+                Tables\Columns\TextColumn::make('tenant.name')
+                    ->label('Tenant')
+                    ->sortable()
+                    ->searchable()
+                    ->placeholder('Platform'),
                 Tables\Columns\TextColumn::make('roles.name')
                     ->badge()
                     ->sortable()

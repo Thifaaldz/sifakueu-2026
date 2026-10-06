@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Policies\ActivityPolicy;
+use App\Support\Tenancy\TenantContext;
 use Filament\Actions\MountableAction;
 use Filament\Notifications\Livewire\Notifications;
 use Filament\Notifications\Notification;
@@ -21,7 +22,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register(): void
     {
-        //
+        $this->app->singleton(TenantContext::class);
     }
 
     /**

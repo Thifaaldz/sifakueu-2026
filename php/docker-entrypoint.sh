@@ -25,6 +25,8 @@ APP_DEBUG=true
 APP_TIMEZONE='Asia/Jakarta'
 APP_URL="https://${PROJECT_NAME}.test"
 ASSET_URL="https://${PROJECT_NAME}.test"
+SIFAK_BASE_DOMAIN="${PROJECT_NAME}.test"
+SIFAK_DEFAULT_TENANT_SLUG=fasilkom
 DEBUGBAR_ENABLED=false
 ASSET_PREFIX=
 # ASSET_PREFIX=/dev/kit/public example in case deployed inside a folder
@@ -51,6 +53,10 @@ DB_PORT=3306
 DB_DATABASE="${PROJECT_NAME}"
 DB_USERNAME=root
 DB_PASSWORD=p455w0rd
+TENANT_DB_HOST=db
+TENANT_DB_PORT=3306
+TENANT_DB_USERNAME=root
+TENANT_DB_PASSWORD=p455w0rd
 
 SESSION_DRIVER=database
 SESSION_LIFETIME=120
@@ -101,6 +107,8 @@ APP_DEBUG=true
 APP_TIMEZONE='Asia/Jakarta'
 APP_URL="https://${PROJECT_NAME}.test"
 ASSET_URL="https://${PROJECT_NAME}.test"
+SIFAK_BASE_DOMAIN="${PROJECT_NAME}.test"
+SIFAK_DEFAULT_TENANT_SLUG=fasilkom
 DEBUGBAR_ENABLED=false
 ASSET_PREFIX=
 # ASSET_PREFIX=/dev/kit/public example in case deployed inside a folder
@@ -127,6 +135,10 @@ DB_PORT=3306
 DB_DATABASE="${PROJECT_NAME}"
 DB_USERNAME=root
 DB_PASSWORD=p455w0rd
+TENANT_DB_HOST=db
+TENANT_DB_PORT=3306
+TENANT_DB_USERNAME=root
+TENANT_DB_PASSWORD=p455w0rd
 
 SESSION_DRIVER=database
 SESSION_LIFETIME=120
@@ -168,8 +180,8 @@ EOF
 fi
 
 # Step 3: Wait for DB connection (host should match DB_HOST in .env)
-DB_HOST=$(grep DB_HOST /var/www/html/.env | cut -d '=' -f2)
-DB_PORT=$(grep DB_PORT /var/www/html/.env | cut -d '=' -f2)
+DB_HOST=$(grep -E '^DB_HOST=' /var/www/html/.env | head -n 1 | cut -d '=' -f2- | tr -d '"')
+DB_PORT=$(grep -E '^DB_PORT=' /var/www/html/.env | head -n 1 | cut -d '=' -f2- | tr -d '"')
 
 DB_HOST=${DB_HOST:-db}
 DB_PORT=${DB_PORT:-3306}
@@ -212,9 +224,10 @@ chown -R www-data:www-data /var/www/html/storage /var/www/html/bootstrap/cache
 echo "🗃️ Running migrations..."
 php artisan migrate --force
 
-# Step 8: Run custom project init command
-echo "🚀 Running project:init..."
-php artisan project:init || true
+# Step 8: Run safe project update and idempotent seeders
+echo "🚀 Running project:update..."
+php artisan project:update || true
+php artisan db:seed --force || true
 
 # Step 9: Create storage symbolic link
 echo "🔗 Creating storage link..."

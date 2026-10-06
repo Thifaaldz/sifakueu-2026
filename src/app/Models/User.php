@@ -6,6 +6,8 @@ namespace App\Models;
 use Filament\Models\Contracts\FilamentUser;
 use Filament\Models\Contracts\HasAvatar;
 use Filament\Panel;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
+use Illuminate\Database\Eloquent\Relations\HasOne;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -22,11 +24,19 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
      * @var list<string>
      */
     protected $fillable = [
+        'tenant_id',
         'avatar_url',
         'name',
         'email',
+        'phone',
         'password',
+        'status',
     ];
+
+    public function getConnectionName(): ?string
+    {
+        return app(\App\Support\Tenancy\TenantContext::class)->get()?->database_name ? 'tenant' : parent::getConnectionName();
+    }
 
     /**
      * The attributes that should be hidden for serialization.
@@ -64,6 +74,34 @@ class User extends Authenticatable implements FilamentUser, HasAvatar
 
     public function canAccessPanel(Panel $panel): bool
     {
-        return true;
+        if ($this->status !== 'active') {
+            return false;
+        }
+
+        $tenant = app(\App\Support\Tenancy\TenantContext::class)->get();
+
+        return match ($panel->getId()) {
+            'super-admin' => $tenant === null && $this->hasRole('super_admin'),
+            'admin' => $tenant !== null && $this->hasAnyRole(['admin_fakultas', 'admin_prodi']),
+            'mahasiswa' => $tenant !== null && $this->hasRole('mahasiswa'),
+            'dosen' => $tenant !== null && $this->hasAnyRole(['dosen', 'dosen_pembimbing', 'dosen_penguji', 'dosen_pa']),
+            'pimpinan' => $tenant !== null && $this->hasAnyRole(['kaprodi', 'dekan', 'wd', 'kbk', 'lpm', 'baak', 'kepala_laboratorium']),
+            default => false,
+        };
+    }
+
+    public function tenant(): BelongsTo
+    {
+        return $this->belongsTo(Tenant::class);
+    }
+
+    public function mahasiswa(): HasOne
+    {
+        return $this->hasOne(Mahasiswa::class);
+    }
+
+    public function dosen(): HasOne
+    {
+        return $this->hasOne(Dosen::class);
     }
 }
