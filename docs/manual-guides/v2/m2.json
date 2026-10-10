@@ -1,0 +1,368 @@
+{
+  "code": "M2",
+  "title": "Surat Menyurat",
+  "purpose": "Mengelola pengajuan surat secara digital: jenis surat & form dinamis, verifikasi, approval berjenjang, penomoran otomatis, pembuatan dokumen, distribusi, arsip, serta verifikasi keaslian surat melalui token/QR.",
+  "actors": [
+    "Mahasiswa",
+    "Admin Prodi",
+    "Kaprodi",
+    "Admin Fakultas / TU"
+  ],
+  "testCase": "Mahasiswa FASILKOM mengajukan Surat Keterangan Aktif Kuliah untuk keperluan beasiswa; surat diverifikasi, disetujui Kaprodi, diberi nomor, dibuat dokumennya, didistribusikan, diarsipkan, lalu dicek keasliannya.",
+  "id": "m2",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Login sebagai Admin Fakultas / TU",
+      "desc": "Buka https://fasilkom.sifakueu.test/admin/login, isi email admin.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m2-01.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/login"
+    },
+    {
+      "n": 2,
+      "title": "Buka menu Surat › Jenis Surat",
+      "desc": "Master jenis surat beserta alur approval yang dipakai.",
+      "file": "m2-02.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin"
+    },
+    {
+      "n": 3,
+      "title": "Daftar jenis surat",
+      "desc": "Contoh: Surat Keterangan Aktif Kuliah (pemohon mahasiswa) terhubung ke Flow Surat Mahasiswa.",
+      "file": "m2-03.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/jenis-surats"
+    },
+    {
+      "n": 4,
+      "title": "Buka menu Surat › Form Field Surat",
+      "desc": "Field form dinamis per jenis surat.",
+      "file": "m2-04.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/jenis-surats"
+    },
+    {
+      "n": 5,
+      "title": "Field form dinamis",
+      "desc": "Field Nama, NIM, Program Studi, Semester, Keperluan — otomatis tampil saat mahasiswa memilih jenis surat.",
+      "file": "m2-05.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/letter-form-fields"
+    },
+    {
+      "n": 6,
+      "title": "Buka menu Surat › Langkah Approval",
+      "desc": "Urutan verifikasi/approval surat.",
+      "file": "m2-06.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/letter-form-fields"
+    },
+    {
+      "n": 7,
+      "title": "Urutan approval",
+      "desc": "1) Admin Prodi verifikasi → 2) Kaprodi approval → 3) Admin Fakultas acknowledgement.",
+      "file": "m2-07.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/approval-flow-steps"
+    },
+    {
+      "n": 8,
+      "title": "Buka menu Surat › Template Surat",
+      "desc": "Template isi surat dengan placeholder.",
+      "file": "m2-08.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/approval-flow-steps"
+    },
+    {
+      "n": 9,
+      "title": "Template surat",
+      "desc": "Template dipakai saat generate dokumen.",
+      "file": "m2-09.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/letter-templates"
+    },
+    {
+      "n": 10,
+      "title": "Login sebagai Mahasiswa",
+      "desc": "Buka https://fasilkom.sifakueu.test/mahasiswa/login, isi email mahasiswa.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m2-10.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/login"
+    },
+    {
+      "n": 11,
+      "title": "Beranda Mahasiswa",
+      "desc": "Menu M2 Surat ada di sidebar.",
+      "file": "m2-11.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa"
+    },
+    {
+      "n": 12,
+      "title": "Buka menu Surat › Pengajuan Surat",
+      "desc": "Daftar pengajuan surat milik mahasiswa.",
+      "file": "m2-12.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa"
+    },
+    {
+      "n": 13,
+      "title": "Klik tombol \"Buat\"",
+      "desc": "Buat pengajuan surat baru.",
+      "file": "m2-13.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/surats"
+    },
+    {
+      "n": 14,
+      "title": "Pilih jenis surat, lengkapi form dinamis, lalu klik Buat",
+      "desc": "Setelah jenis surat dipilih, form dinamis tampil dan data mahasiswa (nama, NIM, prodi, semester) terisi otomatis. Isi Perihal dan Keperluan.",
+      "file": "m2-14.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/surats/create"
+    },
+    {
+      "n": 15,
+      "title": "Pengajuan tersimpan sebagai Draft",
+      "desc": "Surat masih Draft dan bisa diubah sebelum diajukan.",
+      "file": "m2-15.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/surats"
+    },
+    {
+      "n": 16,
+      "title": "Klik Submit untuk mengajukan",
+      "desc": "Sistem memvalidasi field wajib & lampiran, membuat nomor pengajuan (REQ-…) dan antrian approval.",
+      "file": "m2-16.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/surats"
+    },
+    {
+      "n": 17,
+      "title": "Status: Verifikasi",
+      "desc": "Pengajuan masuk tahap verifikasi Admin Prodi.",
+      "file": "m2-17.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/surats"
+    },
+    {
+      "n": 18,
+      "title": "Login sebagai Admin Prodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/admin/login, isi email admin.prodi.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m2-18.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/login"
+    },
+    {
+      "n": 19,
+      "title": "Buka menu Surat › Verifikasi Surat",
+      "desc": "Daftar pengajuan surat yang perlu diverifikasi.",
+      "file": "m2-19.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin"
+    },
+    {
+      "n": 20,
+      "title": "Klik Verifikasi",
+      "desc": "Admin Prodi memeriksa kebenaran data pengajuan. Alternatif: Minta Revisi atau Tolak.",
+      "file": "m2-20.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 21,
+      "title": "Klik Verifikasi — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m2-21.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 22,
+      "title": "Status: Menunggu Approval",
+      "desc": "Setelah verifikasi, surat menunggu approval Kaprodi.",
+      "file": "m2-22.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 23,
+      "title": "Login sebagai Kaprodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/pimpinan/login, isi email kaprodi.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m2-23.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/login"
+    },
+    {
+      "n": 24,
+      "title": "Buka menu Surat › Approval Surat",
+      "desc": "Kaprodi melihat surat yang menunggu persetujuannya.",
+      "file": "m2-24.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 25,
+      "title": "Kaprodi klik Approve",
+      "desc": "Approval step ke-2 (Kaprodi).",
+      "file": "m2-25.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/surats"
+    },
+    {
+      "n": 26,
+      "title": "Kaprodi klik Approve — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m2-26.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/surats"
+    },
+    {
+      "n": 27,
+      "title": "Buka menu Surat › Riwayat Approval",
+      "desc": "Riwayat approval per step.",
+      "file": "m2-27.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/surats"
+    },
+    {
+      "n": 28,
+      "title": "Riwayat approval",
+      "desc": "Step Kaprodi berstatus APPROVED, step Admin Fakultas masih PENDING.",
+      "file": "m2-28.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/surat-approvals"
+    },
+    {
+      "n": 29,
+      "title": "Admin Fakultas klik Approve (acknowledgement)",
+      "desc": "Step terakhir; status surat menjadi Disetujui.",
+      "file": "m2-29.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 30,
+      "title": "Admin Fakultas klik Approve (acknowledgement) — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m2-30.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 31,
+      "title": "Klik Nomor",
+      "desc": "Nomor surat dibuat otomatis dari sequence (format nomor/kode/fakultas/bulan romawi/tahun).",
+      "file": "m2-31.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 32,
+      "title": "Klik Generate",
+      "desc": "Dokumen surat dibuat dari template beserta token verifikasi (QR).",
+      "file": "m2-32.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 33,
+      "title": "Status: Generated dan nomor surat terisi",
+      "desc": "Kolom Nomor sudah terisi dan tombol Download tersedia.",
+      "file": "m2-33.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 34,
+      "title": "Klik Distribusi",
+      "desc": "Surat dikirim ke pemohon (kanal download/notifikasi).",
+      "file": "m2-34.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 35,
+      "title": "Klik Arsip",
+      "desc": "Surat masuk arsip digital.",
+      "file": "m2-35.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 36,
+      "title": "Status: Arsip",
+      "desc": "Seluruh siklus surat selesai.",
+      "file": "m2-36.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 37,
+      "title": "Buka menu Surat › Dokumen Surat",
+      "desc": "Daftar file surat yang dibuat sistem.",
+      "file": "m2-37.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/surats"
+    },
+    {
+      "n": 38,
+      "title": "Dokumen generated",
+      "desc": "File surat dan versinya.",
+      "file": "m2-38.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/generated-letters"
+    },
+    {
+      "n": 39,
+      "title": "Buka menu Surat › Arsip Surat",
+      "desc": "Arsip digital surat beserta klasifikasi.",
+      "file": "m2-39.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/generated-letters"
+    },
+    {
+      "n": 40,
+      "title": "Arsip surat",
+      "desc": "Arsip dapat dicari dan difilter.",
+      "file": "m2-40.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/letter-archives"
+    },
+    {
+      "n": 41,
+      "title": "Buka menu Surat › Token Verifikasi",
+      "desc": "Token yang dipakai untuk QR verifikasi keaslian surat.",
+      "file": "m2-41.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/letter-archives"
+    },
+    {
+      "n": 42,
+      "title": "Token verifikasi",
+      "desc": "Setiap dokumen surat memiliki token unik.",
+      "file": "m2-42.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/letter-verification-tokens"
+    },
+    {
+      "n": 43,
+      "title": "Mahasiswa melihat surat selesai",
+      "desc": "Status Arsip, nomor surat tersedia dan tombol Download aktif.",
+      "file": "m2-43.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/surats"
+    },
+    {
+      "n": 44,
+      "title": "Halaman verifikasi publik (scan QR)",
+      "desc": "Siapa pun dapat membuka https://fasilkom.sifakueu.test/verify/letter/{token} (dari QR pada surat) untuk memastikan surat asli dan masih berlaku.",
+      "file": "m2-44.png",
+      "role": "publik",
+      "url": "https://fasilkom.sifakueu.test/verify/letter/kZJvNFVdSZ9y775jAKIRTuxIGaPCpErVCejKhderX2q4D8yC"
+    }
+  ],
+  "issues": []
+}

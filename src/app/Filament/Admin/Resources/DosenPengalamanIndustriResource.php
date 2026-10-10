@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\DosenPengalamanIndustriResource\Pages;
 use App\Filament\Admin\Resources\DosenPengalamanIndustriResource\RelationManagers;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\DosenPengalamanIndustri;
+use App\Filament\Support\DosenOwnership;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,7 +31,7 @@ class DosenPengalamanIndustriResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('dosen_id')->relationship('dosen', 'name')->searchable()->preload()->required(),
+                DosenOwnership::field(),
                 Forms\Components\TextInput::make('institution')->label('Instansi')->required()->maxLength(150),
                 Forms\Components\TextInput::make('position')->label('Posisi')->maxLength(150),
                 Forms\Components\TextInput::make('field')->label('Bidang')->maxLength(150),

@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\SidangScoreResource\Pages;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\Dosen;
 use App\Models\SidangScore;
+use App\Services\Sifak\SidangScoringService;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -51,7 +52,10 @@ class SidangScoreResource extends Resource
                 ->label('Submit')
                 ->icon('heroicon-o-check')
                 ->visible(fn (SidangScore $record) => ! $record->submitted_at && (auth()->user()?->can('input_sidang_score') || auth()->user()?->can('update_sidang::score')))
-                ->action(fn (SidangScore $record) => $record->update(['submitted_at' => now(), 'examiner_id' => $record->examiner_id ?: Dosen::where('user_id', auth()->id())->value('id')])),
+                ->action(function (SidangScore $record) {
+                    $record->update(['submitted_at' => now(), 'examiner_id' => $record->examiner_id ?: Dosen::where('user_id', auth()->id())->value('id')]);
+                    app(SidangScoringService::class)->summarizeSubmittedScores($record->registration, (int) $record->examiner_id);
+                }),
             Tables\Actions\EditAction::make(),
         ])->bulkActions([]);
     }

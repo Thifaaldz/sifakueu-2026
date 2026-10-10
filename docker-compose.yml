@@ -41,7 +41,7 @@ services:
       timeout: 5s
       retries: 5
     ports:
-      - "13306:3306"
+      - "${DB_FORWARD_PORT:-13306}:3306"
     environment:
       # Database ini akan dibuat saat kontainer pertama kali dijalankan
       MYSQL_DATABASE: ${PROJECT_NAME}

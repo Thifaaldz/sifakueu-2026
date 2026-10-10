@@ -26,7 +26,18 @@ class JenisSuratResource extends Resource
         return $form->schema([
             Forms\Components\TextInput::make('code')->label('Kode')->required()->maxLength(32),
             Forms\Components\TextInput::make('name')->label('Jenis surat')->required()->maxLength(255),
+            Forms\Components\Select::make('requester_type')->label('Pemohon')->required()->default('MULTI')->options([
+                'STUDENT' => 'Mahasiswa',
+                'LECTURER' => 'Dosen',
+                'ADMIN' => 'Admin',
+                'MULTI' => 'Multi',
+            ]),
+            Forms\Components\Select::make('approval_flow_id')->relationship('approvalFlow', 'name')->label('Approval Flow')->searchable()->preload(),
+            Forms\Components\Toggle::make('requires_attachment')->label('Wajib Lampiran')->default(false),
+            Forms\Components\Toggle::make('requires_number')->label('Butuh Nomor Surat')->default(true),
             Forms\Components\Toggle::make('is_active')->label('Aktif')->default(true),
+            Forms\Components\TextInput::make('number_pattern')->label('Pola Nomor')->default('{sequence}/{kode_surat}/{kode_fakultas}/{bulan_romawi}/{tahun}')->columnSpanFull(),
+            Forms\Components\Textarea::make('description')->label('Deskripsi')->columnSpanFull(),
             Forms\Components\TagsInput::make('approval_flow')->label('Alur approval')->helperText('Contoh: Admin Prodi, Fakultas, Dekan')->columnSpanFull(),
             Forms\Components\TagsInput::make('merge_fields')->label('Merge field')->columnSpanFull(),
             Forms\Components\RichEditor::make('template_body')->label('Template')->columnSpanFull(),
@@ -39,6 +50,9 @@ class JenisSuratResource extends Resource
             ->columns([
                 Tables\Columns\TextColumn::make('code')->label('Kode')->badge()->searchable(),
                 Tables\Columns\TextColumn::make('name')->label('Jenis surat')->searchable(),
+                Tables\Columns\TextColumn::make('requester_type')->label('Pemohon')->badge(),
+                Tables\Columns\TextColumn::make('approvalFlow.name')->label('Flow')->placeholder('-'),
+                Tables\Columns\IconColumn::make('requires_attachment')->label('Lampiran')->boolean(),
                 Tables\Columns\IconColumn::make('is_active')->label('Aktif')->boolean(),
                 Tables\Columns\TextColumn::make('updated_at')->dateTime()->sortable(),
             ])

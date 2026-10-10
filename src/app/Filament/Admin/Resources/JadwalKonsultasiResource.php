@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\JadwalKonsultasiResource\Pages;
 use App\Filament\Admin\Resources\JadwalKonsultasiResource\RelationManagers;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\JadwalKonsultasi;
+use App\Filament\Support\DosenOwnership;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,7 +31,7 @@ class JadwalKonsultasiResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('dosen_id')->relationship('dosen', 'name')->searchable()->preload()->required(),
+                DosenOwnership::field(),
                 Forms\Components\Select::make('day_of_week')->label('Hari')->required()->options([
                     1 => 'Senin',
                     2 => 'Selasa',

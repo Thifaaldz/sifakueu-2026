@@ -21,6 +21,14 @@ class KrsDetail extends Model
         'status',
         'validation_status',
         'validation_note',
+        'final_score',
+        'final_grade',
+        'passed_at',
+    ];
+
+    protected $casts = [
+        'final_score' => 'decimal:2',
+        'passed_at' => 'datetime',
     ];
 
     public function krs(): BelongsTo

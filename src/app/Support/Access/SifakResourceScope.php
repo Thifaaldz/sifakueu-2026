@@ -3,7 +3,10 @@
 namespace App\Support\Access;
 
 use App\Models\Alert;
+use App\Models\AlertEscalation;
+use App\Models\AlertFollowup;
 use App\Models\BebanDosen;
+use App\Models\Cpl;
 use App\Models\DokumenTa;
 use App\Models\Dosen;
 use App\Models\DosenLokasi;
@@ -13,19 +16,46 @@ use App\Models\DosenPreferensiMk;
 use App\Models\DosenProfil;
 use App\Models\DosenPublikasi;
 use App\Models\DosenSertifikasi;
+use App\Models\GeneratedLetter;
+use App\Models\JenisSurat;
 use App\Models\JadwalKuliah;
 use App\Models\JadwalConflict;
 use App\Models\JadwalHistory;
 use App\Models\JadwalKonsultasi;
 use App\Models\Keahlian;
 use App\Models\KelasKuliah;
+use App\Models\GraduateProfile;
 use App\Models\Krs;
 use App\Models\KrsDetail;
 use App\Models\KrsValidationResult;
+use App\Models\LetterArchive;
+use App\Models\LetterAttachment;
+use App\Models\LetterDistribution;
+use App\Models\LetterNumber;
+use App\Models\LetterRequestValue;
+use App\Models\LetterVerification;
+use App\Models\LetterVerificationToken;
 use App\Models\Mahasiswa;
+use App\Models\MahasiswaCertification;
+use App\Models\MahasiswaCplScore;
+use App\Models\MahasiswaGraduateProfileScore;
+use App\Models\MahasiswaInterest;
+use App\Models\MahasiswaMbkm;
+use App\Models\MahasiswaOrganization;
+use App\Models\MahasiswaPloScore;
+use App\Models\MahasiswaPortfolio;
+use App\Models\MahasiswaProfile;
 use App\Models\MatriksKesesuaian;
 use App\Models\MataKuliah;
+use App\Models\MonitoringIndicatorResult;
+use App\Models\MonitoringOverride;
+use App\Models\MonitoringRule;
+use App\Models\MonitoringSnapshot;
+use App\Models\CompetencyGap;
+use App\Models\RecommendationHistory;
+use App\Models\StudentRecommendation;
 use App\Models\PendaftaranSidang;
+use App\Models\Plo;
 use App\Models\PenawaranMataKuliah;
 use App\Models\PeriodeKrs;
 use App\Models\PlottingDosen;
@@ -45,6 +75,7 @@ use App\Models\SidangSchedule;
 use App\Models\SidangScore;
 use App\Models\SidangType;
 use App\Models\Surat;
+use App\Models\SuratApproval;
 use App\Models\TaApproval;
 use App\Models\TaComment;
 use App\Models\TaDocument;
@@ -87,10 +118,41 @@ class SifakResourceScope
             Krs::class,
             PendaftaranSidang::class,
             DokumenTa::class,
+            MonitoringSnapshot::class,
+            MonitoringOverride::class,
+            MahasiswaProfile::class,
+            MahasiswaInterest::class,
+            MahasiswaCertification::class,
+            MahasiswaPortfolio::class,
+            MahasiswaOrganization::class,
+            MahasiswaMbkm::class,
+            MahasiswaCplScore::class,
+            MahasiswaPloScore::class,
+            MahasiswaGraduateProfileScore::class,
+            CompetencyGap::class,
+            StudentRecommendation::class,
+            RecommendationHistory::class,
             Alert::class => $mahasiswaId ? $query->where('mahasiswa_id', $mahasiswaId) : $query->whereRaw('1 = 0'),
+            MonitoringIndicatorResult::class => $mahasiswaId ? $query->whereHas('snapshot', fn (Builder $builder) => $builder->where('mahasiswa_id', $mahasiswaId)) : $query->whereRaw('1 = 0'),
+            AlertFollowup::class,
+            AlertEscalation::class => $mahasiswaId ? $query->whereHas('alert', fn (Builder $builder) => $builder->where('mahasiswa_id', $mahasiswaId)) : $query->whereRaw('1 = 0'),
+            MonitoringRule::class => $query->where('active', true),
+            Cpl::class,
+            Plo::class,
+            GraduateProfile::class => $query,
             KrsDetail::class,
             KrsValidationResult::class => $mahasiswaId ? $query->whereHas('krs', fn (Builder $builder) => $builder->where('mahasiswa_id', $mahasiswaId)) : $query->whereRaw('1 = 0'),
+            JenisSurat::class => $query->where('is_active', true),
             Surat::class => $query->where('requester_id', $userId),
+            SuratApproval::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $userId)),
+            LetterRequestValue::class,
+            LetterAttachment::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $userId)),
+            LetterVerification::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $userId)),
+            LetterNumber::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $userId)),
+            GeneratedLetter::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $userId)),
+            LetterDistribution::class,
+            LetterArchive::class => $query->whereHas('generatedLetter.surat', fn (Builder $builder) => $builder->where('requester_id', $userId)),
+            LetterVerificationToken::class => $query->whereHas('generatedLetter.surat', fn (Builder $builder) => $builder->where('requester_id', $userId)),
             PenawaranMataKuliah::class => $mahasiswaId
                 ? $query->whereHas('programStudi.mahasiswas', fn (Builder $builder) => $builder->where('mahasiswas.id', $mahasiswaId))
                 : $query->whereRaw('1 = 0'),
@@ -121,7 +183,7 @@ class SifakResourceScope
             TaProgressLog::class,
             RepositoryItem::class => $mahasiswaId ? $query->whereHas('tugasAkhir', fn (Builder $builder) => $builder->where('mahasiswa_id', $mahasiswaId)) : $query->whereRaw('1 = 0'),
             TaDocument::class => $mahasiswaId ? $query->whereHas('tugasAkhir', fn (Builder $builder) => $builder->where('mahasiswa_id', $mahasiswaId)) : $query->whereRaw('1 = 0'),
-            TaDocumentVersion::class,
+            TaDocumentVersion::class => $mahasiswaId ? $query->whereHas('document.tugasAkhir', fn (Builder $builder) => $builder->where('mahasiswa_id', $mahasiswaId)) : $query->whereRaw('1 = 0'),
             TaReview::class,
             TaComment::class => $mahasiswaId ? $query->whereHas('version.document.tugasAkhir', fn (Builder $builder) => $builder->where('mahasiswa_id', $mahasiswaId)) : $query->whereRaw('1 = 0'),
             TaApproval::class => $mahasiswaId ? $query->whereHas('document.tugasAkhir', fn (Builder $builder) => $builder->where('mahasiswa_id', $mahasiswaId)) : $query->whereRaw('1 = 0'),
@@ -207,6 +269,17 @@ class SifakResourceScope
             Krs::class => $user->hasRole('dosen_pa')
                 ? $query
                 : $query->whereRaw('1 = 0'),
+            JenisSurat::class => $query->where('is_active', true),
+            Surat::class => $query->where('requester_id', $user->id),
+            SuratApproval::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $user->id)),
+            LetterRequestValue::class,
+            LetterAttachment::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $user->id)),
+            LetterVerification::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $user->id)),
+            LetterNumber::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $user->id)),
+            GeneratedLetter::class => $query->whereHas('surat', fn (Builder $builder) => $builder->where('requester_id', $user->id)),
+            LetterDistribution::class,
+            LetterArchive::class => $query->whereHas('generatedLetter.surat', fn (Builder $builder) => $builder->where('requester_id', $user->id)),
+            LetterVerificationToken::class => $query->whereHas('generatedLetter.surat', fn (Builder $builder) => $builder->where('requester_id', $user->id)),
             Alert::class => $user->hasRole('dosen_pa')
                 ? $query
                 : $query->where(function (Builder $builder) use ($user, $assignedMahasiswaIds) {
@@ -214,6 +287,35 @@ class SifakResourceScope
                         ->where('assigned_to', $user->id)
                         ->orWhereIn('mahasiswa_id', $assignedMahasiswaIds);
                 }),
+            MonitoringSnapshot::class,
+            MonitoringOverride::class,
+            MahasiswaProfile::class,
+            MahasiswaInterest::class,
+            MahasiswaCertification::class,
+            MahasiswaPortfolio::class,
+            MahasiswaOrganization::class,
+            MahasiswaMbkm::class,
+            MahasiswaCplScore::class,
+            MahasiswaPloScore::class,
+            MahasiswaGraduateProfileScore::class,
+            CompetencyGap::class,
+            StudentRecommendation::class,
+            RecommendationHistory::class => $user->hasRole('dosen_pa')
+                ? $query
+                : $query->whereIn('mahasiswa_id', $assignedMahasiswaIds),
+            MonitoringIndicatorResult::class => $user->hasRole('dosen_pa')
+                ? $query
+                : $query->whereHas('snapshot', fn (Builder $builder) => $builder->whereIn('mahasiswa_id', $assignedMahasiswaIds)),
+            AlertFollowup::class,
+            AlertEscalation::class => $user->hasRole('dosen_pa')
+                ? $query
+                : $query->whereHas('alert', fn (Builder $builder) => $builder
+                    ->where('assigned_to', $user->id)
+                    ->orWhereIn('mahasiswa_id', $assignedMahasiswaIds)),
+            MonitoringRule::class => $query->where('active', true),
+            Cpl::class,
+            Plo::class,
+            GraduateProfile::class => $query,
             TugasAkhir::class => $query->where(function (Builder $builder) use ($dosenId) {
                 $builder->where('pembimbing_1_id', $dosenId)->orWhere('pembimbing_2_id', $dosenId);
             }),
@@ -225,7 +327,9 @@ class SifakResourceScope
             TaDocument::class => $query->whereHas('tugasAkhir', fn (Builder $builder) => $builder
                 ->where('pembimbing_1_id', $dosenId)
                 ->orWhere('pembimbing_2_id', $dosenId)),
-            TaDocumentVersion::class,
+            TaDocumentVersion::class => $query->whereHas('document.tugasAkhir', fn (Builder $builder) => $builder
+                ->where('pembimbing_1_id', $dosenId)
+                ->orWhere('pembimbing_2_id', $dosenId)),
             TaReview::class,
             TaComment::class => $query->whereHas('version.document.tugasAkhir', fn (Builder $builder) => $builder
                 ->where('pembimbing_1_id', $dosenId)

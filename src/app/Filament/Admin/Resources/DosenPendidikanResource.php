@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\DosenPendidikanResource\Pages;
 use App\Filament\Admin\Resources\DosenPendidikanResource\RelationManagers;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\DosenPendidikan;
+use App\Filament\Support\DosenOwnership;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,7 +31,7 @@ class DosenPendidikanResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('dosen_id')->relationship('dosen', 'name')->searchable()->preload()->required(),
+                DosenOwnership::field(),
                 Forms\Components\Select::make('degree')->label('Jenjang')->required()->options(['S1' => 'S1', 'S2' => 'S2', 'S3' => 'S3']),
                 Forms\Components\TextInput::make('institution')->label('Institusi')->required()->maxLength(150),
                 Forms\Components\TextInput::make('study_program')->label('Program Studi')->maxLength(150),

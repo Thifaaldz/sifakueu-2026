@@ -1,0 +1,608 @@
+{
+  "code": "M1",
+  "title": "Sidang Sempro & Tugas Akhir",
+  "purpose": "Mengelola pendaftaran Seminar Proposal (SEMPRO) dan Sidang TA mulai dari pengecekan syarat, verifikasi, plotting penguji, penjadwalan, penilaian, keputusan, revisi, hingga berita acara.",
+  "actors": [
+    "Mahasiswa",
+    "Admin Prodi",
+    "Dosen Penguji",
+    "Kaprodi"
+  ],
+  "testCase": "Mahasiswa Rina Demo QA (NIM 2026001002) mendaftar SEMPRO, diverifikasi Admin Prodi, diuji oleh Dr. Dosen FASILKOM, lalu hasil dan berita acara diterbitkan.",
+  "id": "m1",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Login sebagai Mahasiswa (Rina Demo QA)",
+      "desc": "Buka https://fasilkom.sifakueu.test/mahasiswa/login, isi email mahasiswa.demo@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m1-01.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/login"
+    },
+    {
+      "n": 2,
+      "title": "Beranda Mahasiswa",
+      "desc": "Setelah login, mahasiswa masuk ke Beranda. Menu Sidang ada di sidebar kiri.",
+      "file": "m1-02.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa"
+    },
+    {
+      "n": 3,
+      "title": "Buka menu Sidang › Persyaratan Sidang",
+      "desc": "Mahasiswa dapat melihat daftar persyaratan setiap jenis sidang sebelum mendaftar.",
+      "file": "m1-03.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa"
+    },
+    {
+      "n": 4,
+      "title": "Daftar persyaratan SEMPRO & Sidang TA",
+      "desc": "Syarat sistem (mahasiswa aktif, minimal SKS, pembimbing valid, kesiapan dokumen TA) dicek otomatis; syarat manual (BERKAS_ADMIN) diverifikasi admin.",
+      "file": "m1-04.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-requirements"
+    },
+    {
+      "n": 5,
+      "title": "Buka menu Sidang › Pendaftaran Sidang",
+      "desc": "Halaman pendaftaran sidang milik mahasiswa.",
+      "file": "m1-05.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-requirements"
+    },
+    {
+      "n": 6,
+      "title": "Klik tombol \"Buat\"",
+      "desc": "Klik tombol New untuk membuat pendaftaran baru.",
+      "file": "m1-06.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations"
+    },
+    {
+      "n": 7,
+      "title": "Isi form pendaftaran lalu klik Buat",
+      "desc": "Pilih Jenis Sidang = Seminar Proposal, Tugas Akhir, Semester dan Tahun Akademik. Field mahasiswa terisi otomatis sesuai akun login. Status awal Draft.",
+      "file": "m1-07.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations/create"
+    },
+    {
+      "n": 8,
+      "title": "Pendaftaran tersimpan (status draft)",
+      "desc": "Nomor pendaftaran dibuat otomatis (SIDANG-YYYYMMDD-xxxxxx). Sistem langsung menjalankan validasi syarat otomatis.",
+      "file": "m1-08.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations"
+    },
+    {
+      "n": 9,
+      "title": "Klik Submit untuk mengajukan pendaftaran",
+      "desc": "Submit hanya bisa dilakukan jika semua syarat wajib otomatis sudah valid.",
+      "file": "m1-09.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations"
+    },
+    {
+      "n": 10,
+      "title": "Status menjadi submitted",
+      "desc": "Pendaftaran sudah diajukan dan menunggu verifikasi Admin Prodi.",
+      "file": "m1-10.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations"
+    },
+    {
+      "n": 11,
+      "title": "Login sebagai Admin Prodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/admin/login, isi email admin.prodi.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m1-11.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/login"
+    },
+    {
+      "n": 12,
+      "title": "Buka menu Sidang › Pendaftaran & Verifikasi",
+      "desc": "Admin Prodi melihat semua pendaftaran sidang di prodinya.",
+      "file": "m1-12.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin"
+    },
+    {
+      "n": 13,
+      "title": "Verifikasi berkas manual (Waive Manual)",
+      "desc": "Syarat manual BERKAS_ADMIN ditandai sudah diperiksa dengan catatan.",
+      "file": "m1-13.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 14,
+      "title": "Verifikasi berkas manual (Waive Manual) — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m1-14.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 15,
+      "title": "Klik Verifikasi pendaftaran",
+      "desc": "Jika semua syarat valid/waived, status berubah menjadi ready_for_plotting.",
+      "file": "m1-15.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 16,
+      "title": "Klik Verifikasi pendaftaran — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m1-16.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 17,
+      "title": "Status ready_for_plotting",
+      "desc": "Pendaftaran terverifikasi dan siap diplot penguji.",
+      "file": "m1-17.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 18,
+      "title": "Lihat rekomendasi penguji (integrasi M5)",
+      "desc": "Sistem menampilkan kandidat penguji berdasarkan kecocokan keahlian dan beban dosen.",
+      "file": "m1-18.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 19,
+      "title": "Notifikasi top kandidat penguji",
+      "desc": "Notifikasi menampilkan nama dosen dan skor kecocokan.",
+      "file": "m1-19.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 20,
+      "title": "Buka menu Sidang › Plotting Penguji",
+      "desc": "Tempat menetapkan pembimbing/penguji untuk pendaftaran sidang.",
+      "file": "m1-20.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 21,
+      "title": "Klik tombol \"Buat\"",
+      "desc": "Tambah penugasan penguji.",
+      "file": "m1-21.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-assignments"
+    },
+    {
+      "n": 22,
+      "title": "Isi penugasan Penguji 1 lalu klik Buat",
+      "desc": "Pilih nomor pendaftaran, dosen penguji, peran Penguji 1, dan justifikasi.",
+      "file": "m1-22.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-assignments/create"
+    },
+    {
+      "n": 23,
+      "title": "Klik Set Assignment",
+      "desc": "Sistem memvalidasi dosen aktif & bukan pembimbing, lalu menetapkan penugasan.",
+      "file": "m1-23.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-assignments"
+    },
+    {
+      "n": 24,
+      "title": "Penugasan penguji tersimpan",
+      "desc": "Dosen penguji tercatat pada pendaftaran sidang.",
+      "file": "m1-24.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-assignments"
+    },
+    {
+      "n": 25,
+      "title": "Buka menu Sidang › Jadwal Sidang",
+      "desc": "Penjadwalan sidang (tanggal, jam, ruang, mode).",
+      "file": "m1-25.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-assignments"
+    },
+    {
+      "n": 26,
+      "title": "Klik tombol \"Buat\"",
+      "desc": "Buat jadwal sidang baru.",
+      "file": "m1-26.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+    },
+    {
+      "n": 27,
+      "title": "Isi jadwal lalu klik Buat",
+      "desc": "Tanggal 2026-10-12 (Senin), 09:00–10:30, Ruang Kuliah 301, mode Onsite.",
+      "file": "m1-27.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules/create"
+    },
+    {
+      "n": 28,
+      "title": "Klik Finalisasi jadwal",
+      "desc": "Sistem mengecek bentrok ruang, penguji, dan jadwal kuliah dosen (M4) sebelum jadwal dikunci.",
+      "file": "m1-28.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+    },
+    {
+      "n": 29,
+      "title": "Sistem mendeteksi bentrok jadwal",
+      "desc": "Hari Senin 09:00 dosen penguji sedang mengajar (jadwal kuliah M4), sehingga status jadwal menjadi conflict dan muncul notifikasi merah.",
+      "file": "m1-29.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+    },
+    {
+      "n": 30,
+      "title": "Klik Edit untuk menjadwalkan ulang",
+      "desc": "Ubah tanggal ke hari yang tidak bentrok.",
+      "file": "m1-30.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+    },
+    {
+      "n": 31,
+      "title": "Ganti tanggal lalu klik Simpan perubahan",
+      "desc": "Tanggal diganti menjadi 2026-10-16 (Jumat).",
+      "file": "m1-31.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules/10/edit"
+    },
+    {
+      "n": 32,
+      "title": "Klik Finalisasi lagi",
+      "desc": "Tidak ada bentrok: status jadwal menjadi final dan pendaftaran menjadi scheduled.",
+      "file": "m1-32.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+    },
+    {
+      "n": 33,
+      "title": "Hari H: klik Mulai",
+      "desc": "Menandai sidang sedang berlangsung (in_progress).",
+      "file": "m1-33.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+    },
+    {
+      "n": 34,
+      "title": "Sidang berlangsung",
+      "desc": "Status jadwal in_progress.",
+      "file": "m1-34.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+    },
+    {
+      "n": 35,
+      "title": "Login sebagai Dosen (PA, Pembimbing, Penguji)",
+      "desc": "Buka https://fasilkom.sifakueu.test/dosen/login, isi email dosen.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m1-35.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/login"
+    },
+    {
+      "n": 36,
+      "title": "Beranda Dosen",
+      "desc": "Dosen penguji login ke panel dosen.",
+      "file": "m1-36.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen"
+    },
+    {
+      "n": 37,
+      "title": "Buka menu Sidang & Pengujian › Jadwal Menguji",
+      "desc": "Daftar jadwal sidang di mana dosen menjadi penguji.",
+      "file": "m1-37.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen"
+    },
+    {
+      "n": 38,
+      "title": "Jadwal menguji",
+      "desc": "Jadwal sidang mahasiswa yang diuji tampil di sini.",
+      "file": "m1-38.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-schedules"
+    },
+    {
+      "n": 39,
+      "title": "Buka menu Sidang & Pengujian › Penilaian Sidang",
+      "desc": "Input nilai per rubrik.",
+      "file": "m1-39.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-schedules"
+    },
+    {
+      "n": 40,
+      "title": "Klik tombol \"Buat\"",
+      "desc": "Tambah nilai rubrik.",
+      "file": "m1-40.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+    },
+    {
+      "n": 41,
+      "title": "Isi nilai rubrik Penguasaan Materi lalu klik Buat",
+      "desc": "Penguji terisi otomatis sesuai akun dosen. Nilai 0–100.",
+      "file": "m1-41.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores/create"
+    },
+    {
+      "n": 42,
+      "title": "Buka menu Sidang & Pengujian › Penilaian Sidang",
+      "desc": "Input nilai per rubrik.",
+      "file": "m1-42.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores/26/edit"
+    },
+    {
+      "n": 43,
+      "title": "Klik tombol \"Buat\"",
+      "desc": "Tambah nilai rubrik.",
+      "file": "m1-43.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+    },
+    {
+      "n": 44,
+      "title": "Isi nilai rubrik Metodologi lalu klik Buat",
+      "desc": "Penguji terisi otomatis sesuai akun dosen. Nilai 0–100.",
+      "file": "m1-44.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores/create"
+    },
+    {
+      "n": 45,
+      "title": "Buka menu Sidang & Pengujian › Penilaian Sidang",
+      "desc": "Input nilai per rubrik.",
+      "file": "m1-45.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores/27/edit"
+    },
+    {
+      "n": 46,
+      "title": "Klik tombol \"Buat\"",
+      "desc": "Tambah nilai rubrik.",
+      "file": "m1-46.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+    },
+    {
+      "n": 47,
+      "title": "Isi nilai rubrik Presentasi lalu klik Buat",
+      "desc": "Penguji terisi otomatis sesuai akun dosen. Nilai 0–100.",
+      "file": "m1-47.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores/create"
+    },
+    {
+      "n": 48,
+      "title": "Klik Submit pada nilai",
+      "desc": "Nilai dikunci (submitted_at terisi).",
+      "file": "m1-48.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+    },
+    {
+      "n": 49,
+      "title": "Klik Submit pada nilai",
+      "desc": "Nilai dikunci (submitted_at terisi).",
+      "file": "m1-49.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+    },
+    {
+      "n": 50,
+      "title": "Klik Submit pada nilai",
+      "desc": "Nilai dikunci (submitted_at terisi).",
+      "file": "m1-50.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+    },
+    {
+      "n": 51,
+      "title": "Semua nilai sudah disubmit",
+      "desc": "Nilai rubrik siap direkap.",
+      "file": "m1-51.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+    },
+    {
+      "n": 52,
+      "title": "Buka menu Sidang & Pengujian › Catatan / Revisi",
+      "desc": "Catatan revisi dari penguji.",
+      "file": "m1-52.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+    },
+    {
+      "n": 53,
+      "title": "Klik tombol \"Buat\"",
+      "desc": "Tambah butir revisi.",
+      "file": "m1-53.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-revisions"
+    },
+    {
+      "n": 54,
+      "title": "Isi revisi lalu klik Buat",
+      "desc": "Deskripsi revisi, kategori dan deadline revisi.",
+      "file": "m1-54.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-revisions/create"
+    },
+    {
+      "n": 55,
+      "title": "Admin menandai sidang Selesai",
+      "desc": "Status jadwal completed.",
+      "file": "m1-55.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+    },
+    {
+      "n": 56,
+      "title": "Klik Finalisasi Hasil",
+      "desc": "Sistem merekap nilai berbobot rubrik dan menentukan nilai akhir, grade, dan keputusan.",
+      "file": "m1-56.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 57,
+      "title": "Klik Finalisasi Hasil — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m1-57.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 58,
+      "title": "Buka menu Sidang › Hasil Sidang",
+      "desc": "Hasil sidang hasil rekap otomatis.",
+      "file": "m1-58.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 59,
+      "title": "Klik Publish hasil sidang",
+      "desc": "Hasil dipublikasikan sehingga terlihat oleh mahasiswa.",
+      "file": "m1-59.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-results"
+    },
+    {
+      "n": 60,
+      "title": "Hasil sidang dipublish",
+      "desc": "Kolom published_at terisi.",
+      "file": "m1-60.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-results"
+    },
+    {
+      "n": 61,
+      "title": "Generate Berita Acara",
+      "desc": "Berita acara sidang dibuat otomatis.",
+      "file": "m1-61.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 62,
+      "title": "Buka menu Sidang › Berita Acara",
+      "desc": "Daftar berita acara.",
+      "file": "m1-62.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+    },
+    {
+      "n": 63,
+      "title": "Berita acara tergenerate",
+      "desc": "Dokumen berita acara tersimpan dengan status generated.",
+      "file": "m1-63.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/sidang-minutes"
+    },
+    {
+      "n": 64,
+      "title": "Penguji memvalidasi revisi",
+      "desc": "Setelah mahasiswa memperbaiki, penguji klik Validasi.",
+      "file": "m1-64.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/sidang-revisions"
+    },
+    {
+      "n": 65,
+      "title": "Mahasiswa melihat status pendaftaran",
+      "desc": "Status pendaftaran terbaru.",
+      "file": "m1-65.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations"
+    },
+    {
+      "n": 66,
+      "title": "Buka menu Sidang › Jadwal Sidang",
+      "desc": "Jadwal, ruang, dan status sidang.",
+      "file": "m1-66.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations"
+    },
+    {
+      "n": 67,
+      "title": "Jadwal sidang mahasiswa",
+      "desc": "Informasi jadwal sidang.",
+      "file": "m1-67.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-schedules"
+    },
+    {
+      "n": 68,
+      "title": "Buka menu Sidang › Hasil Sidang",
+      "desc": "Nilai akhir, grade dan keputusan.",
+      "file": "m1-68.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-schedules"
+    },
+    {
+      "n": 69,
+      "title": "Hasil sidang mahasiswa",
+      "desc": "Hasil yang sudah dipublish.",
+      "file": "m1-69.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-results"
+    },
+    {
+      "n": 70,
+      "title": "Buka menu Sidang › Revisi Sidang",
+      "desc": "Butir revisi beserta deadline dan status.",
+      "file": "m1-70.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-results"
+    },
+    {
+      "n": 71,
+      "title": "Revisi sidang mahasiswa",
+      "desc": "Status revisi validated setelah divalidasi penguji.",
+      "file": "m1-71.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-revisions"
+    },
+    {
+      "n": 72,
+      "title": "Login sebagai Kaprodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/pimpinan/login, isi email kaprodi.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m1-72.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/login"
+    },
+    {
+      "n": 73,
+      "title": "Buka menu Sidang › Pendaftaran Sidang",
+      "desc": "Monitoring pendaftaran sidang di panel pimpinan.",
+      "file": "m1-73.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 74,
+      "title": "Monitoring sidang oleh Kaprodi",
+      "desc": "Kaprodi melihat seluruh status pendaftaran sidang prodi.",
+      "file": "m1-74.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-registrations"
+    }
+  ],
+  "issues": []
+}

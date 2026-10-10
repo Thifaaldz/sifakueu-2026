@@ -1,0 +1,408 @@
+{
+  "code": "M4",
+  "title": "KRS & Penjadwalan",
+  "purpose": "Mengelola periode KRS, penawaran mata kuliah, perhitungan peminat, pembentukan kelas, plotting dosen (rekomendasi M5), penjadwalan dan pengecekan konflik, serta pengisian KRS mahasiswa dengan validasi otomatis dan approval Dosen PA.",
+  "actors": [
+    "Admin Prodi",
+    "Mahasiswa",
+    "Dosen PA",
+    "Kaprodi"
+  ],
+  "testCase": "Admin Prodi menyiapkan penawaran semester 2026-GANJIL; Rina Demo QA (NIM 2026001002) mengisi KRS 2 mata kuliah (6 SKS), Dr. Dosen FASILKOM sebagai Dosen PA menyetujui, lalu Admin Prodi memfinalkan KRS.",
+  "id": "m4",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Login sebagai Admin Prodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/admin/login, isi email admin.prodi.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m4-01.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/login"
+    },
+    {
+      "n": 2,
+      "title": "Buka M4 KRS & Penjadwalan > Periode Krs",
+      "desc": "Periode pengisian KRS per semester.",
+      "file": "m4-02.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin"
+    },
+    {
+      "n": 3,
+      "title": "Periode KRS aktif",
+      "desc": "Periode 2026-GANJIL berstatus open — mahasiswa dapat mengisi KRS.",
+      "file": "m4-03.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/periode-krs"
+    },
+    {
+      "n": 4,
+      "title": "Klik Edit untuk mengatur tanggal periode",
+      "desc": "Pastikan rentang tanggal pengisian KRS mencakup hari ini. (Temuan QA: periode seed berakhir 30 Sep 2026 sehingga KRS tidak bisa disubmit.)",
+      "file": "m4-04.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/periode-krs"
+    },
+    {
+      "n": 5,
+      "title": "Perpanjang periode lalu Save changes",
+      "desc": "Tanggal selesai diubah menjadi 31 Okt 2026; masa revisi 1–7 Nov 2026.",
+      "file": "m4-05.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/periode-krs/1/edit"
+    },
+    {
+      "n": 6,
+      "title": "Buka Penawaran Mata Kuliahs",
+      "desc": "Mata kuliah yang ditawarkan pada semester.",
+      "file": "m4-06.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/periode-krs/1/edit"
+    },
+    {
+      "n": 7,
+      "title": "Klik Hitung Peminat",
+      "desc": "Sistem menghitung jumlah peminat dari KRS mahasiswa.",
+      "file": "m4-07.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/penawaran-mata-kuliahs"
+    },
+    {
+      "n": 8,
+      "title": "Klik Generate Kelas",
+      "desc": "Kelas dibentuk otomatis berdasarkan peminat dan kuota.",
+      "file": "m4-08.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/penawaran-mata-kuliahs"
+    },
+    {
+      "n": 9,
+      "title": "Penawaran setelah dihitung",
+      "desc": "Peminat & jumlah kelas terbarui.",
+      "file": "m4-09.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/penawaran-mata-kuliahs"
+    },
+    {
+      "n": 10,
+      "title": "Buka Kelas Kuliahs",
+      "desc": "Daftar kelas kuliah.",
+      "file": "m4-10.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/penawaran-mata-kuliahs"
+    },
+    {
+      "n": 11,
+      "title": "Klik M5 Kandidat",
+      "desc": "Meminta rekomendasi dosen pengampu dari modul M5 (kecocokan keahlian, beban, preferensi).",
+      "file": "m4-11.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/kelas-kuliahs"
+    },
+    {
+      "n": 12,
+      "title": "Kandidat dosen dari M5",
+      "desc": "Rekomendasi tersimpan dan dapat dipakai untuk plotting.",
+      "file": "m4-12.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/kelas-kuliahs"
+    },
+    {
+      "n": 13,
+      "title": "Buka Plotting Dosens",
+      "desc": "Penetapan dosen pengampu per kelas.",
+      "file": "m4-13.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/kelas-kuliahs"
+    },
+    {
+      "n": 14,
+      "title": "Plotting dosen pengampu",
+      "desc": "Dosen pengampu yang ditetapkan untuk setiap kelas.",
+      "file": "m4-14.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/plotting-dosens"
+    },
+    {
+      "n": 15,
+      "title": "Buka Jadwal Kuliahs",
+      "desc": "Jadwal kuliah per kelas (hari, jam, ruang, dosen).",
+      "file": "m4-15.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/plotting-dosens"
+    },
+    {
+      "n": 16,
+      "title": "Klik Cek Konflik",
+      "desc": "Sistem memeriksa bentrok ruang, dosen, dan kelas.",
+      "file": "m4-16.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/jadwal-kuliahs"
+    },
+    {
+      "n": 17,
+      "title": "Hasil cek konflik",
+      "desc": "Jika ada bentrok, tercatat di menu Jadwal Conflicts.",
+      "file": "m4-17.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/jadwal-kuliahs"
+    },
+    {
+      "n": 18,
+      "title": "Buka Jadwal Conflicts",
+      "desc": "Daftar konflik jadwal & tombol Resolve.",
+      "file": "m4-18.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/jadwal-kuliahs"
+    },
+    {
+      "n": 19,
+      "title": "Daftar konflik jadwal",
+      "desc": "Konflik yang sudah diselesaikan ditandai resolved.",
+      "file": "m4-19.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/jadwal-conflicts"
+    },
+    {
+      "n": 20,
+      "title": "Login sebagai Mahasiswa (Rina Demo QA)",
+      "desc": "Buka https://fasilkom.sifakueu.test/mahasiswa/login, isi email mahasiswa.demo@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m4-20.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/login"
+    },
+    {
+      "n": 21,
+      "title": "Mahasiswa membuka M4 KRS & Penjadwalan > Krs",
+      "desc": "Halaman KRS mahasiswa.",
+      "file": "m4-21.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa"
+    },
+    {
+      "n": 22,
+      "title": "Klik New krs",
+      "desc": "Buat KRS untuk semester berjalan.",
+      "file": "m4-22.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 23,
+      "title": "Isi semester & Dosen PA lalu Create",
+      "desc": "Mahasiswa otomatis sesuai akun login. Status, SKS total, dan approval tidak dapat diubah mahasiswa.",
+      "file": "m4-23.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs/create"
+    },
+    {
+      "n": 24,
+      "title": "Klik Tambah MK (IF101)",
+      "desc": "Pilih mata kuliah dari daftar penawaran semester ini.",
+      "file": "m4-24.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 25,
+      "title": "Klik Tambah MK (IF101) — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m4-25.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 26,
+      "title": "Klik Tambah MK (SI201)",
+      "desc": "Pilih mata kuliah dari daftar penawaran semester ini.",
+      "file": "m4-26.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 27,
+      "title": "Klik Tambah MK (SI201) — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m4-27.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 28,
+      "title": "KRS berisi 2 MK (6 SKS)",
+      "desc": "Total SKS dihitung otomatis.",
+      "file": "m4-28.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 29,
+      "title": "Klik Validasi",
+      "desc": "Validasi otomatis: batas SKS, prasyarat, kurikulum, dan bentrok jadwal.",
+      "file": "m4-29.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 30,
+      "title": "Lihat Krs Validation Results",
+      "desc": "Hasil validasi per aturan.",
+      "file": "m4-30.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 31,
+      "title": "Hasil validasi KRS",
+      "desc": "Setiap aturan berstatus valid/warning/invalid beserta pesan.",
+      "file": "m4-31.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs-validation-results"
+    },
+    {
+      "n": 32,
+      "title": "Kembali ke menu Krs",
+      "desc": "Ajukan KRS setelah valid.",
+      "file": "m4-32.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs-validation-results"
+    },
+    {
+      "n": 33,
+      "title": "Klik Submit",
+      "desc": "KRS dikirim ke Dosen PA (status Menunggu PA) dan Dosen PA menerima notifikasi.",
+      "file": "m4-33.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 34,
+      "title": "Status: waiting_pa",
+      "desc": "KRS menunggu persetujuan Dosen PA.",
+      "file": "m4-34.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 35,
+      "title": "Login sebagai Dosen (PA, Pembimbing, Penguji)",
+      "desc": "Buka https://fasilkom.sifakueu.test/dosen/login, isi email dosen.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m4-35.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/login"
+    },
+    {
+      "n": 36,
+      "title": "Dosen PA membuka Krs",
+      "desc": "KRS mahasiswa bimbingan akademik.",
+      "file": "m4-36.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen"
+    },
+    {
+      "n": 37,
+      "title": "Klik Approve",
+      "desc": "Dosen PA menyetujui KRS (atau Minta Revisi dengan catatan).",
+      "file": "m4-37.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/krs"
+    },
+    {
+      "n": 38,
+      "title": "Klik Approve — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m4-38.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/krs"
+    },
+    {
+      "n": 39,
+      "title": "KRS disetujui",
+      "desc": "Status KRS approved.",
+      "file": "m4-39.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/krs"
+    },
+    {
+      "n": 40,
+      "title": "Admin Prodi klik Final",
+      "desc": "KRS dikunci (final) dan menjadi dasar kelas & monitoring.",
+      "file": "m4-40.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/krs"
+    },
+    {
+      "n": 41,
+      "title": "KRS final",
+      "desc": "Status final.",
+      "file": "m4-41.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/krs"
+    },
+    {
+      "n": 42,
+      "title": "Mahasiswa melihat KRS final",
+      "desc": "KRS sudah final.",
+      "file": "m4-42.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 43,
+      "title": "Buka Krs Details",
+      "desc": "Rincian mata kuliah yang diambil.",
+      "file": "m4-43.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+    },
+    {
+      "n": 44,
+      "title": "Rincian KRS",
+      "desc": "Daftar MK, SKS, dan status approved.",
+      "file": "m4-44.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs-details"
+    },
+    {
+      "n": 45,
+      "title": "Buka Jadwal Kuliahs",
+      "desc": "Jadwal kuliah mahasiswa.",
+      "file": "m4-45.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/krs-details"
+    },
+    {
+      "n": 46,
+      "title": "Jadwal kuliah",
+      "desc": "Hari, jam, ruang, dan dosen pengampu.",
+      "file": "m4-46.png",
+      "role": "mahasiswa_demo",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-kuliahs"
+    },
+    {
+      "n": 47,
+      "title": "Login sebagai Kaprodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/pimpinan/login, isi email kaprodi.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m4-47.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/login"
+    },
+    {
+      "n": 48,
+      "title": "Kaprodi memantau KRS",
+      "desc": "Rekap status KRS seluruh mahasiswa prodi.",
+      "file": "m4-48.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 49,
+      "title": "Monitoring KRS oleh Kaprodi",
+      "desc": "Kaprodi melihat status KRS (draft/menunggu PA/final).",
+      "file": "m4-49.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/krs"
+    }
+  ],
+  "issues": []
+}

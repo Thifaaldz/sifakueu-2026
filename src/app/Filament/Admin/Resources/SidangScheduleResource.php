@@ -41,7 +41,20 @@ class SidangScheduleResource extends Resource
                 'completed' => 'Completed',
                 'cancelled' => 'Cancelled',
             ]),
-            Forms\Components\KeyValue::make('conflict_payload')->columnSpanFull(),
+            Forms\Components\Placeholder::make('conflict_summary')
+                ->label('Konflik terdeteksi')
+                ->content(fn (?SidangSchedule $record) => collect($record?->conflict_payload ?? [])
+                    ->map(fn ($conflict) => match ($conflict['type'] ?? null) {
+                        'ROOM_CONFLICT' => 'Ruangan sudah dipakai sidang lain',
+                        'STUDENT_CONFLICT' => 'Mahasiswa sudah memiliki jadwal sidang lain',
+                        'EXAMINER_CONFLICT' => 'Dosen penguji/pembimbing sudah menguji sidang lain',
+                        'ACADEMIC_SCHEDULE_CONFLICT' => 'Dosen sedang mengajar (jadwal kuliah M4)',
+                        default => (string) ($conflict['type'] ?? 'Konflik'),
+                    })
+                    ->unique()
+                    ->implode('; ') ?: 'Tidak ada konflik')
+                ->visible(fn (?SidangSchedule $record) => filled($record))
+                ->columnSpanFull(),
         ])->columns(2);
     }
 
@@ -59,7 +72,7 @@ class SidangScheduleResource extends Resource
             Tables\Actions\Action::make('finalize')
                 ->label('Finalisasi')
                 ->icon('heroicon-o-lock-closed')
-                ->visible(fn () => auth()->user()?->can('finalize_sidang_schedule') || auth()->user()?->can('update_sidang::schedule'))
+                ->visible(fn (SidangSchedule $record) => in_array($record->status, ['draft', 'validated', 'conflict', 'rescheduled'], true) && (auth()->user()?->can('finalize_sidang_schedule') || auth()->user()?->can('update_sidang::schedule')))
                 ->action(fn (SidangSchedule $record) => app(SidangScheduleService::class)->finalize($record)),
             Tables\Actions\Action::make('start')
                 ->label('Mulai')

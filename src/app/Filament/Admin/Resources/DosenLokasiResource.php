@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\DosenLokasiResource\Pages;
 use App\Filament\Admin\Resources\DosenLokasiResource\RelationManagers;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\DosenLokasi;
+use App\Filament\Support\DosenOwnership;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,7 +31,7 @@ class DosenLokasiResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('dosen_id')->relationship('dosen', 'name')->searchable()->preload()->required(),
+                DosenOwnership::field(),
                 Forms\Components\TextInput::make('latitude')->numeric()->required()->minValue(-90)->maxValue(90),
                 Forms\Components\TextInput::make('longitude')->numeric()->required()->minValue(-180)->maxValue(180),
                 Forms\Components\TextInput::make('accuracy')->label('Accuracy')->numeric()->minValue(0),

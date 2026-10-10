@@ -35,8 +35,12 @@ class DosenPanelProvider extends PanelProvider
                 'info' => Color::Sky,
                 'warning' => Color::Amber,
             ])
+            ->navigation(fn (\Filament\Navigation\NavigationBuilder $builder) => \App\Filament\Support\RoleNavigation::build($builder))
+            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->sidebarCollapsibleOnDesktop()
+            ->maxContentWidth(\Filament\Support\Enums\MaxWidth::SevenExtraLarge)
             ->pages([
-                Pages\Dashboard::class,
+                \App\Filament\Pages\SifakDashboard::class,
                 \App\Filament\Pages\AksesRolePage::class,
             ])
             ->resources([
@@ -50,7 +54,27 @@ class DosenPanelProvider extends PanelProvider
                 \App\Filament\Admin\Resources\KrsResource::class,
                 \App\Filament\Admin\Resources\KrsDetailResource::class,
                 \App\Filament\Admin\Resources\KrsValidationResultResource::class,
+                \App\Filament\Admin\Resources\SuratResource::class,
+                \App\Filament\Admin\Resources\GeneratedLetterResource::class,
+                \App\Filament\Admin\Resources\LetterDistributionResource::class,
+                \App\Filament\Admin\Resources\LetterArchiveResource::class,
                 \App\Filament\Admin\Resources\AlertResource::class,
+                \App\Filament\Admin\Resources\MonitoringSnapshotResource::class,
+                \App\Filament\Admin\Resources\MonitoringIndicatorResultResource::class,
+                \App\Filament\Admin\Resources\AlertFollowupResource::class,
+                \App\Filament\Admin\Resources\AlertEscalationResource::class,
+                \App\Filament\Admin\Resources\MahasiswaProfileResource::class,
+                \App\Filament\Admin\Resources\MahasiswaInterestResource::class,
+                \App\Filament\Admin\Resources\MahasiswaCertificationResource::class,
+                \App\Filament\Admin\Resources\MahasiswaPortfolioResource::class,
+                \App\Filament\Admin\Resources\MahasiswaOrganizationResource::class,
+                \App\Filament\Admin\Resources\MahasiswaMbkmResource::class,
+                \App\Filament\Admin\Resources\MahasiswaCplScoreResource::class,
+                \App\Filament\Admin\Resources\MahasiswaPloScoreResource::class,
+                \App\Filament\Admin\Resources\MahasiswaGraduateProfileScoreResource::class,
+                \App\Filament\Admin\Resources\CompetencyGapResource::class,
+                \App\Filament\Admin\Resources\StudentRecommendationResource::class,
+                \App\Filament\Admin\Resources\RecommendationHistoryResource::class,
                 \App\Filament\Admin\Resources\DokumenTaResource::class,
                 \App\Filament\Admin\Resources\TugasAkhirResource::class,
                 \App\Filament\Admin\Resources\TaSectionResource::class,
@@ -99,6 +123,6 @@ class DosenPanelProvider extends PanelProvider
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
             ])
-            ->authMiddleware([Authenticate::class]);
+            ->authMiddleware([Authenticate::class, \App\Http\Middleware\EnforceRoleFeatures::class]);
     }
 }

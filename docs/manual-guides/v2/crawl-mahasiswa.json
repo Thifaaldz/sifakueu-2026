@@ -1,0 +1,1148 @@
+{
+  "mahasiswa": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "mahasiswa",
+      "email": "mahasiswa.fasilkom@sifak.local",
+      "name": "Mahasiswa",
+      "role": "mahasiswa"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Dashboard",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa"
+          }
+        ]
+      },
+      {
+        "label": "Jobdesk",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/modul-hak-akses"
+          }
+        ]
+      },
+      {
+        "label": "M4 KRS & Jadwal",
+        "items": [
+          {
+            "label": "Krs",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+          },
+          {
+            "label": "Jadwal Kuliahs",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-kuliahs"
+          }
+        ]
+      },
+      {
+        "label": "M1 Sidang",
+        "items": [
+          {
+            "label": "Pendaftaran Sidangs",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/pendaftaran-sidangs"
+          },
+          {
+            "label": "Sidang Types",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-types"
+          },
+          {
+            "label": "Sidang Requirements",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-requirements"
+          },
+          {
+            "label": "Sidang Registrations",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations"
+          },
+          {
+            "label": "Sidang Schedules",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-schedules"
+          },
+          {
+            "label": "Sidang Results",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-results"
+          },
+          {
+            "label": "Sidang Revisions",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-revisions"
+          },
+          {
+            "label": "Sidang Minutes",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-minutes"
+          }
+        ]
+      },
+      {
+        "label": "M2 Surat",
+        "items": [
+          {
+            "label": "Surats",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/surats"
+          },
+          {
+            "label": "Dokumen Generated",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/generated-letters"
+          },
+          {
+            "label": "Distribusi Surat",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/letter-distributions"
+          },
+          {
+            "label": "Arsip Surat",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/letter-archives"
+          }
+        ]
+      },
+      {
+        "label": "M3 Monitoring",
+        "items": [
+          {
+            "label": "Alerts",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/alerts"
+          },
+          {
+            "label": "Monitoring Snapshots",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/monitoring-snapshots"
+          },
+          {
+            "label": "Monitoring Indicator Results",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/monitoring-indicator-results"
+          },
+          {
+            "label": "Alert Followups",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/alert-followups"
+          }
+        ]
+      },
+      {
+        "label": "M6 Profiling Mahasiswa",
+        "items": [
+          {
+            "label": "Mahasiswa Profiles",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-profiles"
+          },
+          {
+            "label": "Mahasiswa Interests",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-interests"
+          },
+          {
+            "label": "Sertifikasi Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-certifications"
+          },
+          {
+            "label": "Portofolio Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-portfolios"
+          },
+          {
+            "label": "Organisasi Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-organizations"
+          },
+          {
+            "label": "MBKM/Magang",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-mbkms"
+          },
+          {
+            "label": "Cpls",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/cpls"
+          },
+          {
+            "label": "Plos",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/plos"
+          },
+          {
+            "label": "Mahasiswa Cpl Scores",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-cpl-scores"
+          },
+          {
+            "label": "Mahasiswa Plo Scores",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-plo-scores"
+          },
+          {
+            "label": "Graduate Profiles",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/graduate-profiles"
+          },
+          {
+            "label": "Skor Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-graduate-profile-scores"
+          },
+          {
+            "label": "Competency Gaps",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/competency-gaps"
+          },
+          {
+            "label": "Student Recommendations",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/student-recommendations"
+          },
+          {
+            "label": "Riwayat Rekomendasi",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/recommendation-histories"
+          }
+        ]
+      },
+      {
+        "label": "M7 Dokumen TA",
+        "items": [
+          {
+            "label": "Dokumen Tas",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/dokumen-tas"
+          },
+          {
+            "label": "Tugas Akhirs",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/tugas-akhirs"
+          },
+          {
+            "label": "Ta Documents",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+          },
+          {
+            "label": "Ta Document Versions",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/ta-document-versions"
+          },
+          {
+            "label": "Ta Comments",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/ta-comments"
+          },
+          {
+            "label": "Ta Progress Logs",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/ta-progress-logs"
+          },
+          {
+            "label": "Repository Items",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/repository-items"
+          },
+          {
+            "label": "Revision Cycles",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/revision-cycles"
+          }
+        ]
+      },
+      {
+        "label": "Master Data",
+        "items": [
+          {
+            "label": "Mahasiswas",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswas"
+          },
+          {
+            "label": "Dosens",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/dosens"
+          },
+          {
+            "label": "Mata Kuliahs",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mata-kuliahs"
+          }
+        ]
+      },
+      {
+        "label": "M4 KRS & Penjadwalan",
+        "items": [
+          {
+            "label": "Penawaran Mata Kuliahs",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/penawaran-mata-kuliahs"
+          },
+          {
+            "label": "Krs Details",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/krs-details"
+          },
+          {
+            "label": "Krs Validation Results",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/krs-validation-results"
+          },
+          {
+            "label": "Kelas Kuliahs",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/kelas-kuliahs"
+          },
+          {
+            "label": "Jadwal Histories",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-histories"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Dashboard",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa",
+        "status": 200,
+        "errors": [],
+        "title": "Dashboard",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Jobdesk",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "M4 KRS & Jadwal",
+        "label": "Krs",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/krs",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Krs",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Validasi",
+          "Edit"
+        ],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M4 KRS & Jadwal",
+        "label": "Jadwal Kuliahs",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-kuliahs",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Jadwal Kuliahs",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Cek Konflik"
+        ]
+      },
+      {
+        "group": "M1 Sidang",
+        "label": "Pendaftaran Sidangs",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/pendaftaran-sidangs",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Pendaftaran Sidangs",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M1 Sidang",
+        "label": "Sidang Types",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-types",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Sidang Types",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M1 Sidang",
+        "label": "Sidang Requirements",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-requirements",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Sidang Requirements",
+        "hasCreate": false,
+        "rows": 9,
+        "rowActions": []
+      },
+      {
+        "group": "M1 Sidang",
+        "label": "Sidang Registrations",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Sidang Registrations",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Validasi Syarat",
+          "Edit"
+        ],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M1 Sidang",
+        "label": "Sidang Schedules",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-schedules",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Sidang Schedules",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": [
+          "Mulai"
+        ]
+      },
+      {
+        "group": "M1 Sidang",
+        "label": "Sidang Results",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-results",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Sidang Results",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "M1 Sidang",
+        "label": "Sidang Revisions",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-revisions",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Sidang Revisions",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "M1 Sidang",
+        "label": "Sidang Minutes",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-minutes",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Sidang Minutes",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "M2 Surat",
+        "label": "Surats",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/surats",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Surats",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Download",
+          "Edit"
+        ],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/file-upload.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allo",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M2 Surat",
+        "label": "Dokumen Generated",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/generated-letters",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Generated Letters",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "M2 Surat",
+        "label": "Distribusi Surat",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/letter-distributions",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Letter Distributions",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "M2 Surat",
+        "label": "Arsip Surat",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/letter-archives",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Letter Archives",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "M3 Monitoring",
+        "label": "Alerts",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/alerts",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Alerts",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Acknowledge",
+          "Tindak lanjut",
+          "Eskalasi",
+          "Resolve",
+          "Edit"
+        ]
+      },
+      {
+        "group": "M3 Monitoring",
+        "label": "Monitoring Snapshots",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/monitoring-snapshots",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Monitoring Snapshots",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M3 Monitoring",
+        "label": "Monitoring Indicator Results",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/monitoring-indicator-results",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Monitoring Indicator Results",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "M3 Monitoring",
+        "label": "Alert Followups",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/alert-followups",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Alert Followups",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Mahasiswa Profiles",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-profiles",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Profiles",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Mahasiswa Interests",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-interests",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Interests",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "Edit"
+        ],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Sertifikasi Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-certifications",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Certifications",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Portofolio Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-portfolios",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Portfolios",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/tags-input.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Organisasi Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-organizations",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Organizations",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "MBKM/Magang",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-mbkms",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Mbkms",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Cpls",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/cpls",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Cpls",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Plos",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/plos",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Plos",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Mahasiswa Cpl Scores",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-cpl-scores",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Cpl Scores",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Mahasiswa Plo Scores",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-plo-scores",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Plo Scores",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Graduate Profiles",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/graduate-profiles",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Graduate Profiles",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Skor Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-graduate-profile-scores",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswa Graduate Profile Scores",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Competency Gaps",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/competency-gaps",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Competency Gaps",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Student Recommendations",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/student-recommendations",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Student Recommendations",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "M6 Profiling Mahasiswa",
+        "label": "Riwayat Rekomendasi",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/recommendation-histories",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Recommendation Histories",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": [
+          "View"
+        ]
+      },
+      {
+        "group": "M7 Dokumen TA",
+        "label": "Dokumen Tas",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/dokumen-tas",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Dokumen Tas",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M7 Dokumen TA",
+        "label": "Tugas Akhirs",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/tugas-akhirs",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Tugas Akhirs",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Buat Struktur",
+          "Hitung Progress",
+          "Checklist",
+          "Edit"
+        ],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/tags-input.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M7 Dokumen TA",
+        "label": "Ta Documents",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Ta Documents",
+        "hasCreate": true,
+        "rows": 8,
+        "rowActions": [
+          "Upload Versi",
+          "Edit"
+        ],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M7 Dokumen TA",
+        "label": "Ta Document Versions",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-document-versions",
+        "status": 500,
+        "errors": [
+          "Failed to load resource: the server responded with a status of 500 (Internal Server Error)",
+          "BODY: Internal Server Error",
+          "HTTP 500"
+        ],
+        "title": "",
+        "hasCreate": false,
+        "rows": 1650,
+        "rowActions": []
+      },
+      {
+        "group": "M7 Dokumen TA",
+        "label": "Ta Comments",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-comments",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Ta Comments",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M7 Dokumen TA",
+        "label": "Ta Progress Logs",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-progress-logs",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Ta Progress Logs",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "M7 Dokumen TA",
+        "label": "Repository Items",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/repository-items",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Repository Items",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "M7 Dokumen TA",
+        "label": "Revision Cycles",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/revision-cycles",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Revision Cycles",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Master Data",
+        "label": "Mahasiswas",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswas",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mahasiswas",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": [
+          "Evaluasi alert",
+          "Recalculate M6",
+          "Edit"
+        ]
+      },
+      {
+        "group": "Master Data",
+        "label": "Dosens",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/dosens",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Dosens",
+        "hasCreate": false,
+        "rows": 7,
+        "rowActions": []
+      },
+      {
+        "group": "Master Data",
+        "label": "Mata Kuliahs",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mata-kuliahs",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Mata Kuliahs",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Hitung rekomendasi"
+        ]
+      },
+      {
+        "group": "M4 KRS & Penjadwalan",
+        "label": "Penawaran Mata Kuliahs",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/penawaran-mata-kuliahs",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Penawaran Mata Kuliahs",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Hitung Peminat",
+          "Generate Kelas"
+        ]
+      },
+      {
+        "group": "M4 KRS & Penjadwalan",
+        "label": "Krs Details",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/krs-details",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Krs Details",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Edit"
+        ],
+        "create": {
+          "status": 200,
+          "errors": [
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/textarea.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-O",
+            "Failed to load resource: net::ERR_FAILED",
+            "Access to script at 'https://sifakueu.test/js/filament/forms/components/select.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+            "Failed to load resource: net::ERR_FAILED"
+          ]
+        }
+      },
+      {
+        "group": "M4 KRS & Penjadwalan",
+        "label": "Krs Validation Results",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/krs-validation-results",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Krs Validation Results",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "M4 KRS & Penjadwalan",
+        "label": "Kelas Kuliahs",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/kelas-kuliahs",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Kelas Kuliahs",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "M5 Kandidat"
+        ]
+      },
+      {
+        "group": "M4 KRS & Penjadwalan",
+        "label": "Jadwal Histories",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-histories",
+        "status": 200,
+        "errors": [
+          "Access to script at 'https://sifakueu.test/js/filament/tables/components/table.js?v=3.3.10.0' from origin 'https://fasilkom.sifakueu.test' has been blocked by CORS policy: No 'Access-Control-Allow-Ori",
+          "Failed to load resource: net::ERR_FAILED"
+        ],
+        "title": "Jadwal Histories",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  }
+}

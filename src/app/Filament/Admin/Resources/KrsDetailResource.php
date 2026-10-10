@@ -26,14 +26,24 @@ class KrsDetailResource extends Resource
     public static function form(Form $form): Form
     {
         return $form->schema([
-            Forms\Components\Select::make('krs_id')->relationship('krs', 'id')->searchable()->preload()->required(),
+            Forms\Components\Select::make('krs_id')
+                ->relationship('krs', 'id', modifyQueryUsing: fn ($query) => auth()->user()?->hasRole('mahasiswa')
+                    ? $query->whereIn('status', ['draft', 'revision_required'])->whereHas('mahasiswa', fn ($builder) => $builder->where('user_id', auth()->id()))
+                    : $query)
+                ->getOptionLabelFromRecordUsing(fn ($record) => 'KRS #' . $record->id . ' - ' . $record->mahasiswa?->nim . ' (' . $record->semester?->code . ')')
+                ->searchable()
+                ->preload()
+                ->required(),
             Forms\Components\Select::make('mata_kuliah_id')->relationship('mataKuliah', 'name')->searchable()->preload()->required(),
             Forms\Components\Select::make('penawaran_mata_kuliah_id')->relationship('penawaranMataKuliah', 'id')->searchable()->preload(),
             Forms\Components\Select::make('kelas_kuliah_id')->relationship('kelasKuliah', 'kode_kelas')->searchable()->preload(),
             Forms\Components\TextInput::make('sks')->numeric()->required(),
-            Forms\Components\Select::make('status')->required()->default('selected')->options(['selected' => 'Selected', 'approved' => 'Approved', 'dropped' => 'Dropped']),
-            Forms\Components\Select::make('validation_status')->required()->default('valid')->options(['valid' => 'Valid', 'invalid' => 'Invalid', 'warning' => 'Warning']),
-            Forms\Components\Textarea::make('validation_note')->columnSpanFull(),
+            Forms\Components\Select::make('status')->required()->default('selected')->visible(fn () => ! auth()->user()?->hasRole('mahasiswa'))->options(['selected' => 'Selected', 'approved' => 'Approved', 'dropped' => 'Dropped']),
+            Forms\Components\Select::make('validation_status')->required()->default('valid')->visible(fn () => ! auth()->user()?->hasRole('mahasiswa'))->options(['valid' => 'Valid', 'invalid' => 'Invalid', 'warning' => 'Warning']),
+            Forms\Components\TextInput::make('final_score')->visible(fn () => ! auth()->user()?->hasRole('mahasiswa'))->label('Nilai Akhir')->numeric()->minValue(0)->maxValue(100),
+            Forms\Components\TextInput::make('final_grade')->visible(fn () => ! auth()->user()?->hasRole('mahasiswa'))->label('Grade')->maxLength(10),
+            Forms\Components\DateTimePicker::make('passed_at')->visible(fn () => ! auth()->user()?->hasRole('mahasiswa'))->label('Lulus pada'),
+            Forms\Components\Textarea::make('validation_note')->visible(fn () => ! auth()->user()?->hasRole('mahasiswa'))->columnSpanFull(),
         ])->columns(2);
     }
 
@@ -46,6 +56,8 @@ class KrsDetailResource extends Resource
             Tables\Columns\TextColumn::make('mataKuliah.name')->label('Mata Kuliah')->searchable(),
             Tables\Columns\TextColumn::make('kelasKuliah.kode_kelas')->label('Kelas')->badge(),
             Tables\Columns\TextColumn::make('sks')->label('SKS'),
+            Tables\Columns\TextColumn::make('final_score')->label('Nilai')->sortable(),
+            Tables\Columns\TextColumn::make('final_grade')->label('Grade')->badge(),
             Tables\Columns\TextColumn::make('validation_status')->badge(),
             Tables\Columns\TextColumn::make('status')->badge(),
         ])->actions([

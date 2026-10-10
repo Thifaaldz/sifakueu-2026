@@ -47,8 +47,9 @@ class AdminPanelProvider extends PanelProvider
             ->sidebarCollapsibleOnDesktop()
             ->discoverResources(in: app_path('Filament/Admin/Resources'), for: 'App\\Filament\\Admin\\Resources')
             ->discoverPages(in: app_path('Filament/Admin/Pages'), for: 'App\\Filament\\Admin\\Pages')
+            ->navigation(fn (\Filament\Navigation\NavigationBuilder $builder) => \App\Filament\Support\RoleNavigation::build($builder))
             ->pages([
-                Pages\Dashboard::class,
+                \App\Filament\Pages\SifakDashboard::class,
                 \App\Filament\Pages\AksesRolePage::class,
             ])
             ->discoverClusters(in: app_path('Filament/Admin/Clusters'), for: 'App\\Filament\\Admin\\Clusters')
@@ -124,6 +125,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
+                \App\Http\Middleware\EnforceRoleFeatures::class,
             ]);
     }
 }

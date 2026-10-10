@@ -36,11 +36,21 @@ class PimpinanPanelProvider extends PanelProvider
                 'success' => Color::Emerald,
                 'warning' => Color::Amber,
             ])
+            ->navigation(fn (\Filament\Navigation\NavigationBuilder $builder) => \App\Filament\Support\RoleNavigation::build($builder))
+            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->sidebarCollapsibleOnDesktop()
+            ->maxContentWidth(\Filament\Support\Enums\MaxWidth::SevenExtraLarge)
             ->pages([
-                Pages\Dashboard::class,
+                \App\Filament\Pages\SifakDashboard::class,
                 \App\Filament\Pages\AksesRolePage::class,
             ])
+            ->widgets([
+                \App\Filament\Admin\Widgets\MonitoringRiskOverview::class,
+            ])
             ->resources([
+                \App\Filament\Admin\Resources\MonitoringOverrideResource::class,
+                \App\Filament\Admin\Resources\PemetaanMkCplResource::class,
+                \App\Filament\Admin\Resources\PemetaanCplPloResource::class,
                 \App\Filament\Admin\Resources\FakultasResource::class,
                 \App\Filament\Admin\Resources\ProgramStudiResource::class,
                 \App\Filament\Admin\Resources\TahunAkademikResource::class,
@@ -63,7 +73,27 @@ class PimpinanPanelProvider extends PanelProvider
                 \App\Filament\Admin\Resources\JadwalHistoryResource::class,
                 \App\Filament\Admin\Resources\PendaftaranSidangResource::class,
                 \App\Filament\Admin\Resources\SuratResource::class,
+                \App\Filament\Admin\Resources\SuratApprovalResource::class,
+                \App\Filament\Admin\Resources\LetterVerificationResource::class,
+                \App\Filament\Admin\Resources\LetterNumberResource::class,
+                \App\Filament\Admin\Resources\GeneratedLetterResource::class,
+                \App\Filament\Admin\Resources\LetterDistributionResource::class,
+                \App\Filament\Admin\Resources\LetterArchiveResource::class,
                 \App\Filament\Admin\Resources\AlertResource::class,
+                \App\Filament\Admin\Resources\MonitoringSnapshotResource::class,
+                \App\Filament\Admin\Resources\MonitoringIndicatorResultResource::class,
+                \App\Filament\Admin\Resources\AlertFollowupResource::class,
+                \App\Filament\Admin\Resources\AlertEscalationResource::class,
+                \App\Filament\Admin\Resources\MahasiswaProfileResource::class,
+                \App\Filament\Admin\Resources\CplResource::class,
+                \App\Filament\Admin\Resources\PloResource::class,
+                \App\Filament\Admin\Resources\MahasiswaCplScoreResource::class,
+                \App\Filament\Admin\Resources\MahasiswaPloScoreResource::class,
+                \App\Filament\Admin\Resources\GraduateProfileResource::class,
+                \App\Filament\Admin\Resources\MahasiswaGraduateProfileScoreResource::class,
+                \App\Filament\Admin\Resources\CompetencyGapResource::class,
+                \App\Filament\Admin\Resources\StudentRecommendationResource::class,
+                \App\Filament\Admin\Resources\RecommendationHistoryResource::class,
                 \App\Filament\Admin\Resources\DokumenTaResource::class,
                 \App\Filament\Admin\Resources\TugasAkhirResource::class,
                 \App\Filament\Admin\Resources\TaSectionResource::class,
@@ -111,6 +141,6 @@ class PimpinanPanelProvider extends PanelProvider
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
             ])
-            ->authMiddleware([Authenticate::class]);
+            ->authMiddleware([Authenticate::class, \App\Http\Middleware\EnforceRoleFeatures::class]);
     }
 }

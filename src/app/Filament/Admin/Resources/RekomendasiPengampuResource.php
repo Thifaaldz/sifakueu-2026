@@ -67,7 +67,7 @@ class RekomendasiPengampuResource extends Resource
                 Tables\Actions\Action::make('accept')
                     ->label('Accept')
                     ->icon('heroicon-o-check')
-                    ->visible(fn (RekomendasiPengampu $record) => in_array($record->status, ['generated', 'reviewed'], true))
+                    ->visible(fn (RekomendasiPengampu $record) => in_array($record->status, ['generated', 'reviewed'], true) && (auth()->user()?->can('accept_dosen_recommendation') || auth()->user()?->can('update_rekomendasi::pengampu')))
                     ->form([
                         Forms\Components\Textarea::make('justification')->label('Justifikasi')->helperText('Wajib jika skor di bawah threshold.'),
                     ])
@@ -76,7 +76,7 @@ class RekomendasiPengampuResource extends Resource
                     ->label('Reject')
                     ->icon('heroicon-o-x-mark')
                     ->color('danger')
-                    ->visible(fn (RekomendasiPengampu $record) => in_array($record->status, ['generated', 'reviewed'], true))
+                    ->visible(fn (RekomendasiPengampu $record) => in_array($record->status, ['generated', 'reviewed'], true) && (auth()->user()?->can('accept_dosen_recommendation') || auth()->user()?->can('update_rekomendasi::pengampu')))
                     ->form([
                         Forms\Components\Textarea::make('justification')->label('Alasan'),
                     ])

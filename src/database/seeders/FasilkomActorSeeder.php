@@ -13,12 +13,14 @@ use App\Models\DosenPublikasi;
 use App\Models\DosenSertifikasi;
 use App\Models\JadwalKonsultasi;
 use App\Models\JadwalKuliah;
+use App\Models\JenisSurat;
 use App\Models\Keahlian;
 use App\Models\KelasKuliah;
 use App\Models\Krs;
 use App\Models\KrsDetail;
 use App\Models\Kbk;
 use App\Models\Mahasiswa;
+use App\Models\MahasiswaInterest;
 use App\Models\MataKuliah;
 use App\Models\PenawaranMataKuliah;
 use App\Models\PlottingDosen;
@@ -29,7 +31,18 @@ use App\Models\RiwayatMengajar;
 use App\Models\RumpunIlmu;
 use App\Models\Semester;
 use App\Models\Security\Role;
+use App\Models\SidangAssignment;
+use App\Models\SidangExaminerSummary;
+use App\Models\SidangMinute;
+use App\Models\SidangRegistration;
+use App\Models\SidangRequirementResult;
+use App\Models\SidangResult;
+use App\Models\SidangRubric;
+use App\Models\SidangSchedule;
+use App\Models\SidangScore;
+use App\Models\SidangType;
 use App\Models\StoredFile;
+use App\Models\Surat;
 use App\Models\TaApproval;
 use App\Models\TaDocument;
 use App\Models\TaDocumentVersion;
@@ -37,6 +50,9 @@ use App\Models\Tenant;
 use App\Models\TugasAkhir;
 use App\Models\User;
 use App\Services\Sifak\DosenRecommendationService;
+use App\Services\Sifak\LetterWorkflowService;
+use App\Services\Sifak\MonitoringEvaluationService;
+use App\Services\Sifak\StudentProfileService;
 use App\Services\Sifak\TaProgressService;
 use App\Services\Sifak\TaService;
 use App\Support\Tenancy\TenantContext;
@@ -101,6 +117,8 @@ class FasilkomActorSeeder extends Seeder
             'name' => 'Mahasiswa FASILKOM',
             'email' => 'mahasiswa.fasilkom@sifak.local',
             'nim' => '2026001001',
+            'semester' => 8,
+            'sks_lulus' => 132,
         ]);
 
         $this->seedStudent($tenant, $programStudi, [
@@ -120,6 +138,10 @@ class FasilkomActorSeeder extends Seeder
 
         $this->seedM4Example($tenant);
         $this->seedM7Example($tenant);
+        $this->seedM1Example($tenant);
+        $this->seedM6Example($tenant);
+        $this->seedM2Example($tenant, $programStudi);
+        $this->seedM3Example();
 
         app(TenantContext::class)->clear();
     }
@@ -152,8 +174,10 @@ class FasilkomActorSeeder extends Seeder
                 'mata_kuliah_id' => $offerings->first()->mata_kuliah_id,
                 'academic_year' => '2026/2027',
                 'term' => 'Ganjil',
-                'status' => 'waiting_pa',
+                'status' => 'final',
                 'submitted_at' => now(),
+                'approved_at' => now()->subMonths(2)->subDays(2),
+                'finalized_at' => now()->subMonths(2),
                 'total_sks' => $offerings->sum(fn (PenawaranMataKuliah $offering) => $offering->mataKuliah?->sks ?? 0),
             ]
         );
@@ -176,6 +200,9 @@ class FasilkomActorSeeder extends Seeder
                     'sks' => $offering->mataKuliah?->sks ?? 0,
                     'status' => 'selected',
                     'validation_status' => 'valid',
+                    'final_score' => $index === 0 ? 86 : 82,
+                    'final_grade' => $index === 0 ? 'A' : 'B',
+                    'passed_at' => now()->subMonths(2),
                 ]
             );
 
@@ -210,6 +237,66 @@ class FasilkomActorSeeder extends Seeder
 
             $offering->update(['jumlah_peminat' => 1, 'target_jumlah_kelas' => 1]);
         });
+    }
+
+    private function seedM2Example(Tenant $tenant, ProgramStudi $programStudi): void
+    {
+        $jenisSurat = JenisSurat::query()->where('code', 'AKTIF-KULIAH')->first();
+        $mahasiswa = Mahasiswa::query()->where('nim', '2026001001')->first();
+        $adminProdi = User::query()->where('email', 'admin.prodi.fasilkom@sifak.local')->first();
+        $kaprodi = User::query()->where('email', 'kaprodi.fasilkom@sifak.local')->first();
+        $adminFakultas = User::query()->where('email', 'admin.fasilkom@sifak.local')->first();
+
+        if (! $jenisSurat || ! $mahasiswa || ! $adminProdi || ! $kaprodi || ! $adminFakultas) {
+            return;
+        }
+
+        $surat = Surat::updateOrCreate(
+            ['tenant_id' => $tenant->id, 'request_number' => 'REQ-SEED-M2-FASILKOM'],
+            [
+                'jenis_surat_id' => $jenisSurat->id,
+                'requester_id' => $mahasiswa->user_id,
+                'requester_type' => 'STUDENT',
+                'requester_reference_id' => $mahasiswa->id,
+                'program_studi_id' => $programStudi->id,
+                'subject' => 'Surat Keterangan Aktif Kuliah',
+                'status' => 'DRAFT',
+                'payload' => [
+                    'nama_mahasiswa' => $mahasiswa->name,
+                    'nim' => $mahasiswa->nim,
+                    'program_studi' => $programStudi->name,
+                    'semester' => $mahasiswa->semester,
+                    'keperluan' => 'Keperluan administrasi beasiswa.',
+                ],
+                'attachments' => [],
+            ]
+        );
+
+        $workflow = app(LetterWorkflowService::class);
+
+        if (in_array($surat->status, ['DRAFT', 'REVISION_REQUIRED'], true)) {
+            $surat = $workflow->submit($surat, $mahasiswa->user);
+        }
+
+        if (in_array($surat->status, ['SUBMITTED', 'UNDER_VERIFICATION'], true)) {
+            $surat = $workflow->verify($surat, $adminProdi, 'Data mahasiswa dan kebutuhan surat valid.');
+        }
+
+        foreach ([$kaprodi, $adminFakultas] as $approver) {
+            if ($surat->status === 'WAITING_APPROVAL') {
+                $surat = $workflow->approve($surat, $approver, 'Disetujui dari seeder M2.');
+            }
+        }
+
+        if ($surat->status === 'APPROVED') {
+            $workflow->generateNumber($surat, $adminFakultas);
+            $surat->refresh();
+        }
+
+        if (in_array($surat->status, ['NUMBERED', 'APPROVED'], true) && ! $surat->generatedLetters()->exists()) {
+            $workflow->generateDocument($surat, $adminFakultas);
+            $surat->refresh();
+        }
     }
 
     /**
@@ -592,8 +679,151 @@ class FasilkomActorSeeder extends Seeder
         );
     }
 
+    private function seedM1Example(Tenant $tenant): void
+    {
+        $mahasiswa = Mahasiswa::query()->where('nim', '2026001001')->first();
+        $dosen = Dosen::query()->where('nidn', '0011223343')->first();
+        $kaprodi = Dosen::query()->where('nidn', '0011223301')->first();
+        $kbk = Dosen::query()->where('nidn', '0011223302')->first();
+        $semester = Semester::query()->where('code', '2026-GANJIL')->first();
+        $ruangan = Ruangan::query()->where('code', 'R-301')->first();
+        $type = SidangType::query()->where('code', 'SIDANG_TA')->first();
+        $ta = TugasAkhir::query()->where('mahasiswa_id', $mahasiswa?->id)->first();
+
+        if (! $mahasiswa || ! $dosen || ! $kaprodi || ! $kbk || ! $semester || ! $ruangan || ! $type || ! $ta) {
+            return;
+        }
+
+        $registration = SidangRegistration::updateOrCreate(
+            ['tenant_id' => $tenant->id, 'registration_number' => 'SIDANG-TA-2026-0001'],
+            [
+                'sidang_type_id' => $type->id,
+                'mahasiswa_id' => $mahasiswa->id,
+                'tugas_akhir_id' => $ta->id,
+                'semester_id' => $semester->id,
+                'tahun_akademik_id' => $semester->tahun_akademik_id,
+                'status' => 'scheduled',
+                'submitted_at' => now()->subDays(7),
+                'verified_at' => now()->subDays(6),
+                'verified_by' => User::query()->where('email', 'admin.prodi.fasilkom@sifak.local')->value('id'),
+            ]
+        );
+
+        $type->requirements()->get()->each(function ($requirement) use ($tenant, $registration) {
+            SidangRequirementResult::updateOrCreate(
+                ['tenant_id' => $tenant->id, 'sidang_registration_id' => $registration->id, 'sidang_requirement_id' => $requirement->id],
+                [
+                    'status' => $requirement->requirement_type === 'manual' ? 'waived' : 'valid',
+                    'note' => $requirement->requirement_type === 'manual' ? 'Seeder waiver berkas administrasi.' : 'Seeder valid.',
+                    'checked_at' => now()->subDays(6),
+                ]
+            );
+        });
+
+        collect([
+            ['PEMBIMBING_1', $dosen->id],
+            ['PENGUJI_1', $kaprodi->id],
+            ['PENGUJI_2', $kbk->id],
+        ])->each(function (array $assignment) use ($tenant, $registration) {
+            SidangAssignment::updateOrCreate(
+                ['tenant_id' => $tenant->id, 'sidang_registration_id' => $registration->id, 'role' => $assignment[0]],
+                [
+                    'dosen_id' => $assignment[1],
+                    'status' => 'assigned',
+                    'assigned_at' => now()->subDays(5),
+                    'justification' => 'Seeder assignment M1 FASILKOM.',
+                ]
+            );
+        });
+
+        SidangSchedule::updateOrCreate(
+            ['tenant_id' => $tenant->id, 'sidang_registration_id' => $registration->id],
+            [
+                'tanggal' => '2026-10-15',
+                'jam_mulai' => '09:00:00',
+                'jam_selesai' => '11:00:00',
+                'ruangan_id' => $ruangan->id,
+                'mode' => 'onsite',
+                'status' => 'final',
+                'conflict_payload' => [],
+            ]
+        );
+
+        SidangRubric::query()
+            ->where('sidang_type_id', $type->id)
+            ->where('active', true)
+            ->get()
+            ->each(function (SidangRubric $rubric) use ($tenant, $registration, $kaprodi, $kbk) {
+                foreach ([$kaprodi, $kbk] as $examiner) {
+                    SidangScore::updateOrCreate(
+                        ['tenant_id' => $tenant->id, 'sidang_registration_id' => $registration->id, 'examiner_id' => $examiner->id, 'sidang_rubric_id' => $rubric->id],
+                        [
+                            'score' => $examiner->id === $kaprodi->id ? 84 : 82,
+                            'note' => 'Seeder nilai rubrik.',
+                            'submitted_at' => now()->subDay(),
+                        ]
+                    );
+                }
+            });
+
+        foreach ([$kaprodi, $kbk] as $examiner) {
+            SidangExaminerSummary::updateOrCreate(
+                ['tenant_id' => $tenant->id, 'sidang_registration_id' => $registration->id, 'examiner_id' => $examiner->id],
+                [
+                    'total_score' => $examiner->id === $kaprodi->id ? 84 : 82,
+                    'recommendation' => 'lulus',
+                    'general_note' => 'Seeder ringkasan penguji.',
+                    'finalized_at' => now()->subDay(),
+                ]
+            );
+        }
+
+        SidangResult::updateOrCreate(
+            ['tenant_id' => $tenant->id, 'sidang_registration_id' => $registration->id],
+            [
+                'final_score' => 83,
+                'final_grade' => 'B',
+                'decision' => 'lulus',
+                'decision_note' => 'Lulus berdasarkan nilai rata-rata penguji.',
+                'decided_at' => now(),
+                'published_at' => now(),
+            ]
+        );
+
+        SidangMinute::updateOrCreate(
+            ['tenant_id' => $tenant->id, 'sidang_registration_id' => $registration->id],
+            ['generated_at' => now(), 'status' => 'draft']
+        );
+    }
+
+    private function seedM3Example(): void
+    {
+        Mahasiswa::query()
+            ->whereIn('nim', ['2026001001'])
+            ->get()
+            ->each(fn (Mahasiswa $mahasiswa) => app(MonitoringEvaluationService::class)->evaluate($mahasiswa));
+    }
+
+    private function seedM6Example(Tenant $tenant): void
+    {
+        $mahasiswa = Mahasiswa::query()->where('nim', '2026001001')->first();
+
+        if (! $mahasiswa) {
+            return;
+        }
+
+        foreach (['Software Engineering', 'Data Analytics', 'Academic Information System'] as $index => $interest) {
+            MahasiswaInterest::updateOrCreate(
+                ['tenant_id' => $tenant->id, 'mahasiswa_id' => $mahasiswa->id, 'interest_area' => $interest],
+                ['level' => $index === 0 ? 'high' : 'medium', 'source' => 'seeder', 'verified' => true]
+            );
+        }
+
+        app(StudentProfileService::class)->recalculate($mahasiswa);
+    }
+
     /**
-     * @param array{name:string,email:string,nim:string,role?:string,semester?:int,status?:string} $actor
+     * @param array{name:string,email:string,nim:string,role?:string,semester?:int,status?:string,sks_lulus?:int} $actor
      */
     private function seedStudent(Tenant $tenant, ProgramStudi $programStudi, array $actor): void
     {
@@ -609,7 +839,7 @@ class FasilkomActorSeeder extends Seeder
                 'angkatan' => (int) substr($actor['nim'], 0, 4),
                 'semester' => $actor['semester'] ?? 1,
                 'ipk' => 3.50,
-                'sks_lulus' => $role === 'alumni' ? 144 : 0,
+                'sks_lulus' => $actor['sks_lulus'] ?? ($role === 'alumni' ? 144 : 0),
                 'status' => $actor['status'] ?? 'active',
                 'interests' => ['software engineering', 'data'],
                 'profile_payload' => ['seed_actor' => $role],

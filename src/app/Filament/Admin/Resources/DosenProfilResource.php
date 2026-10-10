@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\DosenProfilResource\Pages;
 use App\Filament\Admin\Resources\DosenProfilResource\RelationManagers;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\DosenProfil;
+use App\Filament\Support\DosenOwnership;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,8 +31,8 @@ class DosenProfilResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('dosen_id')->relationship('dosen', 'name')->searchable()->preload()->required(),
-                Forms\Components\Select::make('profile_status')->label('Status Profil')->required()->default('draft')->options([
+                DosenOwnership::field(),
+                Forms\Components\Select::make('profile_status')->label('Status Profil')->required()->default('draft')->disabled(fn () => DosenOwnership::isSelfService())->dehydrated()->options([
                     'draft' => 'Draft',
                     'data_completed' => 'Data Completed',
                     'submitted' => 'Submitted',
@@ -41,8 +42,8 @@ class DosenProfilResource extends Resource
                 Forms\Components\Textarea::make('profile_summary')->label('Ringkasan Profil')->columnSpanFull(),
                 Forms\Components\Textarea::make('expertise_focus')->label('Fokus Keahlian')->columnSpanFull(),
                 Forms\Components\Textarea::make('industry_experience_summary')->label('Ringkasan Pengalaman Industri')->columnSpanFull(),
-                Forms\Components\Select::make('verified_by')->relationship('verifier', 'email')->searchable()->preload(),
-                Forms\Components\DateTimePicker::make('verified_at')->label('Diverifikasi pada'),
+                Forms\Components\Select::make('verified_by')->relationship('verifier', 'email')->visible(fn () => ! DosenOwnership::isSelfService())->searchable()->preload(),
+                Forms\Components\DateTimePicker::make('verified_at')->label('Diverifikasi pada')->visible(fn () => ! DosenOwnership::isSelfService()),
             ])->columns(2);
     }
 

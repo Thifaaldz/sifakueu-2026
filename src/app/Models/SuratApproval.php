@@ -10,10 +10,12 @@ class SuratApproval extends Model
 {
     use BelongsToTenant;
 
-    protected $fillable = ['tenant_id', 'surat_id', 'approver_id', 'role_name', 'sequence', 'status', 'notes', 'acted_at'];
+    protected $fillable = ['tenant_id', 'surat_id', 'approval_step_id', 'approver_id', 'role_name', 'sequence', 'status', 'notes', 'acted_at', 'approved_at', 'rejected_at'];
 
     protected $casts = [
         'acted_at' => 'datetime',
+        'approved_at' => 'datetime',
+        'rejected_at' => 'datetime',
     ];
 
     public function surat(): BelongsTo
@@ -24,5 +26,10 @@ class SuratApproval extends Model
     public function approver(): BelongsTo
     {
         return $this->belongsTo(User::class, 'approver_id');
+    }
+
+    public function approvalStep(): BelongsTo
+    {
+        return $this->belongsTo(ApprovalFlowStep::class, 'approval_step_id');
     }
 }

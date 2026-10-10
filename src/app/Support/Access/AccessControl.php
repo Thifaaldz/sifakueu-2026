@@ -56,12 +56,31 @@ class AccessControl
             'generate_nomor_surat',
             'manage_surat_template',
             'manage_surat_archive',
+            'view_letter_request',
+            'verify_letter_request',
+            'request_letter_revision',
+            'reject_letter_request',
+            'manage_letter_type',
+            'manage_letter_form',
+            'manage_approval_flow',
+            'manage_letter_template',
+            'generate_letter_number',
+            'override_letter_number',
+            'generate_letter_document',
+            'regenerate_letter_document',
+            'distribute_letter',
+            'archive_letter',
+            'view_letter_archive',
+            'export_letter_report',
             'view_sidang',
             'manage_sidang_registration',
             'verify_sidang_registration',
             'manage_sidang_schedule',
             'generate_sidang_minutes',
             'view_faculty_monitoring',
+            'view_monitoring_dashboard',
+            'view_monitoring_trend',
+            'export_monitoring_report',
             'manage_ta_repository',
             'finalize_ta_document',
             'compile_ta_document',
@@ -83,6 +102,7 @@ class AccessControl
             'finalize_sidang_schedule',
             'finalize_sidang_result',
             'publish_sidang_result',
+            'generate_sidang_minutes',
             'manage_class_schedule',
             'manage_krs_period',
             'manage_course_offering',
@@ -97,14 +117,36 @@ class AccessControl
             'resolve_schedule_conflict',
             'export_krs',
             'export_schedule',
+            'view_letter_request',
+            'verify_letter_request',
+            'request_letter_revision',
+            'reject_letter_request',
             'generate_dosen_matching',
             'review_dosen_recommendation',
             'accept_dosen_recommendation',
             'view_prodi_monitoring',
+            'view_prodi_alert',
+            'escalate_alert',
+            'manage_monitoring_rule',
+            'activate_monitoring_rule',
+            'override_monitoring_status',
+            'view_monitoring_dashboard',
+            'view_monitoring_trend',
+            'export_monitoring_report',
             'view_dosen_profile',
             'view_dosen_workload',
             'view_dosen_competency_gap',
             'view_student_profile',
+            'manage_cpl',
+            'manage_plo',
+            'manage_cpl_mapping',
+            'manage_plo_mapping',
+            'manage_graduate_profile',
+            'recalculate_student_profile',
+            'generate_student_recommendation',
+            'view_student_recommendation',
+            'view_student_profile_dashboard',
+            'export_student_profile_report',
             'view_ta_status',
             'view_ta_monitoring',
             'view_ta_progress',
@@ -131,10 +173,23 @@ class AccessControl
             'view_own_sidang_result',
             'create_surat',
             'view_own_surat',
+            'view_own_letter_request',
+            'create_letter_request',
+            'update_own_letter_request',
+            'submit_letter_request',
+            'cancel_own_letter_request',
+            'download_own_letter',
             'view_own_alert',
+            'view_own_monitoring',
+            'acknowledge_own_alert',
             'view_own_cpl',
             'view_own_plo',
             'view_own_recommendation',
+            'view_own_student_profile',
+            'update_own_interest',
+            'manage_own_portfolio',
+            'manage_own_certification',
+            'manage_own_mbkm',
             'manage_own_ta',
             'view_own_ta',
             'upload_own_ta_document',
@@ -159,6 +214,11 @@ class AccessControl
             'view_own_matching_score',
             'view_own_recommendation_status',
             'view_assigned_students',
+            'view_own_letter_request',
+            'create_letter_request',
+            'update_own_letter_request',
+            'submit_letter_request',
+            'download_own_letter',
         ],
         'dosen_pa' => [
             'view_own_dosen_profile',
@@ -173,7 +233,17 @@ class AccessControl
             'reject_krs',
             'request_krs_revision',
             'view_student_monitoring',
+            'view_pa_student_profile',
+            'view_pa_student_recommendation',
+            'view_pa_monitoring',
+            'view_pa_alert',
+            'create_alert_followup',
+            'resolve_alert',
             'followup_student_alert',
+            'view_letter_request',
+            'verify_letter_request',
+            'request_letter_revision',
+            'reject_letter_request',
         ],
         'dosen_pembimbing' => [
             'view_own_dosen_profile',
@@ -212,6 +282,12 @@ class AccessControl
         'kaprodi' => [
             'view_prodi_dashboard',
             'view_prodi_monitoring',
+            'view_prodi_alert',
+            'escalate_alert',
+            'override_monitoring_status',
+            'view_monitoring_dashboard',
+            'view_monitoring_trend',
+            'export_monitoring_report',
             'approve_prodi_process',
             'validate_dosen_plotting',
             'view_dosen_matching',
@@ -229,31 +305,53 @@ class AccessControl
             'validate_rumpun',
             'view_cpl',
             'view_plo',
+            'view_student_profile_dashboard',
+            'view_student_recommendation',
+            'export_student_profile_report',
             'view_prodi_profiles',
             'view_ta_monitoring',
             'view_ta_progress',
             'view_final_ta_document',
+            'view_letter_request',
+            'approve_letter',
+            'reject_letter',
             'view_prodi_reports',
         ],
         'dekan' => [
             'view_faculty_dashboard',
             'view_faculty_monitoring',
+            'view_monitoring_dashboard',
+            'view_monitoring_trend',
+            'export_monitoring_report',
             'approve_strategic_surat',
+            'view_letter_request',
+            'approve_letter',
+            'reject_letter',
             'view_faculty_dosen',
             'view_faculty_dosen_profile',
             'view_faculty_dosen_workload',
             'view_faculty_dosen_matching',
             'view_faculty_students',
             'view_faculty_cpl_plo',
+            'view_student_profile_dashboard',
+            'export_student_profile_report',
             'view_faculty_reports',
         ],
         'wd' => [
             'view_faculty_dashboard',
             'view_faculty_monitoring',
+            'view_monitoring_dashboard',
+            'view_monitoring_trend',
+            'export_monitoring_report',
             'approve_strategic_surat',
+            'view_letter_request',
+            'approve_letter',
+            'reject_letter',
             'view_faculty_dosen',
             'view_faculty_students',
             'view_faculty_cpl_plo',
+            'view_student_profile_dashboard',
+            'export_student_profile_report',
             'view_faculty_reports',
         ],
         'kbk' => [
@@ -275,6 +373,11 @@ class AccessControl
             'view_accreditation_repository',
             'generate_quality_report',
             'view_quality_audit',
+            'view_quality_monitoring',
+            'view_quality_cpl_plo',
+            'view_student_profile_dashboard',
+            'view_monitoring_trend',
+            'export_monitoring_report',
             'view_repository_metadata',
             'view_final_ta_document',
         ],
@@ -330,25 +433,25 @@ class AccessControl
             ))),
             'admin_prodi' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS['admin_prodi'],
-                self::readCrudFor(array_merge(['fakultas', 'program::studi', 'mahasiswa', 'dosen', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'rumpun::ilmu', 'kbk', 'krs', 'jadwal::kuliah', 'pendaftaran::sidang', 'dokumen::ta', 'alert'], self::m4Resources(), self::m5Resources(), self::m7ReadOnlyResources(), self::m1Resources())),
-                self::writeCrudFor(array_merge(['mahasiswa', 'dosen', 'mata::kuliah', 'kurikulum', 'krs', 'jadwal::kuliah', 'pendaftaran::sidang'], self::m4OperationalResources(), self::m5OperationalResources(), self::m1OperationalResources(), ['tugas::akhir', 'ta::document'])),
+                self::readCrudFor(array_merge(['fakultas', 'program::studi', 'mahasiswa', 'dosen', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'rumpun::ilmu', 'kbk', 'krs', 'jadwal::kuliah', 'pendaftaran::sidang', 'dokumen::ta', 'alert'], self::m2Resources(), self::m3Resources(), self::m4Resources(), self::m5Resources(), self::m6Resources(), self::m7ReadOnlyResources(), self::m1Resources())),
+                self::writeCrudFor(array_merge(['mahasiswa', 'dosen', 'mata::kuliah', 'kurikulum', 'krs', 'jadwal::kuliah', 'pendaftaran::sidang'], self::m2OperationalResources(), self::m3OperationalResources(), self::m4OperationalResources(), self::m5OperationalResources(), self::m6OperationalResources(), self::m1OperationalResources(), ['tugas::akhir', 'ta::document'])),
             ))),
             'mahasiswa' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS['mahasiswa'],
-                self::readCrudFor(array_merge(['program::studi', 'mahasiswa', 'krs', 'krs::detail', 'krs::validation::result', 'penawaran::mata::kuliah', 'kelas::kuliah', 'jadwal::kuliah', 'jadwal::history', 'pendaftaran::sidang', 'surat', 'alert', 'dokumen::ta', 'dosen', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'jadwal::konsultasi'], self::m7MahasiswaResources(), self::m1MahasiswaResources())),
-                self::writeCrudFor(array_merge(['krs', 'krs::detail', 'pendaftaran::sidang', 'surat', 'dokumen::ta'], ['tugas::akhir', 'ta::document', 'ta::document::version', 'ta::comment', 'sidang::registration', 'sidang::file'])),
-                ['update_mahasiswa'],
+                self::readCrudFor(array_merge(['program::studi', 'mahasiswa', 'krs', 'krs::detail', 'krs::validation::result', 'penawaran::mata::kuliah', 'kelas::kuliah', 'jadwal::kuliah', 'jadwal::history', 'pendaftaran::sidang', 'surat', 'alert', 'dokumen::ta', 'dosen', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'jadwal::konsultasi'], self::m2MahasiswaResources(), self::m3MahasiswaResources(), self::m6MahasiswaResources(), self::m7MahasiswaResources(), self::m1MahasiswaResources())),
+                self::writeCrudFor(array_merge(['krs', 'krs::detail', 'pendaftaran::sidang', 'surat', 'dokumen::ta'], self::m2RequesterWritableResources(), ['tugas::akhir', 'ta::document', 'ta::document::version', 'ta::comment', 'sidang::registration', 'sidang::file'], self::m6MahasiswaWritableResources())),
+                ['update_mahasiswa', 'update_alert'],
             ))),
             'dosen' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS['dosen'],
-                self::readCrudFor(array_merge(['program::studi', 'dosen', 'mahasiswa', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'rumpun::ilmu', 'kbk', 'jadwal::kuliah'], self::m5DosenResources())),
-                self::writeCrudFor(['dosen::profil', 'dosen::pendidikan', 'dosen::sertifikasi', 'dosen::publikasi', 'dosen::pengalaman::industri', 'dosen::preferensi::mk', 'jadwal::konsultasi', 'dosen::lokasi']),
+                self::readCrudFor(array_merge(['program::studi', 'dosen', 'mahasiswa', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'rumpun::ilmu', 'kbk', 'jadwal::kuliah'], self::m2MahasiswaResources(), self::m5DosenResources())),
+                self::writeCrudFor(array_merge(['dosen::profil', 'dosen::pendidikan', 'dosen::sertifikasi', 'dosen::publikasi', 'dosen::pengalaman::industri', 'dosen::preferensi::mk', 'jadwal::konsultasi', 'dosen::lokasi'], self::m2RequesterWritableResources())),
                 ['update_dosen'],
             ))),
             'dosen_pa' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS['dosen_pa'],
-                self::readCrudFor(array_merge(['dosen', 'mahasiswa', 'jadwal::kuliah', 'jadwal::history', 'krs', 'krs::detail', 'krs::validation::result', 'alert'], self::m5DosenResources())),
-                self::writeCrudFor(['dosen::profil', 'dosen::pendidikan', 'dosen::sertifikasi', 'dosen::publikasi', 'dosen::pengalaman::industri', 'dosen::preferensi::mk', 'jadwal::konsultasi', 'dosen::lokasi']),
+                self::readCrudFor(array_merge(['dosen', 'mahasiswa', 'jadwal::kuliah', 'jadwal::history', 'krs', 'krs::detail', 'krs::validation::result', 'alert'], self::m3DosenResources(), self::m5DosenResources(), self::m6DosenResources())),
+                self::writeCrudFor(array_merge(['dosen::profil', 'dosen::pendidikan', 'dosen::sertifikasi', 'dosen::publikasi', 'dosen::pengalaman::industri', 'dosen::preferensi::mk', 'jadwal::konsultasi', 'dosen::lokasi'], ['alert::followup'])),
                 ['update_dosen', 'update_krs', 'update_alert'],
             ))),
             'dosen_pembimbing' => array_values(array_unique(array_merge(
@@ -365,12 +468,13 @@ class AccessControl
             ))),
             'kaprodi' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS['kaprodi'],
-                self::readCrudFor(array_merge(['fakultas', 'program::studi', 'mahasiswa', 'dosen', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'krs', 'jadwal::kuliah', 'pendaftaran::sidang', 'dokumen::ta', 'alert', 'rumpun::ilmu', 'kbk'], self::m4Resources(), self::m5Resources(), self::m7ReadOnlyResources(), self::m1Resources())),
-                ['update_pendaftaran::sidang', 'update_alert', 'update_rekomendasi::pengampu', 'update_jadwal::kuliah', 'update_jadwal::conflict', 'update_sidang::registration', 'update_sidang::assignment', 'update_sidang::result'],
+                self::readCrudFor(array_merge(['fakultas', 'program::studi', 'mahasiswa', 'dosen', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'krs', 'jadwal::kuliah', 'pendaftaran::sidang', 'dokumen::ta', 'alert', 'rumpun::ilmu', 'kbk'], self::m2ReadOnlyResources(), self::m3Resources(), self::m4Resources(), self::m5Resources(), self::m6Resources(), self::m7ReadOnlyResources(), self::m1Resources())),
+                self::writeCrudFor(['alert::escalation', 'monitoring::override']),
+                ['update_pendaftaran::sidang', 'update_alert', 'update_alert::escalation', 'update_monitoring::override', 'update_rekomendasi::pengampu', 'update_jadwal::kuliah', 'update_jadwal::conflict', 'update_sidang::registration', 'update_sidang::assignment', 'update_sidang::result'],
             ))),
             'dekan', 'wd' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS[$role],
-                self::readCrudFor(array_merge(['fakultas', 'program::studi', 'mahasiswa', 'dosen', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'pendaftaran::sidang', 'surat', 'dokumen::ta', 'alert'], self::m4ReadOnlyResources(), self::m5ReadOnlyResources(), self::m7ReadOnlyResources(), self::m1ReadOnlyResources())),
+                self::readCrudFor(array_merge(['fakultas', 'program::studi', 'mahasiswa', 'dosen', 'mata::kuliah', 'kurikulum', 'tahun::akademik', 'semester', 'ruangan', 'pendaftaran::sidang', 'surat', 'dokumen::ta', 'alert'], self::m2ReadOnlyResources(), self::m3ReadOnlyResources(), self::m4ReadOnlyResources(), self::m5ReadOnlyResources(), self::m6ReadOnlyResources(), self::m7ReadOnlyResources(), self::m1ReadOnlyResources())),
                 ['update_surat'],
             ))),
             'kbk' => array_values(array_unique(array_merge(
@@ -381,11 +485,11 @@ class AccessControl
             ))),
             'lpm' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS['lpm'],
-                self::readCrudFor(array_merge(['mahasiswa', 'dosen', 'dokumen::ta', 'alert'], self::m7ReadOnlyResources(), self::m1ReadOnlyResources())),
+                self::readCrudFor(array_merge(['mahasiswa', 'dosen', 'dokumen::ta', 'alert'], self::m3ReadOnlyResources(), self::m6ReadOnlyResources(), self::m7ReadOnlyResources(), self::m1ReadOnlyResources())),
             ))),
             'baak' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS['baak'],
-                self::readCrudFor(array_merge(['mahasiswa', 'pendaftaran::sidang', 'dokumen::ta', 'alert'], self::m7ReadOnlyResources(), self::m1ReadOnlyResources())),
+                self::readCrudFor(array_merge(['mahasiswa', 'pendaftaran::sidang', 'dokumen::ta', 'alert'], self::m3ReadOnlyResources(), self::m6ReadOnlyResources(), self::m7ReadOnlyResources(), self::m1ReadOnlyResources())),
             ))),
             'kepala_laboratorium' => array_values(array_unique(array_merge(
                 self::TENANT_BUSINESS_PERMISSIONS['kepala_laboratorium'],
@@ -431,10 +535,11 @@ class AccessControl
             ...self::m4Resources(),
             'pendaftaran::sidang',
             ...self::m1Resources(),
-            'jenis::surat',
-            'surat',
+            ...self::m2Resources(),
             'alert',
+            ...self::m3Resources(),
             'dokumen::ta',
+            ...self::m6Resources(),
             ...self::m7Resources(),
             'audit::log',
             'sifak::notification',
@@ -462,6 +567,199 @@ class AccessControl
             'rekomendasi::pengampu',
             'jadwal::konsultasi',
             'dosen::lokasi',
+        ];
+    }
+
+    public static function m2Resources(): array
+    {
+        return [
+            'jenis::surat',
+            'surat',
+            'surat::approval',
+            'approval::flow',
+            'approval::flow::step',
+            'letter::form::field',
+            'letter::request::value',
+            'letter::attachment',
+            'letter::verification',
+            'letter::number::sequence',
+            'letter::number',
+            'letter::template',
+            'generated::letter',
+            'letter::verification::token',
+            'letter::distribution',
+            'letter::archive',
+        ];
+    }
+
+    public static function m2OperationalResources(): array
+    {
+        return self::m2Resources();
+    }
+
+    public static function m2ReadOnlyResources(): array
+    {
+        return self::m2Resources();
+    }
+
+    public static function m2MahasiswaResources(): array
+    {
+        return [
+            'jenis::surat',
+            'surat',
+            'surat::approval',
+            'letter::request::value',
+            'letter::attachment',
+            'letter::verification',
+            'letter::number',
+            'generated::letter',
+            'letter::distribution',
+            'letter::archive',
+        ];
+    }
+
+    public static function m2RequesterWritableResources(): array
+    {
+        return [
+            'surat',
+            'letter::request::value',
+            'letter::attachment',
+        ];
+    }
+
+    public static function m3Resources(): array
+    {
+        return [
+            'monitoring::rule',
+            'monitoring::snapshot',
+            'monitoring::indicator::result',
+            'alert::followup',
+            'alert::escalation',
+            'monitoring::override',
+        ];
+    }
+
+    public static function m3OperationalResources(): array
+    {
+        return [
+            'monitoring::rule',
+            'monitoring::snapshot',
+            'monitoring::indicator::result',
+            'alert::followup',
+            'alert::escalation',
+            'monitoring::override',
+        ];
+    }
+
+    public static function m3ReadOnlyResources(): array
+    {
+        return [
+            'monitoring::snapshot',
+            'monitoring::indicator::result',
+            'alert::followup',
+            'alert::escalation',
+        ];
+    }
+
+    public static function m3MahasiswaResources(): array
+    {
+        return [
+            'monitoring::snapshot',
+            'monitoring::indicator::result',
+            'alert::followup',
+        ];
+    }
+
+    public static function m3DosenResources(): array
+    {
+        return [
+            'monitoring::snapshot',
+            'monitoring::indicator::result',
+            'alert::followup',
+            'alert::escalation',
+        ];
+    }
+
+    public static function m6Resources(): array
+    {
+        return [
+            'mahasiswa::profile',
+            'mahasiswa::interest',
+            'mahasiswa::certification',
+            'mahasiswa::portfolio',
+            'mahasiswa::organization',
+            'mahasiswa::mbkm',
+            'cpl',
+            'plo',
+            'pemetaan::mk::cpl',
+            'pemetaan::cpl::plo',
+            'mahasiswa::cpl::score',
+            'mahasiswa::plo::score',
+            'graduate::profile',
+            'mahasiswa::graduate::profile::score',
+            'competency::gap',
+            'student::recommendation',
+            'recommendation::history',
+        ];
+    }
+
+    public static function m6OperationalResources(): array
+    {
+        return self::m6Resources();
+    }
+
+    public static function m6ReadOnlyResources(): array
+    {
+        return self::m6Resources();
+    }
+
+    public static function m6MahasiswaResources(): array
+    {
+        return [
+            'mahasiswa::profile',
+            'mahasiswa::interest',
+            'mahasiswa::certification',
+            'mahasiswa::portfolio',
+            'mahasiswa::organization',
+            'mahasiswa::mbkm',
+            'cpl',
+            'plo',
+            'mahasiswa::cpl::score',
+            'mahasiswa::plo::score',
+            'graduate::profile',
+            'mahasiswa::graduate::profile::score',
+            'competency::gap',
+            'student::recommendation',
+            'recommendation::history',
+        ];
+    }
+
+    public static function m6MahasiswaWritableResources(): array
+    {
+        return [
+            'mahasiswa::interest',
+            'mahasiswa::certification',
+            'mahasiswa::portfolio',
+            'mahasiswa::organization',
+            'mahasiswa::mbkm',
+        ];
+    }
+
+    public static function m6DosenResources(): array
+    {
+        return [
+            'mahasiswa::profile',
+            'mahasiswa::interest',
+            'mahasiswa::certification',
+            'mahasiswa::portfolio',
+            'mahasiswa::organization',
+            'mahasiswa::mbkm',
+            'mahasiswa::cpl::score',
+            'mahasiswa::plo::score',
+            'mahasiswa::graduate::profile::score',
+            'competency::gap',
+            'student::recommendation',
+            'recommendation::history',
         ];
     }
 

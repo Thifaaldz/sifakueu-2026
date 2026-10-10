@@ -8,4 +8,12 @@ use Filament\Resources\Pages\CreateRecord;
 class CreateSurat extends CreateRecord
 {
     protected static string $resource = SuratResource::class;
+
+    protected function mutateFormDataBeforeCreate(array $data): array
+    {
+        $data['requester_id'] ??= auth()->id();
+        $data['status'] ??= 'DRAFT';
+
+        return $data;
+    }
 }

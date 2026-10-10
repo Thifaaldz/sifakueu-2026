@@ -1,0 +1,312 @@
+{
+  "code": "M5",
+  "title": "Profiling Dosen & Rekomendasi Pengajaran",
+  "purpose": "Membangun profil kompetensi dosen (keahlian, pendidikan, sertifikasi, publikasi, pengalaman industri, riwayat mengajar, preferensi MK), menghitung beban dan matriks kesesuaian dosen–MK, menghasilkan rekomendasi dosen pengampu/pembimbing/penguji, serta mengelola jadwal konsultasi & ketersediaan dosen.",
+  "actors": [
+    "Dosen",
+    "Koordinator KBK",
+    "Admin Prodi",
+    "Dekan"
+  ],
+  "testCase": "Dr. Dosen FASILKOM menambah sertifikasi, publikasi, preferensi MK, dan jadwal konsultasi; KBK menghitung ulang rekomendasi pengampu MK IF101 dan menerima rekomendasi; Dekan memantau beban & kesesuaian dosen.",
+  "id": "m5",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Login sebagai Dosen (PA, Pembimbing, Penguji)",
+      "desc": "Buka https://fasilkom.sifakueu.test/dosen/login, isi email dosen.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m5-01.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/login"
+    },
+    {
+      "n": 2,
+      "title": "Buka M5 Profiling Dosen > Dosen Profils",
+      "desc": "Ringkasan profil dosen.",
+      "file": "m5-02.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen"
+    },
+    {
+      "n": 3,
+      "title": "Profil dosen",
+      "desc": "Status profil, fokus keahlian, dan ringkasan pengalaman.",
+      "file": "m5-03.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-profils"
+    },
+    {
+      "n": 4,
+      "title": "Buka Keahlians",
+      "desc": "Bidang keahlian dosen (terhubung Rumpun Ilmu & KBK).",
+      "file": "m5-04.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-profils"
+    },
+    {
+      "n": 5,
+      "title": "Daftar keahlian",
+      "desc": "Keahlian menjadi dasar perhitungan kesesuaian dosen–MK.",
+      "file": "m5-05.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/keahlians"
+    },
+    {
+      "n": 6,
+      "title": "Buka Dosen Sertifikasis",
+      "desc": "Sertifikasi kompetensi dosen.",
+      "file": "m5-06.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/keahlians"
+    },
+    {
+      "n": 7,
+      "title": "Klik New dosen sertifikasi",
+      "desc": "Tambah sertifikasi baru.",
+      "file": "m5-07.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-sertifikasis"
+    },
+    {
+      "n": 8,
+      "title": "Isi data sertifikasi lalu Create",
+      "desc": "Dosen otomatis terisi akun sendiri; status validasi diatur oleh Admin/KBK (bukan oleh dosen).",
+      "file": "m5-08.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-sertifikasis/create"
+    },
+    {
+      "n": 9,
+      "title": "Buka Dosen Publikasis",
+      "desc": "Publikasi ilmiah dosen.",
+      "file": "m5-09.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-sertifikasis/7/edit"
+    },
+    {
+      "n": 10,
+      "title": "Klik New dosen publikasi",
+      "desc": "Tambah publikasi.",
+      "file": "m5-10.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-publikasis"
+    },
+    {
+      "n": 11,
+      "title": "Isi data publikasi lalu Create",
+      "desc": "Judul, tahun, jenis, jurnal, dan bidang.",
+      "file": "m5-11.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-publikasis/create"
+    },
+    {
+      "n": 12,
+      "title": "Buka Dosen Preferensi Mks",
+      "desc": "Preferensi mata kuliah yang ingin diampu.",
+      "file": "m5-12.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-publikasis/7/edit"
+    },
+    {
+      "n": 13,
+      "title": "Daftar preferensi MK",
+      "desc": "Setiap kombinasi dosen–MK–semester hanya boleh satu (sistem menolak duplikat dengan pesan validasi).",
+      "file": "m5-13.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-preferensi-mks"
+    },
+    {
+      "n": 14,
+      "title": "Klik Edit pada preferensi Analisis dan Perancangan Sistem",
+      "desc": "Perbarui tingkat preferensi atau catatan.",
+      "file": "m5-14.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-preferensi-mks"
+    },
+    {
+      "n": 15,
+      "title": "Ubah catatan lalu Save changes",
+      "desc": "Preferensi dipakai sebagai salah satu bobot rekomendasi pengampu.",
+      "file": "m5-15.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-preferensi-mks/8/edit"
+    },
+    {
+      "n": 16,
+      "title": "Buka M5 Availability > Jadwal Konsultasis",
+      "desc": "Jadwal konsultasi/bimbingan dosen.",
+      "file": "m5-16.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/dosen-preferensi-mks/8/edit"
+    },
+    {
+      "n": 17,
+      "title": "Klik New jadwal konsultasi",
+      "desc": "Tambah slot konsultasi.",
+      "file": "m5-17.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/jadwal-konsultasis"
+    },
+    {
+      "n": 18,
+      "title": "Isi hari, jam, ruang lalu Create",
+      "desc": "Slot ini terlihat oleh mahasiswa dan dipakai cek ketersediaan sidang.",
+      "file": "m5-18.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/jadwal-konsultasis/create"
+    },
+    {
+      "n": 19,
+      "title": "Dosen melihat Beban Dosens",
+      "desc": "Beban mengajar, membimbing, dan menguji.",
+      "file": "m5-19.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/jadwal-konsultasis/6/edit"
+    },
+    {
+      "n": 20,
+      "title": "Beban dosen",
+      "desc": "Total SKS dan jumlah bimbingan/penguji per semester.",
+      "file": "m5-20.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/beban-dosens"
+    },
+    {
+      "n": 21,
+      "title": "Login sebagai Koordinator KBK",
+      "desc": "Buka https://fasilkom.sifakueu.test/pimpinan/login, isi email kbk.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m5-21.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/login"
+    },
+    {
+      "n": 22,
+      "title": "KBK membuka Master Data > Mata Kuliahs",
+      "desc": "Rekomendasi pengampu dihitung per mata kuliah.",
+      "file": "m5-22.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 23,
+      "title": "Klik Hitung rekomendasi pada IF101",
+      "desc": "Sistem menilai setiap dosen berdasarkan keahlian, pendidikan, sertifikasi, publikasi, riwayat mengajar, preferensi, dan beban.",
+      "file": "m5-23.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/mata-kuliahs"
+    },
+    {
+      "n": 24,
+      "title": "Buka Matriks Kesesuaians",
+      "desc": "Skor kesesuaian dosen–MK.",
+      "file": "m5-24.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/mata-kuliahs"
+    },
+    {
+      "n": 25,
+      "title": "Matriks kesesuaian dosen–MK",
+      "desc": "Skor tiap komponen dan skor total.",
+      "file": "m5-25.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians"
+    },
+    {
+      "n": 26,
+      "title": "Buka Rekomendasi Pengampus",
+      "desc": "Daftar kandidat pengampu per MK beserta peringkat.",
+      "file": "m5-26.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians"
+    },
+    {
+      "n": 27,
+      "title": "Rekomendasi pengampu",
+      "desc": "Kandidat diurutkan berdasar skor; status generated menunggu keputusan.",
+      "file": "m5-27.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/rekomendasi-pengampus"
+    },
+    {
+      "n": 28,
+      "title": "Klik Accept pada kandidat teratas",
+      "desc": "KBK/Kaprodi menerima rekomendasi; justifikasi wajib bila skor di bawah threshold.",
+      "file": "m5-28.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/rekomendasi-pengampus"
+    },
+    {
+      "n": 29,
+      "title": "Klik Accept pada kandidat teratas — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m5-29.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/rekomendasi-pengampus"
+    },
+    {
+      "n": 30,
+      "title": "Rekomendasi diterima",
+      "desc": "Status rekomendasi accepted dan tersimpan di histori.",
+      "file": "m5-30.png",
+      "role": "kbk",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/rekomendasi-pengampus"
+    },
+    {
+      "n": 31,
+      "title": "Login sebagai Dekan",
+      "desc": "Buka https://fasilkom.sifakueu.test/pimpinan/login, isi email dekan.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m5-31.png",
+      "role": "dekan",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/login"
+    },
+    {
+      "n": 32,
+      "title": "Dekan membuka M5 Analytics > Beban Dosens",
+      "desc": "Peta beban dosen fakultas (read-only).",
+      "file": "m5-32.png",
+      "role": "dekan",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 33,
+      "title": "Peta beban dosen",
+      "desc": "Dekan memantau distribusi beban.",
+      "file": "m5-33.png",
+      "role": "dekan",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens"
+    },
+    {
+      "n": 34,
+      "title": "Dekan melihat Dosen Sertifikasis",
+      "desc": "Rekap sertifikasi dosen.",
+      "file": "m5-34.png",
+      "role": "dekan",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens"
+    },
+    {
+      "n": 35,
+      "title": "Rekap sertifikasi",
+      "desc": "Sertifikasi baru dari dosen tampil dengan status validasi pending.",
+      "file": "m5-35.png",
+      "role": "dekan",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-sertifikasis"
+    },
+    {
+      "n": 36,
+      "title": "Login sebagai Mahasiswa",
+      "desc": "Buka https://fasilkom.sifakueu.test/mahasiswa/login, isi email mahasiswa.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m5-36.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/login"
+    },
+    {
+      "n": 37,
+      "title": "Mahasiswa melihat jadwal konsultasi dosen",
+      "desc": "Mahasiswa dapat melihat slot konsultasi dosen pembimbing/PA.",
+      "file": "m5-37.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-konsultasis"
+    }
+  ],
+  "issues": []
+}

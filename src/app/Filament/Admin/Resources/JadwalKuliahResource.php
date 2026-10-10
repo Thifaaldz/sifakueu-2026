@@ -21,7 +21,7 @@ class JadwalKuliahResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-calendar-days';
 
-    protected static ?string $navigationGroup = 'M4 KRS & Jadwal';
+    protected static ?string $navigationGroup = 'M4 KRS & Penjadwalan';
 
     public static function form(Form $form): Form
     {

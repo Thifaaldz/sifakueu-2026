@@ -35,8 +35,12 @@ class MahasiswaPanelProvider extends PanelProvider
                 'success' => Color::Emerald,
                 'warning' => Color::Amber,
             ])
+            ->navigation(fn (\Filament\Navigation\NavigationBuilder $builder) => \App\Filament\Support\RoleNavigation::build($builder))
+            ->viteTheme('resources/css/filament/admin/theme.css')
+            ->sidebarCollapsibleOnDesktop()
+            ->maxContentWidth(\Filament\Support\Enums\MaxWidth::SevenExtraLarge)
             ->pages([
-                Pages\Dashboard::class,
+                \App\Filament\Pages\SifakDashboard::class,
                 \App\Filament\Pages\AksesRolePage::class,
             ])
             ->resources([
@@ -47,6 +51,7 @@ class MahasiswaPanelProvider extends PanelProvider
                 \App\Filament\Admin\Resources\PenawaranMataKuliahResource::class,
                 \App\Filament\Admin\Resources\KelasKuliahResource::class,
                 \App\Filament\Admin\Resources\JadwalKuliahResource::class,
+                \App\Filament\Admin\Resources\JadwalKonsultasiResource::class,
                 \App\Filament\Admin\Resources\JadwalHistoryResource::class,
                 \App\Filament\Admin\Resources\PendaftaranSidangResource::class,
                 \App\Filament\Admin\Resources\SidangTypeResource::class,
@@ -57,7 +62,28 @@ class MahasiswaPanelProvider extends PanelProvider
                 \App\Filament\Admin\Resources\SidangRevisionResource::class,
                 \App\Filament\Admin\Resources\SidangMinuteResource::class,
                 \App\Filament\Admin\Resources\SuratResource::class,
+                \App\Filament\Admin\Resources\GeneratedLetterResource::class,
+                \App\Filament\Admin\Resources\LetterDistributionResource::class,
+                \App\Filament\Admin\Resources\LetterArchiveResource::class,
                 \App\Filament\Admin\Resources\AlertResource::class,
+                \App\Filament\Admin\Resources\MonitoringSnapshotResource::class,
+                \App\Filament\Admin\Resources\MonitoringIndicatorResultResource::class,
+                \App\Filament\Admin\Resources\AlertFollowupResource::class,
+                \App\Filament\Admin\Resources\MahasiswaProfileResource::class,
+                \App\Filament\Admin\Resources\MahasiswaInterestResource::class,
+                \App\Filament\Admin\Resources\MahasiswaCertificationResource::class,
+                \App\Filament\Admin\Resources\MahasiswaPortfolioResource::class,
+                \App\Filament\Admin\Resources\MahasiswaOrganizationResource::class,
+                \App\Filament\Admin\Resources\MahasiswaMbkmResource::class,
+                \App\Filament\Admin\Resources\CplResource::class,
+                \App\Filament\Admin\Resources\PloResource::class,
+                \App\Filament\Admin\Resources\MahasiswaCplScoreResource::class,
+                \App\Filament\Admin\Resources\MahasiswaPloScoreResource::class,
+                \App\Filament\Admin\Resources\GraduateProfileResource::class,
+                \App\Filament\Admin\Resources\MahasiswaGraduateProfileScoreResource::class,
+                \App\Filament\Admin\Resources\CompetencyGapResource::class,
+                \App\Filament\Admin\Resources\StudentRecommendationResource::class,
+                \App\Filament\Admin\Resources\RecommendationHistoryResource::class,
                 \App\Filament\Admin\Resources\DokumenTaResource::class,
                 \App\Filament\Admin\Resources\TugasAkhirResource::class,
                 \App\Filament\Admin\Resources\TaSectionResource::class,
@@ -82,6 +108,6 @@ class MahasiswaPanelProvider extends PanelProvider
                 DisableBladeIconComponents::class,
                 DispatchServingFilamentEvent::class,
             ])
-            ->authMiddleware([Authenticate::class]);
+            ->authMiddleware([Authenticate::class, \App\Http\Middleware\EnforceRoleFeatures::class]);
     }
 }

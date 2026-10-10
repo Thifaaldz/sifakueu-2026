@@ -14,4 +14,16 @@ class EditSidangSchedule extends EditRecord
     {
         return [Actions\DeleteAction::make()];
     }
+
+    protected function mutateFormDataBeforeSave(array $data): array
+    {
+        $moved = collect(['tanggal', 'jam_mulai', 'jam_selesai', 'ruangan_id'])
+            ->contains(fn (string $field) => (string) ($data[$field] ?? '') !== (string) $this->record->getRawOriginal($field));
+
+        if ($moved && $this->record->status === 'conflict' && ($data['status'] ?? 'conflict') === 'conflict') {
+            $data['status'] = 'rescheduled';
+        }
+
+        return $data;
+    }
 }

@@ -5,10 +5,12 @@ namespace App\Filament\Admin\Resources;
 use App\Filament\Admin\Resources\KrsResource\Pages;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\Krs;
+use App\Models\PenawaranMataKuliah;
 use App\Services\Sifak\KrsService;
 use App\Services\Sifak\KrsValidationService;
 use Filament\Forms;
 use Filament\Forms\Form;
+use Filament\Notifications\Notification;
 use Filament\Resources\Resource;
 use Filament\Tables;
 use Filament\Tables\Table;
@@ -21,21 +23,36 @@ class KrsResource extends Resource
 
     protected static ?string $navigationIcon = 'heroicon-o-clipboard-document-list';
 
-    protected static ?string $navigationGroup = 'M4 KRS & Jadwal';
+    protected static ?string $navigationGroup = 'M4 KRS & Penjadwalan';
 
     public static function form(Form $form): Form
     {
+        $isStudent = fn (): bool => (bool) auth()->user()?->hasRole('mahasiswa');
+        $staffOnly = fn (): bool => ! auth()->user()?->hasRole('mahasiswa');
+
         return $form->schema([
-            Forms\Components\Select::make('mahasiswa_id')->relationship('mahasiswa', 'name')->searchable()->preload()->required(),
-            Forms\Components\Select::make('semester_id')->relationship('semester', 'code')->searchable()->preload(),
+            Forms\Components\Select::make('mahasiswa_id')
+                ->relationship('mahasiswa', 'name', modifyQueryUsing: fn ($query) => auth()->user()?->hasRole('mahasiswa') ? $query->where('user_id', auth()->id()) : $query)
+                ->default(fn () => auth()->user()?->mahasiswa?->id)
+                ->disabled($isStudent)
+                ->dehydrated()
+                ->searchable()
+                ->preload()
+                ->required(),
+            Forms\Components\Select::make('semester_id')->relationship('semester', 'code')->searchable()->preload()->required(),
             Forms\Components\Select::make('tahun_akademik_id')->relationship('tahunAkademik', 'code')->searchable()->preload(),
-            Forms\Components\Select::make('dosen_pa_id')->relationship('dosenPa', 'name')->label('Dosen PA')->searchable()->preload(),
-            Forms\Components\Select::make('mata_kuliah_id')->relationship('mataKuliah', 'name')->searchable()->preload(),
+            Forms\Components\Select::make('dosen_pa_id')
+                ->relationship('dosenPa', 'name', modifyQueryUsing: fn ($query) => $query->where('status', 'active'))
+                ->label('Dosen PA')
+                ->default(fn () => Krs::query()->where('mahasiswa_id', auth()->user()?->mahasiswa?->id)->latest('id')->value('dosen_pa_id'))
+                ->searchable()
+                ->preload(),
+            Forms\Components\Select::make('mata_kuliah_id')->relationship('mataKuliah', 'name')->searchable()->preload()->visible($staffOnly),
             Forms\Components\TextInput::make('academic_year')->label('Tahun akademik')->required()->default(date('Y') . '/' . (date('Y') + 1)),
             Forms\Components\Select::make('term')->required()->default('ganjil')->options(['ganjil' => 'Ganjil', 'genap' => 'Genap', 'pendek' => 'Pendek']),
-            Forms\Components\Select::make('approved_by')->relationship('approver', 'name')->label('Dosen PA')->searchable()->preload(),
-            Forms\Components\TextInput::make('total_sks')->numeric()->default(0),
-            Forms\Components\Select::make('status')->required()->default('draft')->options([
+            Forms\Components\Select::make('approved_by')->relationship('approver', 'name')->label('Disetujui oleh')->searchable()->preload()->visible($staffOnly),
+            Forms\Components\TextInput::make('total_sks')->numeric()->default(0)->disabled()->dehydrated(false),
+            Forms\Components\Select::make('status')->required()->default('draft')->visible($staffOnly)->options([
                 'draft' => 'Draft',
                 'submitted' => 'Diajukan',
                 'waiting_pa' => 'Menunggu PA',
@@ -45,11 +62,11 @@ class KrsResource extends Resource
                 'final' => 'Final',
                 'cancelled' => 'Dibatalkan',
             ]),
-            Forms\Components\DateTimePicker::make('submitted_at')->label('Diajukan pada'),
-            Forms\Components\DateTimePicker::make('approved_at')->label('Disetujui pada'),
-            Forms\Components\DateTimePicker::make('finalized_at')->label('Final pada'),
-            Forms\Components\Textarea::make('note')->label('Catatan')->columnSpanFull(),
-            Forms\Components\KeyValue::make('validation_notes')->label('Catatan validasi')->columnSpanFull(),
+            Forms\Components\DateTimePicker::make('submitted_at')->label('Diajukan pada')->visible($staffOnly),
+            Forms\Components\DateTimePicker::make('approved_at')->label('Disetujui pada')->visible($staffOnly),
+            Forms\Components\DateTimePicker::make('finalized_at')->label('Final pada')->visible($staffOnly),
+            Forms\Components\Textarea::make('note')->label('Catatan')->disabled($isStudent)->columnSpanFull(),
+            Forms\Components\KeyValue::make('validation_notes')->label('Catatan validasi')->visible($staffOnly)->columnSpanFull(),
         ])->columns(2);
     }
 
@@ -68,6 +85,27 @@ class KrsResource extends Resource
                 Tables\Columns\TextColumn::make('status')->badge(),
             ])
             ->actions([
+                Tables\Actions\Action::make('addCourse')
+                    ->label('Tambah MK')
+                    ->icon('heroicon-o-plus-circle')
+                    ->visible(fn (Krs $record) => in_array($record->status, ['draft', 'revision_required'], true)
+                        && ($record->mahasiswa?->user_id === auth()->id() || auth()->user()?->can('update_krs')))
+                    ->form(fn (Krs $record) => [
+                        Forms\Components\Select::make('penawaran_mata_kuliah_id')
+                            ->label('Mata kuliah ditawarkan')
+                            ->options(PenawaranMataKuliah::query()
+                                ->with('mataKuliah')
+                                ->where('semester_id', $record->semester_id)
+                                ->where('status', 'open')
+                                ->get()
+                                ->mapWithKeys(fn (PenawaranMataKuliah $offering) => [$offering->id => $offering->mataKuliah?->code . ' - ' . $offering->mataKuliah?->name . ' (' . $offering->mataKuliah?->sks . ' SKS)']))
+                            ->required(),
+                    ])
+                    ->action(function (Krs $record, array $data) {
+                        app(KrsService::class)->addOffering($record, PenawaranMataKuliah::findOrFail($data['penawaran_mata_kuliah_id']));
+                        app(KrsValidationService::class)->validate($record->fresh());
+                        Notification::make()->title('Mata kuliah ditambahkan ke KRS')->success()->send();
+                    }),
                 Tables\Actions\Action::make('validate')
                     ->label('Validasi')
                     ->icon('heroicon-o-shield-check')

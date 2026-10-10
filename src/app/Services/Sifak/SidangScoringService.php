@@ -52,9 +52,46 @@ class SidangScoringService
         return $summary;
     }
 
+    /**
+     * Rekap nilai rubrik yang diinput satu per satu (menu Sidang Scores) menjadi ringkasan penguji.
+     */
+    public function summarizeSubmittedScores(SidangRegistration $registration, int $examinerId): ?SidangExaminerSummary
+    {
+        $scores = SidangScore::query()
+            ->with('rubric')
+            ->where('sidang_registration_id', $registration->id)
+            ->where('examiner_id', $examinerId)
+            ->whereNotNull('submitted_at')
+            ->get();
+
+        if ($scores->isEmpty()) {
+            return null;
+        }
+
+        $weightTotal = max(1, (float) $scores->sum(fn (SidangScore $score) => (float) ($score->rubric?->weight ?? 1)));
+        $weighted = $scores->sum(fn (SidangScore $score) => (float) $score->score * (float) ($score->rubric?->weight ?? 1));
+        $total = round($weighted / $weightTotal, 2);
+
+        return SidangExaminerSummary::updateOrCreate(
+            ['tenant_id' => $registration->tenant_id, 'sidang_registration_id' => $registration->id, 'examiner_id' => $examinerId],
+            ['total_score' => $total, 'recommendation' => $this->recommendation($total), 'finalized_at' => now()]
+        );
+    }
+
     public function finalizeResult(SidangRegistration $registration, ?string $note = null): SidangResult
     {
         $summaries = $registration->examinerSummaries()->get();
+
+        if ($summaries->isEmpty()) {
+            SidangScore::query()
+                ->where('sidang_registration_id', $registration->id)
+                ->whereNotNull('submitted_at')
+                ->distinct()
+                ->pluck('examiner_id')
+                ->each(fn ($examinerId) => $this->summarizeSubmittedScores($registration, (int) $examinerId));
+
+            $summaries = $registration->examinerSummaries()->get();
+        }
 
         if ($summaries->isEmpty()) {
             throw ValidationException::withMessages(['scores' => 'Belum ada nilai penguji untuk difinalisasi.']);

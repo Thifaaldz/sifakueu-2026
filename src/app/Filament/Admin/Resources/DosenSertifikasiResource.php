@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\DosenSertifikasiResource\Pages;
 use App\Filament\Admin\Resources\DosenSertifikasiResource\RelationManagers;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\DosenSertifikasi;
+use App\Filament\Support\DosenOwnership;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,14 +31,14 @@ class DosenSertifikasiResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('dosen_id')->relationship('dosen', 'name')->searchable()->preload()->required(),
+                DosenOwnership::field(),
                 Forms\Components\TextInput::make('name')->label('Sertifikasi')->required()->maxLength(150),
                 Forms\Components\TextInput::make('issuer')->label('Penerbit')->maxLength(150),
                 Forms\Components\TextInput::make('field')->label('Bidang')->maxLength(150),
                 Forms\Components\TextInput::make('certificate_number')->label('Nomor Sertifikat')->maxLength(120),
                 Forms\Components\DatePicker::make('issued_on')->label('Tanggal Terbit'),
                 Forms\Components\DatePicker::make('expires_on')->label('Tanggal Berakhir'),
-                Forms\Components\Select::make('validation_status')->label('Status Validasi')->default('pending')->options(['pending' => 'Pending', 'validated' => 'Validated', 'rejected' => 'Rejected']),
+                Forms\Components\Select::make('validation_status')->label('Status Validasi')->default('pending')->visible(fn () => ! DosenOwnership::isSelfService())->options(['pending' => 'Pending', 'validated' => 'Validated', 'rejected' => 'Rejected']),
                 Forms\Components\TextInput::make('file_path')->label('File')->maxLength(255)->columnSpanFull(),
             ])->columns(2);
     }

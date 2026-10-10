@@ -1,0 +1,288 @@
+{
+  "code": "M3",
+  "title": "Monitoring & Alert Akademik",
+  "purpose": "Memantau kondisi akademik mahasiswa secara otomatis (KRS, SKS, IPK, progres TA, Sempro/Sidang, revisi, CPL/PLO), mengklasifikasikan risiko Hijau/Kuning/Merah, membangkitkan alert, serta mencatat acknowledgement, tindak lanjut, eskalasi, dan penyelesaian.",
+  "actors": [
+    "Admin Prodi",
+    "Mahasiswa",
+    "Dosen PA",
+    "Kaprodi"
+  ],
+  "testCase": "Admin Prodi menjalankan evaluasi untuk Mahasiswa FASILKOM (NIM 2026001001). Alert \"Progress SKS tertinggal\" dan \"Belum Sempro\" muncul, mahasiswa melakukan acknowledge, Dosen PA memberi konseling dan mengeskalasi ke Kaprodi, Kaprodi menyelesaikan alert.",
+  "id": "m3",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Login sebagai Admin Prodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/admin/login, isi email admin.prodi.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m3-01.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/login"
+    },
+    {
+      "n": 2,
+      "title": "Beranda Admin Prodi (ringkasan risiko)",
+      "desc": "Widget ringkasan risiko monitoring tampil di dashboard.",
+      "file": "m3-02.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin"
+    },
+    {
+      "n": 3,
+      "title": "Buka menu Monitoring › Aturan Monitoring",
+      "desc": "Daftar aturan monitoring yang aktif.",
+      "file": "m3-03.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin"
+    },
+    {
+      "n": 4,
+      "title": "Daftar rule monitoring",
+      "desc": "Contoh rule: KRS belum final, Progress SKS tertinggal, IPK rendah, Progress TA rendah, Belum Sempro/Sidang TA, Revisi overdue, Gap CPL/PLO — lengkap dengan severity.",
+      "file": "m3-04.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/monitoring-rules"
+    },
+    {
+      "n": 5,
+      "title": "Buka menu Data Master › Mahasiswa",
+      "desc": "Evaluasi dapat dijalankan per mahasiswa (scheduler juga menjalankannya otomatis).",
+      "file": "m3-05.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/monitoring-rules"
+    },
+    {
+      "n": 6,
+      "title": "Klik Evaluasi alert pada mahasiswa",
+      "desc": "Sistem menghitung semua indikator, menyimpan snapshot, lalu membuat/memperbarui alert.",
+      "file": "m3-06.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/mahasiswas"
+    },
+    {
+      "n": 7,
+      "title": "Notifikasi hasil evaluasi",
+      "desc": "Jumlah alert aktif hasil evaluasi ditampilkan.",
+      "file": "m3-07.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/mahasiswas"
+    },
+    {
+      "n": 8,
+      "title": "Buka menu Monitoring › Snapshot Evaluasi",
+      "desc": "Snapshot kondisi akademik per evaluasi.",
+      "file": "m3-08.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/mahasiswas"
+    },
+    {
+      "n": 9,
+      "title": "Snapshot monitoring",
+      "desc": "Tingkat risiko (green/yellow/red) dan skor per mahasiswa.",
+      "file": "m3-09.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/monitoring-snapshots"
+    },
+    {
+      "n": 10,
+      "title": "Buka menu Monitoring › Hasil Indikator",
+      "desc": "Hasil per indikator.",
+      "file": "m3-10.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/monitoring-snapshots"
+    },
+    {
+      "n": 11,
+      "title": "Hasil indikator",
+      "desc": "Setiap rule menghasilkan status indikator beserta nilai aktual vs ambang.",
+      "file": "m3-11.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/monitoring-indicator-results"
+    },
+    {
+      "n": 12,
+      "title": "Buka menu Monitoring › Alert Akademik",
+      "desc": "Daftar alert aktif.",
+      "file": "m3-12.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/monitoring-indicator-results"
+    },
+    {
+      "n": 13,
+      "title": "Daftar alert",
+      "desc": "Alert tampil dengan severity, status, dan mahasiswa terkait.",
+      "file": "m3-13.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/alerts"
+    },
+    {
+      "n": 14,
+      "title": "Login sebagai Mahasiswa",
+      "desc": "Buka https://fasilkom.sifakueu.test/mahasiswa/login, isi email mahasiswa.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m3-14.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/login"
+    },
+    {
+      "n": 15,
+      "title": "Buka menu Monitoring › Peringatan Akademik",
+      "desc": "Mahasiswa hanya melihat alert miliknya sendiri.",
+      "file": "m3-15.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa"
+    },
+    {
+      "n": 16,
+      "title": "Klik Acknowledge",
+      "desc": "Mahasiswa menandai alert sudah dibaca.",
+      "file": "m3-16.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/alerts"
+    },
+    {
+      "n": 17,
+      "title": "Status alert: acknowledged",
+      "desc": "Dosen PA dapat melihat bahwa mahasiswa sudah membaca peringatan.",
+      "file": "m3-17.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/alerts"
+    },
+    {
+      "n": 18,
+      "title": "Login sebagai Dosen (PA, Pembimbing, Penguji)",
+      "desc": "Buka https://fasilkom.sifakueu.test/dosen/login, isi email dosen.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m3-18.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/login"
+    },
+    {
+      "n": 19,
+      "title": "Buka menu Perwalian (PA) › Alert Mahasiswa PA",
+      "desc": "Alert mahasiswa bimbingan akademik.",
+      "file": "m3-19.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen"
+    },
+    {
+      "n": 20,
+      "title": "Klik Tindak lanjut pada alert \"Progress SKS tertinggal\"",
+      "desc": "Catat tindakan yang dilakukan terhadap mahasiswa: jenis (konseling/reminder/koordinasi), catatan, tanggal aksi berikutnya.",
+      "file": "m3-20.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/alerts"
+    },
+    {
+      "n": 21,
+      "title": "Klik Tindak lanjut pada alert \"Progress SKS tertinggal\" — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m3-21.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/alerts"
+    },
+    {
+      "n": 22,
+      "title": "Klik Eskalasi pada alert \"Belum Sempro\"",
+      "desc": "Alert yang butuh keputusan pimpinan dieskalasi: pilih tujuan (Kaprodi) dan alasan.",
+      "file": "m3-22.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/alerts"
+    },
+    {
+      "n": 23,
+      "title": "Klik Eskalasi pada alert \"Belum Sempro\" — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m3-23.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/alerts"
+    },
+    {
+      "n": 24,
+      "title": "Alert tereskalasi",
+      "desc": "Status alert menjadi escalated.",
+      "file": "m3-24.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/alerts"
+    },
+    {
+      "n": 25,
+      "title": "Buka menu Perwalian (PA) › Riwayat Tindak Lanjut",
+      "desc": "Riwayat tindak lanjut.",
+      "file": "m3-25.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/alerts"
+    },
+    {
+      "n": 26,
+      "title": "Riwayat tindak lanjut",
+      "desc": "Setiap tindak lanjut tercatat dengan jenis, catatan, dan pelaku.",
+      "file": "m3-26.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/alert-followups"
+    },
+    {
+      "n": 27,
+      "title": "Login sebagai Kaprodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/pimpinan/login, isi email kaprodi.fasilkom@sifak.local dan password \"password\", lalu klik Masuk.",
+      "file": "m3-27.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/login"
+    },
+    {
+      "n": 28,
+      "title": "Beranda Kaprodi",
+      "desc": "Ringkasan risiko prodi pada panel pimpinan.",
+      "file": "m3-28.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 29,
+      "title": "Buka menu Monitoring › Eskalasi Masuk",
+      "desc": "Daftar eskalasi yang ditujukan ke Kaprodi.",
+      "file": "m3-29.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 30,
+      "title": "Daftar eskalasi",
+      "desc": "Eskalasi berisi alasan, asal role, dan tujuan role.",
+      "file": "m3-30.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/alert-escalations"
+    },
+    {
+      "n": 31,
+      "title": "Buka menu Monitoring › Alert Mahasiswa",
+      "desc": "Kaprodi dapat menyelesaikan alert.",
+      "file": "m3-31.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/alert-escalations"
+    },
+    {
+      "n": 32,
+      "title": "Klik Resolve",
+      "desc": "Alert ditutup setelah tindak lanjut dinilai cukup.",
+      "file": "m3-32.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/alerts"
+    },
+    {
+      "n": 33,
+      "title": "Alert resolved",
+      "desc": "Status alert menjadi resolved; histori tetap tersimpan.",
+      "file": "m3-33.png",
+      "role": "kaprodi",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/alerts"
+    },
+    {
+      "n": 34,
+      "title": "Mahasiswa melihat status alert terbaru",
+      "desc": "Satu alert resolved, satu alert escalated.",
+      "file": "m3-34.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/alerts"
+    }
+  ],
+  "issues": []
+}

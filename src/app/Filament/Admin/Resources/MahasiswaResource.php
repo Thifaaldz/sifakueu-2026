@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\MahasiswaResource\Pages;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\Mahasiswa;
 use App\Services\Sifak\AcademicAlertEngine;
+use App\Services\Sifak\StudentProfileService;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Notifications\Notification;
@@ -83,6 +84,18 @@ class MahasiswaResource extends Resource
 
                         Notification::make()
                             ->title(count($alerts) . ' alert aktif dievaluasi')
+                            ->success()
+                            ->send();
+                    }),
+                Tables\Actions\Action::make('recalculateProfile')
+                    ->label('Recalculate M6')
+                    ->icon('heroicon-o-arrow-path')
+                    ->visible(fn () => auth()->user()?->can('recalculate_student_profile') || auth()->user()?->can('update_mahasiswa'))
+                    ->action(function (Mahasiswa $record) {
+                        app(StudentProfileService::class)->recalculate($record);
+
+                        Notification::make()
+                            ->title('Profil M6 berhasil dihitung ulang')
                             ->success()
                             ->send();
                     }),

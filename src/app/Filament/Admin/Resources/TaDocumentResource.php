@@ -99,7 +99,7 @@ class TaDocumentResource extends Resource
                 ->label('Approve')
                 ->icon('heroicon-o-check')
                 ->color('success')
-                ->visible(fn (TaDocument $record) => $record->current_version_id && auth()->user()?->can('approve_ta_document'))
+                ->visible(fn (TaDocument $record) => $record->current_version_id && in_array($record->status, ['submitted', 'under_review'], true) && auth()->user()?->can('approve_ta_document'))
                 ->form([Forms\Components\Textarea::make('note')->label('Catatan')])
                 ->action(function (TaDocument $record, array $data) {
                     $dosen = Dosen::query()->where('user_id', auth()->id())->first();
@@ -114,7 +114,7 @@ class TaDocumentResource extends Resource
                 ->label('Minta Revisi')
                 ->icon('heroicon-o-arrow-path')
                 ->color('warning')
-                ->visible(fn (TaDocument $record) => $record->current_version_id && auth()->user()?->can('request_ta_revision'))
+                ->visible(fn (TaDocument $record) => $record->current_version_id && in_array($record->status, ['submitted', 'under_review'], true) && auth()->user()?->can('request_ta_revision'))
                 ->form([Forms\Components\Textarea::make('summary')->required()])
                 ->action(function (TaDocument $record, array $data) {
                     $dosen = Dosen::query()->where('user_id', auth()->id())->first();

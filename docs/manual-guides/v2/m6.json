@@ -1,0 +1,384 @@
+{
+  "code": "M6",
+  "title": "Profiling Mahasiswa & Rekomendasi Profil Lulusan",
+  "purpose": "Membangun profil mahasiswa (akademik, minat, sertifikasi, portofolio, organisasi, MBKM/magang), menghitung capaian CPL/PLO dan skor profil lulusan, mendeteksi gap kompetensi, serta memberikan rekomendasi (MK, karier, topik TA, pembimbing) lengkap dengan penjelasan (explainability).",
+  "actors": [
+    "Admin Prodi",
+    "Mahasiswa",
+    "Dosen PA",
+    "LPM"
+  ],
+  "testCase": "Mahasiswa FASILKOM menambah minat, sertifikasi, portofolio, organisasi, dan MBKM; Admin Prodi menghitung ulang profil; mahasiswa melihat skor CPL/PLO, gap kompetensi dan rekomendasi; LPM memantau sebaran profil lulusan.",
+  "id": "m6",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Login sebagai Admin Prodi",
+      "desc": "Buka https://fasilkom.sifakueu.test/admin/login, isi email admin.prodi.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m6-01.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/login"
+    },
+    {
+      "n": 2,
+      "title": "Buka M6 Profiling Mahasiswa > Cpls",
+      "desc": "Capaian Pembelajaran Lulusan (CPL) prodi.",
+      "file": "m6-02.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin"
+    },
+    {
+      "n": 3,
+      "title": "Daftar CPL",
+      "desc": "CPL menjadi acuan penilaian kompetensi.",
+      "file": "m6-03.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/cpls"
+    },
+    {
+      "n": 4,
+      "title": "Buka Plos",
+      "desc": "Program Learning Outcome.",
+      "file": "m6-04.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/cpls"
+    },
+    {
+      "n": 5,
+      "title": "Daftar PLO",
+      "desc": "PLO dipetakan ke CPL.",
+      "file": "m6-05.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/plos"
+    },
+    {
+      "n": 6,
+      "title": "Buka Pemetaan Mk Cpls",
+      "desc": "Kontribusi mata kuliah terhadap CPL.",
+      "file": "m6-06.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/plos"
+    },
+    {
+      "n": 7,
+      "title": "Pemetaan MK–CPL",
+      "desc": "Bobot kontribusi tiap MK ke CPL — nilai MK mahasiswa dikonversi menjadi skor CPL.",
+      "file": "m6-07.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/pemetaan-mk-cpls"
+    },
+    {
+      "n": 8,
+      "title": "Buka Graduate Profiles",
+      "desc": "Profil lulusan yang dituju prodi.",
+      "file": "m6-08.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/pemetaan-mk-cpls"
+    },
+    {
+      "n": 9,
+      "title": "Profil lulusan",
+      "desc": "Contoh: Software Engineer, Data Analyst.",
+      "file": "m6-09.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/graduate-profiles"
+    },
+    {
+      "n": 10,
+      "title": "Login sebagai Mahasiswa",
+      "desc": "Buka https://fasilkom.sifakueu.test/mahasiswa/login, isi email mahasiswa.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m6-10.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/login"
+    },
+    {
+      "n": 11,
+      "title": "Mahasiswa membuka M6 > Mahasiswa Profiles",
+      "desc": "Ringkasan profil akademik & kompetensi.",
+      "file": "m6-11.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa"
+    },
+    {
+      "n": 12,
+      "title": "Profil mahasiswa",
+      "desc": "Skor akademik, skor kompetensi, status perhitungan.",
+      "file": "m6-12.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-profiles"
+    },
+    {
+      "n": 13,
+      "title": "Buka Mahasiswa Interests",
+      "desc": "Minat bidang mahasiswa.",
+      "file": "m6-13.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-profiles"
+    },
+    {
+      "n": 14,
+      "title": "Klik New mahasiswa interest",
+      "desc": "Tambah minat.",
+      "file": "m6-14.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-interests"
+    },
+    {
+      "n": 15,
+      "title": "Isi minat & tingkat lalu Create",
+      "desc": "Mahasiswa otomatis sesuai akun login.",
+      "file": "m6-15.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-interests/create"
+    },
+    {
+      "n": 16,
+      "title": "Buka Sertifikasi Mahasiswa",
+      "desc": "Sertifikasi yang dimiliki.",
+      "file": "m6-16.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-interests/4/edit"
+    },
+    {
+      "n": 17,
+      "title": "Klik New sertifikasi",
+      "desc": "Tambah sertifikasi.",
+      "file": "m6-17.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-certifications"
+    },
+    {
+      "n": 18,
+      "title": "Isi data sertifikasi lalu Create",
+      "desc": "Status verifikasi diisi oleh Admin/Dosen PA, bukan oleh mahasiswa.",
+      "file": "m6-18.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-certifications/create"
+    },
+    {
+      "n": 19,
+      "title": "Buka Portofolio Mahasiswa",
+      "desc": "Portofolio proyek.",
+      "file": "m6-19.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-certifications/1/edit"
+    },
+    {
+      "n": 20,
+      "title": "Klik New portofolio",
+      "desc": "Tambah portofolio.",
+      "file": "m6-20.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-portfolios"
+    },
+    {
+      "n": 21,
+      "title": "Isi judul, URL, skill, deskripsi lalu Create",
+      "desc": "Skill dari portofolio dipakai dalam perhitungan kekuatan kompetensi.",
+      "file": "m6-21.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-portfolios/create"
+    },
+    {
+      "n": 22,
+      "title": "Buka Organisasi Mahasiswa",
+      "desc": "Pengalaman organisasi.",
+      "file": "m6-22.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-portfolios/1/edit"
+    },
+    {
+      "n": 23,
+      "title": "Klik New organisasi",
+      "desc": "Tambah organisasi.",
+      "file": "m6-23.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-organizations"
+    },
+    {
+      "n": 24,
+      "title": "Isi organisasi & peran lalu Create",
+      "desc": "Soft skill/kepemimpinan.",
+      "file": "m6-24.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-organizations/create"
+    },
+    {
+      "n": 25,
+      "title": "Buka MBKM/Magang",
+      "desc": "Program MBKM atau magang.",
+      "file": "m6-25.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-organizations/1/edit"
+    },
+    {
+      "n": 26,
+      "title": "Klik New MBKM",
+      "desc": "Tambah pengalaman MBKM/magang.",
+      "file": "m6-26.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-mbkms"
+    },
+    {
+      "n": 27,
+      "title": "Isi data MBKM lalu Create",
+      "desc": "Pengalaman industri memperkuat profil lulusan.",
+      "file": "m6-27.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-mbkms/create"
+    },
+    {
+      "n": 28,
+      "title": "Admin Prodi klik Recalculate",
+      "desc": "Sistem menghitung ulang skor CPL/PLO, profil lulusan, gap kompetensi, dan rekomendasi.",
+      "file": "m6-28.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-profiles"
+    },
+    {
+      "n": 29,
+      "title": "Profil terhitung ulang",
+      "desc": "Status calculated dan waktu recalculated terbarui.",
+      "file": "m6-29.png",
+      "role": "admin_prodi",
+      "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-profiles"
+    },
+    {
+      "n": 30,
+      "title": "Skor CPL mahasiswa",
+      "desc": "Capaian per CPL.",
+      "file": "m6-30.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-cpl-scores"
+    },
+    {
+      "n": 31,
+      "title": "Buka Skor Profil Lulusan",
+      "desc": "Kecocokan terhadap tiap profil lulusan.",
+      "file": "m6-31.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-cpl-scores"
+    },
+    {
+      "n": 32,
+      "title": "Skor profil lulusan",
+      "desc": "Persentase kecocokan mahasiswa terhadap profil lulusan prodi.",
+      "file": "m6-32.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-graduate-profile-scores"
+    },
+    {
+      "n": 33,
+      "title": "Buka Competency Gaps",
+      "desc": "Gap kompetensi.",
+      "file": "m6-33.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-graduate-profile-scores"
+    },
+    {
+      "n": 34,
+      "title": "Gap kompetensi",
+      "desc": "Kompetensi yang masih kurang dibanding target profil lulusan.",
+      "file": "m6-34.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/competency-gaps"
+    },
+    {
+      "n": 35,
+      "title": "Buka Student Recommendations",
+      "desc": "Rekomendasi personal.",
+      "file": "m6-35.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/competency-gaps"
+    },
+    {
+      "n": 36,
+      "title": "Rekomendasi mahasiswa",
+      "desc": "Rekomendasi MK, karier, topik TA, dan pembimbing beserta alasan (explainability).",
+      "file": "m6-36.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/student-recommendations"
+    },
+    {
+      "n": 37,
+      "title": "Buka Riwayat Rekomendasi",
+      "desc": "Histori rekomendasi.",
+      "file": "m6-37.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/student-recommendations"
+    },
+    {
+      "n": 38,
+      "title": "Riwayat rekomendasi",
+      "desc": "Setiap perhitungan ulang tersimpan sebagai histori.",
+      "file": "m6-38.png",
+      "role": "mahasiswa",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/recommendation-histories"
+    },
+    {
+      "n": 39,
+      "title": "Login sebagai Dosen (PA, Pembimbing, Penguji)",
+      "desc": "Buka https://fasilkom.sifakueu.test/dosen/login, isi email dosen.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m6-39.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/login"
+    },
+    {
+      "n": 40,
+      "title": "Dosen PA melihat rekomendasi mahasiswa bimbingan",
+      "desc": "Bahan diskusi saat perwalian.",
+      "file": "m6-40.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen"
+    },
+    {
+      "n": 41,
+      "title": "Rekomendasi mahasiswa bimbingan",
+      "desc": "Dosen PA melihat rekomendasi mahasiswa yang dibimbing.",
+      "file": "m6-41.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/student-recommendations"
+    },
+    {
+      "n": 42,
+      "title": "Login sebagai LPM / Gugus Mutu",
+      "desc": "Buka https://fasilkom.sifakueu.test/pimpinan/login, isi email lpm.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m6-42.png",
+      "role": "lpm",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/login"
+    },
+    {
+      "n": 43,
+      "title": "LPM membuka Skor Profil Lulusan",
+      "desc": "Monitoring mutu: sebaran ketercapaian profil lulusan.",
+      "file": "m6-43.png",
+      "role": "lpm",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 44,
+      "title": "Sebaran profil lulusan (LPM)",
+      "desc": "Data mutu untuk akreditasi (read-only).",
+      "file": "m6-44.png",
+      "role": "lpm",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores"
+    },
+    {
+      "n": 45,
+      "title": "LPM membuka Mahasiswa Cpl Scores",
+      "desc": "Capaian CPL seluruh mahasiswa.",
+      "file": "m6-45.png",
+      "role": "lpm",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores"
+    },
+    {
+      "n": 46,
+      "title": "Capaian CPL (LPM)",
+      "desc": "Rekap capaian CPL untuk evaluasi kurikulum.",
+      "file": "m6-46.png",
+      "role": "lpm",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores"
+    }
+  ],
+  "issues": []
+}

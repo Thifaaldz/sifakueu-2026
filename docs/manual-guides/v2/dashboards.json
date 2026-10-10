@@ -1,0 +1,967 @@
+{
+  "admin_fakultas": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "items": [
+          "Pendaftaran Sidang",
+          "Jadwal Sidang",
+          "Hasil Sidang",
+          "Berita Acara"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "items": [
+          "Tugas Akhir",
+          "Dokumen TA",
+          "Struktur Bab",
+          "Progres TA",
+          "Repositori TA",
+          "Siklus Revisi"
+        ]
+      },
+      {
+        "group": "Surat",
+        "items": [
+          "Pengajuan Surat",
+          "Riwayat Approval",
+          "Dokumen Surat",
+          "Distribusi",
+          "Arsip Surat",
+          "Nomor Surat",
+          "Log Verifikasi",
+          "Token Verifikasi",
+          "Jenis Surat",
+          "Form Field Surat",
+          "Template Surat",
+          "Sequence Nomor",
+          "Alur Approval",
+          "Langkah Approval"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Alert Akademik",
+          "Eskalasi",
+          "Snapshot Evaluasi"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "items": [
+          "Profil Fakultas",
+          "Program Studi",
+          "Mahasiswa",
+          "Dosen",
+          "Mata Kuliah",
+          "Kurikulum",
+          "Ruangan",
+          "Tahun Akademik",
+          "Semester",
+          "Rumpun Ilmu",
+          "KBK"
+        ]
+      },
+      {
+        "group": "Pengguna & Akses",
+        "items": [
+          "Pengguna",
+          "Role & Permission"
+        ]
+      },
+      {
+        "group": "Layanan Sistem",
+        "items": [
+          "Audit Log",
+          "Notifikasi",
+          "Template Notifikasi",
+          "Riwayat Workflow",
+          "File Tersimpan",
+          "Log Tugas Terjadwal"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/krs",
+        "status": 403
+      },
+      {
+        "path": "/rekomendasi-pengampus",
+        "status": 403
+      },
+      {
+        "path": "/tenants",
+        "status": 403
+      }
+    ]
+  },
+  "admin_prodi": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "items": [
+          "Jenis Sidang",
+          "Persyaratan",
+          "Pendaftaran & Verifikasi",
+          "Plotting Penguji",
+          "Jadwal Sidang",
+          "Rubrik Penilaian",
+          "Nilai Sidang",
+          "Hasil Sidang",
+          "Revisi Sidang",
+          "Berita Acara"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "items": [
+          "Tugas Akhir",
+          "Dokumen TA",
+          "Progres TA",
+          "Repositori TA"
+        ]
+      },
+      {
+        "group": "Surat",
+        "items": [
+          "Verifikasi Surat",
+          "Riwayat Approval"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Alert Akademik",
+          "Tindak Lanjut",
+          "Eskalasi",
+          "Snapshot Evaluasi",
+          "Hasil Indikator",
+          "Aturan Monitoring",
+          "Override Status"
+        ]
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "items": [
+          "Periode KRS",
+          "Penawaran Mata Kuliah",
+          "KRS Mahasiswa",
+          "Rincian KRS",
+          "Hasil Validasi KRS",
+          "Kelas Kuliah",
+          "Plotting Dosen",
+          "Jadwal Kuliah",
+          "Konflik Jadwal",
+          "Riwayat Jadwal"
+        ]
+      },
+      {
+        "group": "Profiling Dosen",
+        "items": [
+          "Profil Dosen",
+          "Keahlian",
+          "Pendidikan",
+          "Sertifikasi",
+          "Publikasi",
+          "Pengalaman Industri",
+          "Riwayat Mengajar",
+          "Preferensi Mata Kuliah",
+          "Beban Dosen",
+          "Matriks Kesesuaian",
+          "Rekomendasi Pengampu",
+          "Jadwal Konsultasi"
+        ]
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "items": [
+          "Profil Mahasiswa",
+          "Skor CPL",
+          "Skor PLO",
+          "Skor Profil Lulusan",
+          "Gap Kompetensi",
+          "Rekomendasi Mahasiswa",
+          "Minat Mahasiswa",
+          "Sertifikasi Mahasiswa",
+          "Portofolio Mahasiswa",
+          "Organisasi Mahasiswa",
+          "MBKM / Magang",
+          "Riwayat Rekomendasi"
+        ]
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "items": [
+          "CPL",
+          "PLO",
+          "Pemetaan MK–CPL",
+          "Pemetaan CPL–PLO",
+          "Profil Lulusan"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "items": [
+          "Mahasiswa",
+          "Dosen",
+          "Mata Kuliah",
+          "Kurikulum",
+          "Semester",
+          "Ruangan"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/users",
+        "status": 403
+      },
+      {
+        "path": "/jenis-surats",
+        "status": 403
+      },
+      {
+        "path": "/tenants",
+        "status": 403
+      }
+    ]
+  },
+  "dosen": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Akademik",
+        "items": [
+          "Jadwal Mengajar",
+          "Beban Dosen",
+          "Jadwal Konsultasi",
+          "Lokasi & Ketersediaan"
+        ]
+      },
+      {
+        "group": "Perwalian (PA)",
+        "items": [
+          "Approval KRS",
+          "Rincian KRS",
+          "Alert Mahasiswa PA",
+          "Riwayat Tindak Lanjut",
+          "Profil Mahasiswa PA",
+          "Rekomendasi Mahasiswa"
+        ]
+      },
+      {
+        "group": "Sidang & Pengujian",
+        "items": [
+          "Jadwal Menguji",
+          "Detail Sidang",
+          "Penilaian Sidang",
+          "Catatan / Revisi",
+          "Hasil Sidang"
+        ]
+      },
+      {
+        "group": "Bimbingan TA",
+        "items": [
+          "Mahasiswa Bimbingan",
+          "Review Dokumen TA",
+          "Riwayat Versi",
+          "Riwayat Review",
+          "Komentar",
+          "Approval Bab",
+          "Progres TA"
+        ]
+      },
+      {
+        "group": "Surat",
+        "items": [
+          "Pengajuan Surat",
+          "Dokumen Surat"
+        ]
+      },
+      {
+        "group": "Profil Saya",
+        "items": [
+          "Profil Dosen",
+          "Keahlian",
+          "Pendidikan",
+          "Sertifikasi",
+          "Publikasi",
+          "Pengalaman Industri",
+          "Riwayat Mengajar",
+          "Preferensi Mata Kuliah"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/rekomendasi-pengampus",
+        "status": 403
+      },
+      {
+        "path": "/mahasiswas",
+        "status": 403
+      },
+      {
+        "path": "/matriks-kesesuaians",
+        "status": 403
+      }
+    ]
+  },
+  "mahasiswa": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Akademik",
+        "items": [
+          "KRS Saya",
+          "Mata Kuliah Diambil",
+          "Hasil Validasi KRS",
+          "Jadwal Kuliah"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "items": [
+          "Persyaratan Sidang",
+          "Pendaftaran Sidang",
+          "Jadwal Sidang",
+          "Hasil Sidang",
+          "Revisi Sidang",
+          "Berita Acara"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "items": [
+          "Tugas Akhir Saya",
+          "Dokumen per Bab",
+          "Riwayat Versi",
+          "Komentar Pembimbing",
+          "Repositori TA",
+          "Jadwal Konsultasi Dosen"
+        ]
+      },
+      {
+        "group": "Surat",
+        "items": [
+          "Pengajuan Surat",
+          "Dokumen Surat"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Peringatan Akademik",
+          "Riwayat Evaluasi"
+        ]
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "items": [
+          "Profil Saya",
+          "Minat",
+          "Sertifikasi",
+          "Portofolio",
+          "Organisasi",
+          "MBKM / Magang",
+          "Skor CPL",
+          "Skor Profil Lulusan",
+          "Gap Kompetensi",
+          "Rekomendasi Untuk Saya"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/sidang-types",
+        "status": 403
+      },
+      {
+        "path": "/cpls",
+        "status": 403
+      },
+      {
+        "path": "/kelas-kuliahs",
+        "status": 403
+      },
+      {
+        "path": "/mahasiswas",
+        "status": 403
+      }
+    ]
+  },
+  "mahasiswa_demo": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Akademik",
+        "items": [
+          "KRS Saya",
+          "Mata Kuliah Diambil",
+          "Hasil Validasi KRS",
+          "Jadwal Kuliah"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "items": [
+          "Persyaratan Sidang",
+          "Pendaftaran Sidang",
+          "Jadwal Sidang",
+          "Hasil Sidang",
+          "Revisi Sidang",
+          "Berita Acara"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "items": [
+          "Tugas Akhir Saya",
+          "Dokumen per Bab",
+          "Riwayat Versi",
+          "Komentar Pembimbing",
+          "Repositori TA",
+          "Jadwal Konsultasi Dosen"
+        ]
+      },
+      {
+        "group": "Surat",
+        "items": [
+          "Pengajuan Surat",
+          "Dokumen Surat"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Peringatan Akademik",
+          "Riwayat Evaluasi"
+        ]
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "items": [
+          "Profil Saya",
+          "Minat",
+          "Sertifikasi",
+          "Portofolio",
+          "Organisasi",
+          "MBKM / Magang",
+          "Skor CPL",
+          "Skor Profil Lulusan",
+          "Gap Kompetensi",
+          "Rekomendasi Untuk Saya"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": []
+  },
+  "kaprodi": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "items": [
+          "Pendaftaran Sidang",
+          "Plotting Penguji",
+          "Jadwal Sidang",
+          "Hasil Sidang",
+          "Revisi Sidang"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "items": [
+          "Tugas Akhir",
+          "Dokumen TA",
+          "Progres TA"
+        ]
+      },
+      {
+        "group": "Surat",
+        "items": [
+          "Approval Surat",
+          "Riwayat Approval"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Alert Mahasiswa",
+          "Eskalasi Masuk",
+          "Snapshot Evaluasi",
+          "Override Status"
+        ]
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "items": [
+          "Monitoring KRS",
+          "Jadwal Kuliah",
+          "Plotting Dosen",
+          "Konflik Jadwal"
+        ]
+      },
+      {
+        "group": "Profiling Dosen",
+        "items": [
+          "Profil Dosen",
+          "Beban Dosen",
+          "Matriks Kesesuaian",
+          "Rekomendasi Pengampu"
+        ]
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "items": [
+          "Profil Mahasiswa",
+          "Skor CPL",
+          "Skor PLO",
+          "Skor Profil Lulusan",
+          "Gap Kompetensi",
+          "Rekomendasi Mahasiswa"
+        ]
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "items": [
+          "CPL",
+          "PLO",
+          "Pemetaan MK–CPL",
+          "Pemetaan CPL–PLO",
+          "Profil Lulusan"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/sidang-scores",
+        "status": 403
+      }
+    ]
+  },
+  "dekan": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Surat",
+        "items": [
+          "Approval Surat",
+          "Riwayat Approval"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Monitoring Risiko",
+          "Snapshot Evaluasi"
+        ]
+      },
+      {
+        "group": "Profiling Dosen",
+        "items": [
+          "Profil Dosen",
+          "Peta Keahlian",
+          "Peta Beban Dosen",
+          "Matriks Kesesuaian"
+        ]
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "items": [
+          "Profil Mahasiswa",
+          "Sebaran Profil Lulusan",
+          "Capaian CPL"
+        ]
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "items": [
+          "CPL",
+          "PLO",
+          "Profil Lulusan"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/krs",
+        "status": 403
+      },
+      {
+        "path": "/sidang-registrations",
+        "status": 403
+      }
+    ]
+  },
+  "wd": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Surat",
+        "items": [
+          "Approval Surat",
+          "Riwayat Approval"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Monitoring Risiko",
+          "Snapshot Evaluasi"
+        ]
+      },
+      {
+        "group": "Profiling Dosen",
+        "items": [
+          "Profil Dosen",
+          "Peta Keahlian",
+          "Peta Beban Dosen",
+          "Matriks Kesesuaian"
+        ]
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "items": [
+          "Profil Mahasiswa",
+          "Sebaran Profil Lulusan",
+          "Capaian CPL"
+        ]
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "items": [
+          "CPL",
+          "PLO",
+          "Profil Lulusan"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/krs",
+        "status": 403
+      }
+    ]
+  },
+  "kbk": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Profiling Dosen",
+        "items": [
+          "Profil Dosen",
+          "Keahlian",
+          "Pendidikan",
+          "Sertifikasi",
+          "Publikasi",
+          "Pengalaman Industri",
+          "Riwayat Mengajar",
+          "Beban Dosen",
+          "Matriks Kesesuaian",
+          "Rekomendasi Pengampu"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "items": [
+          "Rumpun Ilmu",
+          "KBK",
+          "Mata Kuliah",
+          "Dosen"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/surats",
+        "status": 403
+      },
+      {
+        "path": "/alerts",
+        "status": 403
+      }
+    ]
+  },
+  "lpm": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "items": [
+          "Repositori TA",
+          "Tugas Akhir"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Alert Akademik",
+          "Snapshot Evaluasi"
+        ]
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "items": [
+          "Capaian CPL",
+          "Capaian PLO",
+          "Skor Profil Lulusan",
+          "Gap CPL / Kompetensi",
+          "Profil Mahasiswa"
+        ]
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "items": [
+          "CPL",
+          "PLO",
+          "Profil Lulusan"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/surats",
+        "status": 403
+      },
+      {
+        "path": "/krs",
+        "status": 403
+      }
+    ]
+  },
+  "baak": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "items": [
+          "Rekap Sidang",
+          "Hasil Sidang",
+          "Berita Acara"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "items": [
+          "Status Tugas Akhir",
+          "Repositori Final"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "items": [
+          "Alert Akademik",
+          "Snapshot Evaluasi"
+        ]
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "items": [
+          "Rekap Profil Mahasiswa"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "items": [
+          "Rekap Mahasiswa"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/surats",
+        "status": 403
+      },
+      {
+        "path": "/dosen-profils",
+        "status": 403
+      }
+    ]
+  },
+  "kalab": {
+    "nav": [
+      {
+        "group": "",
+        "items": [
+          "Beranda"
+        ]
+      },
+      {
+        "group": "Profiling Dosen",
+        "items": [
+          "Profil Dosen",
+          "Keahlian",
+          "Publikasi & Riset",
+          "Beban Dosen"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "items": [
+          "Dosen",
+          "Mahasiswa",
+          "Mata Kuliah"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "items": [
+          "Modul & Hak Akses"
+        ]
+      }
+    ],
+    "errors": [],
+    "blocked": [
+      {
+        "path": "/surats",
+        "status": 403
+      },
+      {
+        "path": "/alerts",
+        "status": 403
+      },
+      {
+        "path": "/mahasiswa-profiles",
+        "status": 403
+      }
+    ]
+  }
+}

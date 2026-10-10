@@ -1,0 +1,6149 @@
+{
+  "superadmin": {
+    "account": {
+      "base": "https://sifakueu.test",
+      "panel": "admin",
+      "email": "admin@admin.com",
+      "name": "Super Admin",
+      "role": "super_admin"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Dasbor",
+            "href": "https://sifakueu.test/admin"
+          }
+        ]
+      },
+      {
+        "label": "Administration",
+        "items": [
+          {
+            "label": "Pengguna",
+            "href": "https://sifakueu.test/admin/users"
+          },
+          {
+            "label": "Catatan Aktivitas",
+            "href": "https://sifakueu.test/admin/activity-logs"
+          }
+        ]
+      },
+      {
+        "label": "Jobdesk",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://sifakueu.test/admin/modul-hak-akses"
+          }
+        ]
+      },
+      {
+        "label": "Platform",
+        "items": [
+          {
+            "label": "Fakultas / Tenant",
+            "href": "https://sifakueu.test/admin/tenants"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Dasbor",
+        "url": "https://sifakueu.test/admin",
+        "status": 200,
+        "errors": [],
+        "title": "Dasbor",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Administration",
+        "label": "Pengguna",
+        "url": "https://sifakueu.test/admin/users",
+        "status": 200,
+        "errors": [],
+        "title": "Pengguna",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Lihat",
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Administration",
+        "label": "Catatan Aktivitas",
+        "url": "https://sifakueu.test/admin/activity-logs",
+        "status": 200,
+        "errors": [],
+        "title": "Catatan Aktivitas",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Jobdesk",
+        "label": "Modul & Hak Akses",
+        "url": "https://sifakueu.test/admin/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Platform",
+        "label": "Fakultas / Tenant",
+        "url": "https://sifakueu.test/admin/tenants",
+        "status": 200,
+        "errors": [],
+        "title": "Tenant",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Buka lokal",
+          "Buat admin",
+          "Provision DB",
+          "Nonaktifkan",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      }
+    ]
+  },
+  "admin_fakultas": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "admin",
+      "email": "admin.fasilkom@sifak.local",
+      "name": "Admin Fakultas / TU",
+      "role": "admin_fakultas"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/admin"
+          }
+        ]
+      },
+      {
+        "label": "Sidang",
+        "items": [
+          {
+            "label": "Pendaftaran Sidang",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+          },
+          {
+            "label": "Jadwal Sidang",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+          },
+          {
+            "label": "Hasil Sidang",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-results"
+          },
+          {
+            "label": "Berita Acara",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-minutes"
+          }
+        ]
+      },
+      {
+        "label": "Dokumen TA",
+        "items": [
+          {
+            "label": "Tugas Akhir",
+            "href": "https://fasilkom.sifakueu.test/admin/tugas-akhirs"
+          },
+          {
+            "label": "Dokumen TA",
+            "href": "https://fasilkom.sifakueu.test/admin/ta-documents"
+          },
+          {
+            "label": "Struktur Bab",
+            "href": "https://fasilkom.sifakueu.test/admin/ta-sections"
+          },
+          {
+            "label": "Progres TA",
+            "href": "https://fasilkom.sifakueu.test/admin/ta-progress-logs"
+          },
+          {
+            "label": "Repositori TA",
+            "href": "https://fasilkom.sifakueu.test/admin/repository-items"
+          },
+          {
+            "label": "Siklus Revisi",
+            "href": "https://fasilkom.sifakueu.test/admin/revision-cycles"
+          }
+        ]
+      },
+      {
+        "label": "Surat",
+        "items": [
+          {
+            "label": "Pengajuan Surat",
+            "href": "https://fasilkom.sifakueu.test/admin/surats"
+          },
+          {
+            "label": "Riwayat Approval",
+            "href": "https://fasilkom.sifakueu.test/admin/surat-approvals"
+          },
+          {
+            "label": "Dokumen Surat",
+            "href": "https://fasilkom.sifakueu.test/admin/generated-letters"
+          },
+          {
+            "label": "Distribusi",
+            "href": "https://fasilkom.sifakueu.test/admin/letter-distributions"
+          },
+          {
+            "label": "Arsip Surat",
+            "href": "https://fasilkom.sifakueu.test/admin/letter-archives"
+          },
+          {
+            "label": "Nomor Surat",
+            "href": "https://fasilkom.sifakueu.test/admin/letter-numbers"
+          },
+          {
+            "label": "Log Verifikasi",
+            "href": "https://fasilkom.sifakueu.test/admin/letter-verifications"
+          },
+          {
+            "label": "Token Verifikasi",
+            "href": "https://fasilkom.sifakueu.test/admin/letter-verification-tokens"
+          },
+          {
+            "label": "Jenis Surat",
+            "href": "https://fasilkom.sifakueu.test/admin/jenis-surats"
+          },
+          {
+            "label": "Form Field Surat",
+            "href": "https://fasilkom.sifakueu.test/admin/letter-form-fields"
+          },
+          {
+            "label": "Template Surat",
+            "href": "https://fasilkom.sifakueu.test/admin/letter-templates"
+          },
+          {
+            "label": "Sequence Nomor",
+            "href": "https://fasilkom.sifakueu.test/admin/letter-number-sequences"
+          },
+          {
+            "label": "Alur Approval",
+            "href": "https://fasilkom.sifakueu.test/admin/approval-flows"
+          },
+          {
+            "label": "Langkah Approval",
+            "href": "https://fasilkom.sifakueu.test/admin/approval-flow-steps"
+          }
+        ]
+      },
+      {
+        "label": "Monitoring",
+        "items": [
+          {
+            "label": "Alert Akademik",
+            "href": "https://fasilkom.sifakueu.test/admin/alerts"
+          },
+          {
+            "label": "Eskalasi",
+            "href": "https://fasilkom.sifakueu.test/admin/alert-escalations"
+          },
+          {
+            "label": "Snapshot Evaluasi",
+            "href": "https://fasilkom.sifakueu.test/admin/monitoring-snapshots"
+          }
+        ]
+      },
+      {
+        "label": "Data Master",
+        "items": [
+          {
+            "label": "Profil Fakultas",
+            "href": "https://fasilkom.sifakueu.test/admin/fakultas"
+          },
+          {
+            "label": "Program Studi",
+            "href": "https://fasilkom.sifakueu.test/admin/program-studis"
+          },
+          {
+            "label": "Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswas"
+          },
+          {
+            "label": "Dosen",
+            "href": "https://fasilkom.sifakueu.test/admin/dosens"
+          },
+          {
+            "label": "Mata Kuliah",
+            "href": "https://fasilkom.sifakueu.test/admin/mata-kuliahs"
+          },
+          {
+            "label": "Kurikulum",
+            "href": "https://fasilkom.sifakueu.test/admin/kurikulums"
+          },
+          {
+            "label": "Ruangan",
+            "href": "https://fasilkom.sifakueu.test/admin/ruangans"
+          },
+          {
+            "label": "Tahun Akademik",
+            "href": "https://fasilkom.sifakueu.test/admin/tahun-akademiks"
+          },
+          {
+            "label": "Semester",
+            "href": "https://fasilkom.sifakueu.test/admin/semesters"
+          },
+          {
+            "label": "Rumpun Ilmu",
+            "href": "https://fasilkom.sifakueu.test/admin/rumpun-ilmus"
+          },
+          {
+            "label": "KBK",
+            "href": "https://fasilkom.sifakueu.test/admin/kbks"
+          }
+        ]
+      },
+      {
+        "label": "Pengguna & Akses",
+        "items": [
+          {
+            "label": "Pengguna",
+            "href": "https://fasilkom.sifakueu.test/admin/users"
+          },
+          {
+            "label": "Role & Permission",
+            "href": "https://fasilkom.sifakueu.test/admin/shield/roles"
+          }
+        ]
+      },
+      {
+        "label": "Layanan Sistem",
+        "items": [
+          {
+            "label": "Audit Log",
+            "href": "https://fasilkom.sifakueu.test/admin/audit-logs"
+          },
+          {
+            "label": "Notifikasi",
+            "href": "https://fasilkom.sifakueu.test/admin/sifak-notifications"
+          },
+          {
+            "label": "Template Notifikasi",
+            "href": "https://fasilkom.sifakueu.test/admin/notification-templates"
+          },
+          {
+            "label": "Riwayat Workflow",
+            "href": "https://fasilkom.sifakueu.test/admin/workflow-histories"
+          },
+          {
+            "label": "File Tersimpan",
+            "href": "https://fasilkom.sifakueu.test/admin/stored-files"
+          },
+          {
+            "label": "Log Tugas Terjadwal",
+            "href": "https://fasilkom.sifakueu.test/admin/scheduled-task-logs"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/admin/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/admin",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Admin FASILKOM",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 404,
+          "errors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "HTTP 404"
+          ]
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Pendaftaran Sidang",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations",
+        "status": 200,
+        "errors": [],
+        "title": "Pendaftaran Sidang",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Berita Acara",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Jadwal Sidang",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Sidang",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Hasil Sidang",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Sidang",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Berita Acara",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-minutes",
+        "status": 200,
+        "errors": [],
+        "title": "Berita Acara",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Generate",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Tugas Akhir",
+        "url": "https://fasilkom.sifakueu.test/admin/tugas-akhirs",
+        "status": 200,
+        "errors": [],
+        "title": "Tugas Akhir",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "Buat Struktur",
+          "Hitung Progress",
+          "Checklist",
+          "Finalisasi",
+          "Buat Repository",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Dokumen TA",
+        "url": "https://fasilkom.sifakueu.test/admin/ta-documents",
+        "status": 200,
+        "errors": [],
+        "title": "Dokumen TA",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Upload Versi",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Struktur Bab",
+        "url": "https://fasilkom.sifakueu.test/admin/ta-sections",
+        "status": 200,
+        "errors": [],
+        "title": "Struktur Bab TA",
+        "hasCreate": true,
+        "rows": 8,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Progres TA",
+        "url": "https://fasilkom.sifakueu.test/admin/ta-progress-logs",
+        "status": 200,
+        "errors": [],
+        "title": "Progres TA",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Repositori TA",
+        "url": "https://fasilkom.sifakueu.test/admin/repository-items",
+        "status": 200,
+        "errors": [],
+        "title": "Repositori TA",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Siklus Revisi",
+        "url": "https://fasilkom.sifakueu.test/admin/revision-cycles",
+        "status": 200,
+        "errors": [],
+        "title": "Siklus Revisi",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Pengajuan Surat",
+        "url": "https://fasilkom.sifakueu.test/admin/surats",
+        "status": 200,
+        "errors": [],
+        "title": "Surat",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Download",
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Riwayat Approval",
+        "url": "https://fasilkom.sifakueu.test/admin/surat-approvals",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Approval Surat",
+        "hasCreate": true,
+        "rows": 6,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Dokumen Surat",
+        "url": "https://fasilkom.sifakueu.test/admin/generated-letters",
+        "status": 200,
+        "errors": [],
+        "title": "Dokumen Surat",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Distribusi",
+        "url": "https://fasilkom.sifakueu.test/admin/letter-distributions",
+        "status": 200,
+        "errors": [],
+        "title": "Distribusi Surat",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Arsip Surat",
+        "url": "https://fasilkom.sifakueu.test/admin/letter-archives",
+        "status": 200,
+        "errors": [],
+        "title": "Arsip Surat",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Nomor Surat",
+        "url": "https://fasilkom.sifakueu.test/admin/letter-numbers",
+        "status": 200,
+        "errors": [],
+        "title": "Nomor Surat",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Log Verifikasi",
+        "url": "https://fasilkom.sifakueu.test/admin/letter-verifications",
+        "status": 200,
+        "errors": [],
+        "title": "Log Verifikasi Surat",
+        "hasCreate": true,
+        "rows": 5,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Token Verifikasi",
+        "url": "https://fasilkom.sifakueu.test/admin/letter-verification-tokens",
+        "status": 200,
+        "errors": [],
+        "title": "Token Verifikasi",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Jenis Surat",
+        "url": "https://fasilkom.sifakueu.test/admin/jenis-surats",
+        "status": 200,
+        "errors": [],
+        "title": "Jenis Surat",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Form Field Surat",
+        "url": "https://fasilkom.sifakueu.test/admin/letter-form-fields",
+        "status": 200,
+        "errors": [],
+        "title": "Form Field Surat",
+        "hasCreate": true,
+        "rows": 5,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Template Surat",
+        "url": "https://fasilkom.sifakueu.test/admin/letter-templates",
+        "status": 200,
+        "errors": [],
+        "title": "Template Surat",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Sequence Nomor",
+        "url": "https://fasilkom.sifakueu.test/admin/letter-number-sequences",
+        "status": 200,
+        "errors": [],
+        "title": "Sequence Nomor Surat",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Alur Approval",
+        "url": "https://fasilkom.sifakueu.test/admin/approval-flows",
+        "status": 200,
+        "errors": [],
+        "title": "Alur Approval",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Langkah Approval",
+        "url": "https://fasilkom.sifakueu.test/admin/approval-flow-steps",
+        "status": 200,
+        "errors": [],
+        "title": "Langkah Approval",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Alert Akademik",
+        "url": "https://fasilkom.sifakueu.test/admin/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Tindak lanjut",
+          "Resolve",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Eskalasi",
+        "url": "https://fasilkom.sifakueu.test/admin/alert-escalations",
+        "status": 200,
+        "errors": [],
+        "title": "Eskalasi Alert",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Snapshot Evaluasi",
+        "url": "https://fasilkom.sifakueu.test/admin/monitoring-snapshots",
+        "status": 200,
+        "errors": [],
+        "title": "Snapshot Evaluasi",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Evaluasi ulang",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Profil Fakultas",
+        "url": "https://fasilkom.sifakueu.test/admin/fakultas",
+        "status": 200,
+        "errors": [],
+        "title": "Fakultas",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Program Studi",
+        "url": "https://fasilkom.sifakueu.test/admin/program-studis",
+        "status": 200,
+        "errors": [],
+        "title": "Program Studi",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswas",
+        "status": 200,
+        "errors": [],
+        "title": "Mahasiswa",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Evaluasi alert",
+          "Recalculate M6",
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Dosen",
+        "url": "https://fasilkom.sifakueu.test/admin/dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Dosen",
+        "hasCreate": true,
+        "rows": 7,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Mata Kuliah",
+        "url": "https://fasilkom.sifakueu.test/admin/mata-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Mata Kuliah",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Hitung rekomendasi",
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Kurikulum",
+        "url": "https://fasilkom.sifakueu.test/admin/kurikulums",
+        "status": 200,
+        "errors": [],
+        "title": "Kurikulum",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Ruangan",
+        "url": "https://fasilkom.sifakueu.test/admin/ruangans",
+        "status": 200,
+        "errors": [],
+        "title": "Ruangan",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Tahun Akademik",
+        "url": "https://fasilkom.sifakueu.test/admin/tahun-akademiks",
+        "status": 200,
+        "errors": [],
+        "title": "Tahun Akademik",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Semester",
+        "url": "https://fasilkom.sifakueu.test/admin/semesters",
+        "status": 200,
+        "errors": [],
+        "title": "Semester",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Rumpun Ilmu",
+        "url": "https://fasilkom.sifakueu.test/admin/rumpun-ilmus",
+        "status": 200,
+        "errors": [],
+        "title": "Rumpun Ilmu",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "KBK",
+        "url": "https://fasilkom.sifakueu.test/admin/kbks",
+        "status": 200,
+        "errors": [],
+        "title": "KBK",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Pengguna & Akses",
+        "label": "Pengguna",
+        "url": "https://fasilkom.sifakueu.test/admin/users",
+        "status": 200,
+        "errors": [],
+        "title": "Pengguna",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Lihat",
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Pengguna & Akses",
+        "label": "Role & Permission",
+        "url": "https://fasilkom.sifakueu.test/admin/shield/roles",
+        "status": 200,
+        "errors": [],
+        "title": "Peran",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Layanan Sistem",
+        "label": "Audit Log",
+        "url": "https://fasilkom.sifakueu.test/admin/audit-logs",
+        "status": 200,
+        "errors": [],
+        "title": "Audit Log",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": [
+          "Lihat"
+        ]
+      },
+      {
+        "group": "Layanan Sistem",
+        "label": "Notifikasi",
+        "url": "https://fasilkom.sifakueu.test/admin/sifak-notifications",
+        "status": 200,
+        "errors": [],
+        "title": "Notifikasi",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Layanan Sistem",
+        "label": "Template Notifikasi",
+        "url": "https://fasilkom.sifakueu.test/admin/notification-templates",
+        "status": 200,
+        "errors": [],
+        "title": "Template Notifikasi",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah",
+          "Hapus"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Layanan Sistem",
+        "label": "Riwayat Workflow",
+        "url": "https://fasilkom.sifakueu.test/admin/workflow-histories",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Workflow",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Layanan Sistem",
+        "label": "File Tersimpan",
+        "url": "https://fasilkom.sifakueu.test/admin/stored-files",
+        "status": 200,
+        "errors": [],
+        "title": "File Tersimpan",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": [
+          "Lihat"
+        ]
+      },
+      {
+        "group": "Layanan Sistem",
+        "label": "Log Tugas Terjadwal",
+        "url": "https://fasilkom.sifakueu.test/admin/scheduled-task-logs",
+        "status": 200,
+        "errors": [],
+        "title": "Log Tugas Terjadwal",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": [
+          "Lihat"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/admin/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "admin_prodi": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "admin",
+      "email": "admin.prodi.fasilkom@sifak.local",
+      "name": "Admin Prodi",
+      "role": "admin_prodi"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/admin"
+          }
+        ]
+      },
+      {
+        "label": "Sidang",
+        "items": [
+          {
+            "label": "Jenis Sidang",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-types"
+          },
+          {
+            "label": "Persyaratan",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-requirements"
+          },
+          {
+            "label": "Pendaftaran & Verifikasi",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-registrations"
+          },
+          {
+            "label": "Plotting Penguji",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-assignments"
+          },
+          {
+            "label": "Jadwal Sidang",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-schedules"
+          },
+          {
+            "label": "Rubrik Penilaian",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-rubrics"
+          },
+          {
+            "label": "Nilai Sidang",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-scores"
+          },
+          {
+            "label": "Hasil Sidang",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-results"
+          },
+          {
+            "label": "Revisi Sidang",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-revisions"
+          },
+          {
+            "label": "Berita Acara",
+            "href": "https://fasilkom.sifakueu.test/admin/sidang-minutes"
+          }
+        ]
+      },
+      {
+        "label": "Dokumen TA",
+        "items": [
+          {
+            "label": "Tugas Akhir",
+            "href": "https://fasilkom.sifakueu.test/admin/tugas-akhirs"
+          },
+          {
+            "label": "Dokumen TA",
+            "href": "https://fasilkom.sifakueu.test/admin/ta-documents"
+          },
+          {
+            "label": "Progres TA",
+            "href": "https://fasilkom.sifakueu.test/admin/ta-progress-logs"
+          },
+          {
+            "label": "Repositori TA",
+            "href": "https://fasilkom.sifakueu.test/admin/repository-items"
+          }
+        ]
+      },
+      {
+        "label": "Surat",
+        "items": [
+          {
+            "label": "Verifikasi Surat",
+            "href": "https://fasilkom.sifakueu.test/admin/surats"
+          },
+          {
+            "label": "Riwayat Approval",
+            "href": "https://fasilkom.sifakueu.test/admin/surat-approvals"
+          }
+        ]
+      },
+      {
+        "label": "Monitoring",
+        "items": [
+          {
+            "label": "Alert Akademik",
+            "href": "https://fasilkom.sifakueu.test/admin/alerts"
+          },
+          {
+            "label": "Tindak Lanjut",
+            "href": "https://fasilkom.sifakueu.test/admin/alert-followups"
+          },
+          {
+            "label": "Eskalasi",
+            "href": "https://fasilkom.sifakueu.test/admin/alert-escalations"
+          },
+          {
+            "label": "Snapshot Evaluasi",
+            "href": "https://fasilkom.sifakueu.test/admin/monitoring-snapshots"
+          },
+          {
+            "label": "Hasil Indikator",
+            "href": "https://fasilkom.sifakueu.test/admin/monitoring-indicator-results"
+          },
+          {
+            "label": "Aturan Monitoring",
+            "href": "https://fasilkom.sifakueu.test/admin/monitoring-rules"
+          },
+          {
+            "label": "Override Status",
+            "href": "https://fasilkom.sifakueu.test/admin/monitoring-overrides"
+          }
+        ]
+      },
+      {
+        "label": "KRS & Penjadwalan",
+        "items": [
+          {
+            "label": "Periode KRS",
+            "href": "https://fasilkom.sifakueu.test/admin/periode-krs"
+          },
+          {
+            "label": "Penawaran Mata Kuliah",
+            "href": "https://fasilkom.sifakueu.test/admin/penawaran-mata-kuliahs"
+          },
+          {
+            "label": "KRS Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/krs"
+          },
+          {
+            "label": "Rincian KRS",
+            "href": "https://fasilkom.sifakueu.test/admin/krs-details"
+          },
+          {
+            "label": "Hasil Validasi KRS",
+            "href": "https://fasilkom.sifakueu.test/admin/krs-validation-results"
+          },
+          {
+            "label": "Kelas Kuliah",
+            "href": "https://fasilkom.sifakueu.test/admin/kelas-kuliahs"
+          },
+          {
+            "label": "Plotting Dosen",
+            "href": "https://fasilkom.sifakueu.test/admin/plotting-dosens"
+          },
+          {
+            "label": "Jadwal Kuliah",
+            "href": "https://fasilkom.sifakueu.test/admin/jadwal-kuliahs"
+          },
+          {
+            "label": "Konflik Jadwal",
+            "href": "https://fasilkom.sifakueu.test/admin/jadwal-conflicts"
+          },
+          {
+            "label": "Riwayat Jadwal",
+            "href": "https://fasilkom.sifakueu.test/admin/jadwal-histories"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Dosen",
+        "items": [
+          {
+            "label": "Profil Dosen",
+            "href": "https://fasilkom.sifakueu.test/admin/dosen-profils"
+          },
+          {
+            "label": "Keahlian",
+            "href": "https://fasilkom.sifakueu.test/admin/keahlians"
+          },
+          {
+            "label": "Pendidikan",
+            "href": "https://fasilkom.sifakueu.test/admin/dosen-pendidikans"
+          },
+          {
+            "label": "Sertifikasi",
+            "href": "https://fasilkom.sifakueu.test/admin/dosen-sertifikasis"
+          },
+          {
+            "label": "Publikasi",
+            "href": "https://fasilkom.sifakueu.test/admin/dosen-publikasis"
+          },
+          {
+            "label": "Pengalaman Industri",
+            "href": "https://fasilkom.sifakueu.test/admin/dosen-pengalaman-industris"
+          },
+          {
+            "label": "Riwayat Mengajar",
+            "href": "https://fasilkom.sifakueu.test/admin/riwayat-mengajars"
+          },
+          {
+            "label": "Preferensi Mata Kuliah",
+            "href": "https://fasilkom.sifakueu.test/admin/dosen-preferensi-mks"
+          },
+          {
+            "label": "Beban Dosen",
+            "href": "https://fasilkom.sifakueu.test/admin/beban-dosens"
+          },
+          {
+            "label": "Matriks Kesesuaian",
+            "href": "https://fasilkom.sifakueu.test/admin/matriks-kesesuaians"
+          },
+          {
+            "label": "Rekomendasi Pengampu",
+            "href": "https://fasilkom.sifakueu.test/admin/rekomendasi-pengampus"
+          },
+          {
+            "label": "Jadwal Konsultasi",
+            "href": "https://fasilkom.sifakueu.test/admin/jadwal-konsultasis"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Mahasiswa",
+        "items": [
+          {
+            "label": "Profil Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-profiles"
+          },
+          {
+            "label": "Skor CPL",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-cpl-scores"
+          },
+          {
+            "label": "Skor PLO",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-plo-scores"
+          },
+          {
+            "label": "Skor Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-graduate-profile-scores"
+          },
+          {
+            "label": "Gap Kompetensi",
+            "href": "https://fasilkom.sifakueu.test/admin/competency-gaps"
+          },
+          {
+            "label": "Rekomendasi Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/student-recommendations"
+          },
+          {
+            "label": "Minat Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-interests"
+          },
+          {
+            "label": "Sertifikasi Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-certifications"
+          },
+          {
+            "label": "Portofolio Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-portfolios"
+          },
+          {
+            "label": "Organisasi Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-organizations"
+          },
+          {
+            "label": "MBKM / Magang",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswa-mbkms"
+          },
+          {
+            "label": "Riwayat Rekomendasi",
+            "href": "https://fasilkom.sifakueu.test/admin/recommendation-histories"
+          }
+        ]
+      },
+      {
+        "label": "CPL & Profil Lulusan",
+        "items": [
+          {
+            "label": "CPL",
+            "href": "https://fasilkom.sifakueu.test/admin/cpls"
+          },
+          {
+            "label": "PLO",
+            "href": "https://fasilkom.sifakueu.test/admin/plos"
+          },
+          {
+            "label": "Pemetaan MK–CPL",
+            "href": "https://fasilkom.sifakueu.test/admin/pemetaan-mk-cpls"
+          },
+          {
+            "label": "Pemetaan CPL–PLO",
+            "href": "https://fasilkom.sifakueu.test/admin/pemetaan-cpl-plos"
+          },
+          {
+            "label": "Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/admin/graduate-profiles"
+          }
+        ]
+      },
+      {
+        "label": "Data Master",
+        "items": [
+          {
+            "label": "Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/admin/mahasiswas"
+          },
+          {
+            "label": "Dosen",
+            "href": "https://fasilkom.sifakueu.test/admin/dosens"
+          },
+          {
+            "label": "Mata Kuliah",
+            "href": "https://fasilkom.sifakueu.test/admin/mata-kuliahs"
+          },
+          {
+            "label": "Kurikulum",
+            "href": "https://fasilkom.sifakueu.test/admin/kurikulums"
+          },
+          {
+            "label": "Semester",
+            "href": "https://fasilkom.sifakueu.test/admin/semesters"
+          },
+          {
+            "label": "Ruangan",
+            "href": "https://fasilkom.sifakueu.test/admin/ruangans"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/admin/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/admin",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Admin Prodi Informatika",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 404,
+          "errors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "HTTP 404"
+          ]
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Jenis Sidang",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-types",
+        "status": 200,
+        "errors": [],
+        "title": "Jenis Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Persyaratan",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-requirements",
+        "status": 200,
+        "errors": [],
+        "title": "Persyaratan Sidang",
+        "hasCreate": true,
+        "rows": 9,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Pendaftaran & Verifikasi",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-registrations",
+        "status": 200,
+        "errors": [],
+        "title": "Pendaftaran Sidang",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Berita Acara",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Plotting Penguji",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-assignments",
+        "status": 200,
+        "errors": [],
+        "title": "Penugasan Sidang",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Set Assignment",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Jadwal Sidang",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-schedules",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Sidang",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Rubrik Penilaian",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-rubrics",
+        "status": 200,
+        "errors": [],
+        "title": "Rubrik Penilaian",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Nilai Sidang",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Nilai Sidang",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Hasil Sidang",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Sidang",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Revisi Sidang",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-revisions",
+        "status": 200,
+        "errors": [],
+        "title": "Revisi Sidang",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Berita Acara",
+        "url": "https://fasilkom.sifakueu.test/admin/sidang-minutes",
+        "status": 200,
+        "errors": [],
+        "title": "Berita Acara",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Generate",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Tugas Akhir",
+        "url": "https://fasilkom.sifakueu.test/admin/tugas-akhirs",
+        "status": 200,
+        "errors": [],
+        "title": "Tugas Akhir",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "Buat Struktur",
+          "Hitung Progress",
+          "Checklist",
+          "Finalisasi",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Dokumen TA",
+        "url": "https://fasilkom.sifakueu.test/admin/ta-documents",
+        "status": 200,
+        "errors": [],
+        "title": "Dokumen TA",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Upload Versi",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Progres TA",
+        "url": "https://fasilkom.sifakueu.test/admin/ta-progress-logs",
+        "status": 200,
+        "errors": [],
+        "title": "Progres TA",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Repositori TA",
+        "url": "https://fasilkom.sifakueu.test/admin/repository-items",
+        "status": 200,
+        "errors": [],
+        "title": "Repositori TA",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Surat",
+        "label": "Verifikasi Surat",
+        "url": "https://fasilkom.sifakueu.test/admin/surats",
+        "status": 200,
+        "errors": [],
+        "title": "Surat",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Download",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Riwayat Approval",
+        "url": "https://fasilkom.sifakueu.test/admin/surat-approvals",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Approval Surat",
+        "hasCreate": true,
+        "rows": 6,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Alert Akademik",
+        "url": "https://fasilkom.sifakueu.test/admin/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Tindak Lanjut",
+        "url": "https://fasilkom.sifakueu.test/admin/alert-followups",
+        "status": 200,
+        "errors": [],
+        "title": "Tindak Lanjut Alert",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Eskalasi",
+        "url": "https://fasilkom.sifakueu.test/admin/alert-escalations",
+        "status": 200,
+        "errors": [],
+        "title": "Eskalasi Alert",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Snapshot Evaluasi",
+        "url": "https://fasilkom.sifakueu.test/admin/monitoring-snapshots",
+        "status": 200,
+        "errors": [],
+        "title": "Snapshot Evaluasi",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Evaluasi ulang",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Hasil Indikator",
+        "url": "https://fasilkom.sifakueu.test/admin/monitoring-indicator-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Indikator",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Aturan Monitoring",
+        "url": "https://fasilkom.sifakueu.test/admin/monitoring-rules",
+        "status": 200,
+        "errors": [],
+        "title": "Aturan Monitoring",
+        "hasCreate": true,
+        "rows": 9,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Override Status",
+        "url": "https://fasilkom.sifakueu.test/admin/monitoring-overrides",
+        "status": 200,
+        "errors": [],
+        "title": "Override Status",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Periode KRS",
+        "url": "https://fasilkom.sifakueu.test/admin/periode-krs",
+        "status": 200,
+        "errors": [],
+        "title": "Periode KRS",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Penawaran Mata Kuliah",
+        "url": "https://fasilkom.sifakueu.test/admin/penawaran-mata-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Penawaran Mata Kuliah",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Hitung Peminat",
+          "Generate Kelas",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "KRS Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/krs",
+        "status": 200,
+        "errors": [],
+        "title": "KRS",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Validasi",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Rincian KRS",
+        "url": "https://fasilkom.sifakueu.test/admin/krs-details",
+        "status": 200,
+        "errors": [],
+        "title": "Rincian KRS",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Hasil Validasi KRS",
+        "url": "https://fasilkom.sifakueu.test/admin/krs-validation-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Validasi KRS",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Kelas Kuliah",
+        "url": "https://fasilkom.sifakueu.test/admin/kelas-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Kelas Kuliah",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "M5 Kandidat",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Plotting Dosen",
+        "url": "https://fasilkom.sifakueu.test/admin/plotting-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Plotting Dosen",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Jadwal Kuliah",
+        "url": "https://fasilkom.sifakueu.test/admin/jadwal-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Kuliah",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Cek Konflik",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Konflik Jadwal",
+        "url": "https://fasilkom.sifakueu.test/admin/jadwal-conflicts",
+        "status": 200,
+        "errors": [],
+        "title": "Konflik Jadwal",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Riwayat Jadwal",
+        "url": "https://fasilkom.sifakueu.test/admin/jadwal-histories",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Jadwal",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Profil Dosen",
+        "url": "https://fasilkom.sifakueu.test/admin/dosen-profils",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Dosen",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Keahlian",
+        "url": "https://fasilkom.sifakueu.test/admin/keahlians",
+        "status": 200,
+        "errors": [],
+        "title": "Keahlian",
+        "hasCreate": true,
+        "rows": 5,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Pendidikan",
+        "url": "https://fasilkom.sifakueu.test/admin/dosen-pendidikans",
+        "status": 200,
+        "errors": [],
+        "title": "Pendidikan Dosen",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Sertifikasi",
+        "url": "https://fasilkom.sifakueu.test/admin/dosen-sertifikasis",
+        "status": 200,
+        "errors": [],
+        "title": "Sertifikasi Dosen",
+        "hasCreate": true,
+        "rows": 7,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Publikasi",
+        "url": "https://fasilkom.sifakueu.test/admin/dosen-publikasis",
+        "status": 200,
+        "errors": [],
+        "title": "Publikasi Dosen",
+        "hasCreate": true,
+        "rows": 7,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Pengalaman Industri",
+        "url": "https://fasilkom.sifakueu.test/admin/dosen-pengalaman-industris",
+        "status": 200,
+        "errors": [],
+        "title": "Pengalaman Industri",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Riwayat Mengajar",
+        "url": "https://fasilkom.sifakueu.test/admin/riwayat-mengajars",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Mengajar",
+        "hasCreate": true,
+        "rows": 8,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Preferensi Mata Kuliah",
+        "url": "https://fasilkom.sifakueu.test/admin/dosen-preferensi-mks",
+        "status": 200,
+        "errors": [],
+        "title": "Preferensi Mata Kuliah",
+        "hasCreate": true,
+        "rows": 8,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Beban Dosen",
+        "url": "https://fasilkom.sifakueu.test/admin/beban-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Beban Dosen",
+        "hasCreate": true,
+        "rows": 8,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Matriks Kesesuaian",
+        "url": "https://fasilkom.sifakueu.test/admin/matriks-kesesuaians",
+        "status": 200,
+        "errors": [],
+        "title": "Matriks Kesesuaian",
+        "hasCreate": true,
+        "rows": 8,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Rekomendasi Pengampu",
+        "url": "https://fasilkom.sifakueu.test/admin/rekomendasi-pengampus",
+        "status": 200,
+        "errors": [],
+        "title": "Rekomendasi Pengampu",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Jadwal Konsultasi",
+        "url": "https://fasilkom.sifakueu.test/admin/jadwal-konsultasis",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Konsultasi",
+        "hasCreate": true,
+        "rows": 6,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Profil Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Mahasiswa",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Recalculate",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Skor CPL",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-cpl-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor CPL",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Skor PLO",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-plo-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor PLO",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Skor Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-graduate-profile-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor Profil Lulusan",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Gap Kompetensi",
+        "url": "https://fasilkom.sifakueu.test/admin/competency-gaps",
+        "status": 200,
+        "errors": [],
+        "title": "Gap Kompetensi",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Rekomendasi Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/student-recommendations",
+        "status": 200,
+        "errors": [],
+        "title": "Rekomendasi Mahasiswa",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Minat Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-interests",
+        "status": 200,
+        "errors": [],
+        "title": "Minat Mahasiswa",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Sertifikasi Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-certifications",
+        "status": 200,
+        "errors": [],
+        "title": "Sertifikasi Mahasiswa",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Portofolio Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-portfolios",
+        "status": 200,
+        "errors": [],
+        "title": "Portofolio",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Organisasi Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-organizations",
+        "status": 200,
+        "errors": [],
+        "title": "Organisasi Mahasiswa",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "MBKM / Magang",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswa-mbkms",
+        "status": 200,
+        "errors": [],
+        "title": "MBKM / Magang",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Riwayat Rekomendasi",
+        "url": "https://fasilkom.sifakueu.test/admin/recommendation-histories",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Rekomendasi",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Lihat",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "CPL",
+        "url": "https://fasilkom.sifakueu.test/admin/cpls",
+        "status": 200,
+        "errors": [],
+        "title": "CPL",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "PLO",
+        "url": "https://fasilkom.sifakueu.test/admin/plos",
+        "status": 200,
+        "errors": [],
+        "title": "PLO",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Pemetaan MK–CPL",
+        "url": "https://fasilkom.sifakueu.test/admin/pemetaan-mk-cpls",
+        "status": 200,
+        "errors": [],
+        "title": "Pemetaan MK–CPL",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Pemetaan CPL–PLO",
+        "url": "https://fasilkom.sifakueu.test/admin/pemetaan-cpl-plos",
+        "status": 200,
+        "errors": [],
+        "title": "Pemetaan CPL–PLO",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/admin/graduate-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Lulusan",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/admin/mahasiswas",
+        "status": 200,
+        "errors": [],
+        "title": "Mahasiswa",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Evaluasi alert",
+          "Recalculate M6",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Dosen",
+        "url": "https://fasilkom.sifakueu.test/admin/dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Dosen",
+        "hasCreate": true,
+        "rows": 7,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Mata Kuliah",
+        "url": "https://fasilkom.sifakueu.test/admin/mata-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Mata Kuliah",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Hitung rekomendasi",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Kurikulum",
+        "url": "https://fasilkom.sifakueu.test/admin/kurikulums",
+        "status": 200,
+        "errors": [],
+        "title": "Kurikulum",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Semester",
+        "url": "https://fasilkom.sifakueu.test/admin/semesters",
+        "status": 200,
+        "errors": [],
+        "title": "Semester",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Data Master",
+        "label": "Ruangan",
+        "url": "https://fasilkom.sifakueu.test/admin/ruangans",
+        "status": 200,
+        "errors": [],
+        "title": "Ruangan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/admin/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "dosen": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "dosen",
+      "email": "dosen.fasilkom@sifak.local",
+      "name": "Dosen (PA, Pembimbing, Penguji)",
+      "role": "dosen, dosen_pa, dosen_pembimbing, dosen_penguji"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/dosen"
+          }
+        ]
+      },
+      {
+        "label": "Akademik",
+        "items": [
+          {
+            "label": "Jadwal Mengajar",
+            "href": "https://fasilkom.sifakueu.test/dosen/jadwal-kuliahs"
+          },
+          {
+            "label": "Beban Dosen",
+            "href": "https://fasilkom.sifakueu.test/dosen/beban-dosens"
+          },
+          {
+            "label": "Jadwal Konsultasi",
+            "href": "https://fasilkom.sifakueu.test/dosen/jadwal-konsultasis"
+          },
+          {
+            "label": "Lokasi & Ketersediaan",
+            "href": "https://fasilkom.sifakueu.test/dosen/dosen-lokasis"
+          }
+        ]
+      },
+      {
+        "label": "Perwalian (PA)",
+        "items": [
+          {
+            "label": "Approval KRS",
+            "href": "https://fasilkom.sifakueu.test/dosen/krs"
+          },
+          {
+            "label": "Rincian KRS",
+            "href": "https://fasilkom.sifakueu.test/dosen/krs-details"
+          },
+          {
+            "label": "Alert Mahasiswa PA",
+            "href": "https://fasilkom.sifakueu.test/dosen/alerts"
+          },
+          {
+            "label": "Riwayat Tindak Lanjut",
+            "href": "https://fasilkom.sifakueu.test/dosen/alert-followups"
+          },
+          {
+            "label": "Profil Mahasiswa PA",
+            "href": "https://fasilkom.sifakueu.test/dosen/mahasiswa-profiles"
+          },
+          {
+            "label": "Rekomendasi Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/dosen/student-recommendations"
+          }
+        ]
+      },
+      {
+        "label": "Sidang & Pengujian",
+        "items": [
+          {
+            "label": "Jadwal Menguji",
+            "href": "https://fasilkom.sifakueu.test/dosen/sidang-schedules"
+          },
+          {
+            "label": "Detail Sidang",
+            "href": "https://fasilkom.sifakueu.test/dosen/sidang-registrations"
+          },
+          {
+            "label": "Penilaian Sidang",
+            "href": "https://fasilkom.sifakueu.test/dosen/sidang-scores"
+          },
+          {
+            "label": "Catatan / Revisi",
+            "href": "https://fasilkom.sifakueu.test/dosen/sidang-revisions"
+          },
+          {
+            "label": "Hasil Sidang",
+            "href": "https://fasilkom.sifakueu.test/dosen/sidang-results"
+          }
+        ]
+      },
+      {
+        "label": "Bimbingan TA",
+        "items": [
+          {
+            "label": "Mahasiswa Bimbingan",
+            "href": "https://fasilkom.sifakueu.test/dosen/tugas-akhirs"
+          },
+          {
+            "label": "Review Dokumen TA",
+            "href": "https://fasilkom.sifakueu.test/dosen/ta-documents"
+          },
+          {
+            "label": "Riwayat Versi",
+            "href": "https://fasilkom.sifakueu.test/dosen/ta-document-versions"
+          },
+          {
+            "label": "Riwayat Review",
+            "href": "https://fasilkom.sifakueu.test/dosen/ta-reviews"
+          },
+          {
+            "label": "Komentar",
+            "href": "https://fasilkom.sifakueu.test/dosen/ta-comments"
+          },
+          {
+            "label": "Approval Bab",
+            "href": "https://fasilkom.sifakueu.test/dosen/ta-approvals"
+          },
+          {
+            "label": "Progres TA",
+            "href": "https://fasilkom.sifakueu.test/dosen/ta-progress-logs"
+          }
+        ]
+      },
+      {
+        "label": "Surat",
+        "items": [
+          {
+            "label": "Pengajuan Surat",
+            "href": "https://fasilkom.sifakueu.test/dosen/surats"
+          },
+          {
+            "label": "Dokumen Surat",
+            "href": "https://fasilkom.sifakueu.test/dosen/generated-letters"
+          }
+        ]
+      },
+      {
+        "label": "Profil Saya",
+        "items": [
+          {
+            "label": "Profil Dosen",
+            "href": "https://fasilkom.sifakueu.test/dosen/dosen-profils"
+          },
+          {
+            "label": "Keahlian",
+            "href": "https://fasilkom.sifakueu.test/dosen/keahlians"
+          },
+          {
+            "label": "Pendidikan",
+            "href": "https://fasilkom.sifakueu.test/dosen/dosen-pendidikans"
+          },
+          {
+            "label": "Sertifikasi",
+            "href": "https://fasilkom.sifakueu.test/dosen/dosen-sertifikasis"
+          },
+          {
+            "label": "Publikasi",
+            "href": "https://fasilkom.sifakueu.test/dosen/dosen-publikasis"
+          },
+          {
+            "label": "Pengalaman Industri",
+            "href": "https://fasilkom.sifakueu.test/dosen/dosen-pengalaman-industris"
+          },
+          {
+            "label": "Riwayat Mengajar",
+            "href": "https://fasilkom.sifakueu.test/dosen/riwayat-mengajars"
+          },
+          {
+            "label": "Preferensi Mata Kuliah",
+            "href": "https://fasilkom.sifakueu.test/dosen/dosen-preferensi-mks"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/dosen/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/dosen",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Dr. Dosen FASILKOM",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 404,
+          "errors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "HTTP 404"
+          ]
+        }
+      },
+      {
+        "group": "Akademik",
+        "label": "Jadwal Mengajar",
+        "url": "https://fasilkom.sifakueu.test/dosen/jadwal-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Kuliah",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Cek Konflik"
+        ]
+      },
+      {
+        "group": "Akademik",
+        "label": "Beban Dosen",
+        "url": "https://fasilkom.sifakueu.test/dosen/beban-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Beban Dosen",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Akademik",
+        "label": "Jadwal Konsultasi",
+        "url": "https://fasilkom.sifakueu.test/dosen/jadwal-konsultasis",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Konsultasi",
+        "hasCreate": true,
+        "rows": 3,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Akademik",
+        "label": "Lokasi & Ketersediaan",
+        "url": "https://fasilkom.sifakueu.test/dosen/dosen-lokasis",
+        "status": 200,
+        "errors": [],
+        "title": "Lokasi Dosen",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Perwalian (PA)",
+        "label": "Approval KRS",
+        "url": "https://fasilkom.sifakueu.test/dosen/krs",
+        "status": 200,
+        "errors": [],
+        "title": "KRS",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Validasi",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Perwalian (PA)",
+        "label": "Rincian KRS",
+        "url": "https://fasilkom.sifakueu.test/dosen/krs-details",
+        "status": 200,
+        "errors": [],
+        "title": "Rincian KRS",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Perwalian (PA)",
+        "label": "Alert Mahasiswa PA",
+        "url": "https://fasilkom.sifakueu.test/dosen/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Tindak lanjut",
+          "Resolve",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Perwalian (PA)",
+        "label": "Riwayat Tindak Lanjut",
+        "url": "https://fasilkom.sifakueu.test/dosen/alert-followups",
+        "status": 200,
+        "errors": [],
+        "title": "Tindak Lanjut Alert",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Perwalian (PA)",
+        "label": "Profil Mahasiswa PA",
+        "url": "https://fasilkom.sifakueu.test/dosen/mahasiswa-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Mahasiswa",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Perwalian (PA)",
+        "label": "Rekomendasi Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/dosen/student-recommendations",
+        "status": 200,
+        "errors": [],
+        "title": "Rekomendasi Mahasiswa",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang & Pengujian",
+        "label": "Jadwal Menguji",
+        "url": "https://fasilkom.sifakueu.test/dosen/sidang-schedules",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang & Pengujian",
+        "label": "Detail Sidang",
+        "url": "https://fasilkom.sifakueu.test/dosen/sidang-registrations",
+        "status": 200,
+        "errors": [],
+        "title": "Pendaftaran Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang & Pengujian",
+        "label": "Penilaian Sidang",
+        "url": "https://fasilkom.sifakueu.test/dosen/sidang-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Nilai Sidang",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang & Pengujian",
+        "label": "Catatan / Revisi",
+        "url": "https://fasilkom.sifakueu.test/dosen/sidang-revisions",
+        "status": 200,
+        "errors": [],
+        "title": "Revisi Sidang",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang & Pengujian",
+        "label": "Hasil Sidang",
+        "url": "https://fasilkom.sifakueu.test/dosen/sidang-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Bimbingan TA",
+        "label": "Mahasiswa Bimbingan",
+        "url": "https://fasilkom.sifakueu.test/dosen/tugas-akhirs",
+        "status": 200,
+        "errors": [],
+        "title": "Tugas Akhir",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Buat Struktur",
+          "Hitung Progress",
+          "Checklist"
+        ]
+      },
+      {
+        "group": "Bimbingan TA",
+        "label": "Review Dokumen TA",
+        "url": "https://fasilkom.sifakueu.test/dosen/ta-documents",
+        "status": 200,
+        "errors": [],
+        "title": "Dokumen TA",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": [
+          "Upload Versi",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Bimbingan TA",
+        "label": "Riwayat Versi",
+        "url": "https://fasilkom.sifakueu.test/dosen/ta-document-versions",
+        "status": 200,
+        "errors": [],
+        "title": "Versi Dokumen TA",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Bimbingan TA",
+        "label": "Riwayat Review",
+        "url": "https://fasilkom.sifakueu.test/dosen/ta-reviews",
+        "status": 200,
+        "errors": [],
+        "title": "Review TA",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Bimbingan TA",
+        "label": "Komentar",
+        "url": "https://fasilkom.sifakueu.test/dosen/ta-comments",
+        "status": 200,
+        "errors": [],
+        "title": "Komentar TA",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Bimbingan TA",
+        "label": "Approval Bab",
+        "url": "https://fasilkom.sifakueu.test/dosen/ta-approvals",
+        "status": 200,
+        "errors": [],
+        "title": "Approval Bab",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Bimbingan TA",
+        "label": "Progres TA",
+        "url": "https://fasilkom.sifakueu.test/dosen/ta-progress-logs",
+        "status": 200,
+        "errors": [],
+        "title": "Progres TA",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Surat",
+        "label": "Pengajuan Surat",
+        "url": "https://fasilkom.sifakueu.test/dosen/surats",
+        "status": 200,
+        "errors": [],
+        "title": "Surat",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Dokumen Surat",
+        "url": "https://fasilkom.sifakueu.test/dosen/generated-letters",
+        "status": 200,
+        "errors": [],
+        "title": "Dokumen Surat",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Profil Saya",
+        "label": "Profil Dosen",
+        "url": "https://fasilkom.sifakueu.test/dosen/dosen-profils",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Dosen",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil Saya",
+        "label": "Keahlian",
+        "url": "https://fasilkom.sifakueu.test/dosen/keahlians",
+        "status": 200,
+        "errors": [],
+        "title": "Keahlian",
+        "hasCreate": false,
+        "rows": 5,
+        "rowActions": []
+      },
+      {
+        "group": "Profil Saya",
+        "label": "Pendidikan",
+        "url": "https://fasilkom.sifakueu.test/dosen/dosen-pendidikans",
+        "status": 200,
+        "errors": [],
+        "title": "Pendidikan Dosen",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil Saya",
+        "label": "Sertifikasi",
+        "url": "https://fasilkom.sifakueu.test/dosen/dosen-sertifikasis",
+        "status": 200,
+        "errors": [],
+        "title": "Sertifikasi Dosen",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil Saya",
+        "label": "Publikasi",
+        "url": "https://fasilkom.sifakueu.test/dosen/dosen-publikasis",
+        "status": 200,
+        "errors": [],
+        "title": "Publikasi Dosen",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil Saya",
+        "label": "Pengalaman Industri",
+        "url": "https://fasilkom.sifakueu.test/dosen/dosen-pengalaman-industris",
+        "status": 200,
+        "errors": [],
+        "title": "Pengalaman Industri",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil Saya",
+        "label": "Riwayat Mengajar",
+        "url": "https://fasilkom.sifakueu.test/dosen/riwayat-mengajars",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Mengajar",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profil Saya",
+        "label": "Preferensi Mata Kuliah",
+        "url": "https://fasilkom.sifakueu.test/dosen/dosen-preferensi-mks",
+        "status": 200,
+        "errors": [],
+        "title": "Preferensi Mata Kuliah",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/dosen/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "mahasiswa": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "mahasiswa",
+      "email": "mahasiswa.fasilkom@sifak.local",
+      "name": "Mahasiswa",
+      "role": "mahasiswa"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa"
+          }
+        ]
+      },
+      {
+        "label": "Akademik",
+        "items": [
+          {
+            "label": "KRS Saya",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/krs"
+          },
+          {
+            "label": "Mata Kuliah Diambil",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/krs-details"
+          },
+          {
+            "label": "Hasil Validasi KRS",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/krs-validation-results"
+          },
+          {
+            "label": "Jadwal Kuliah",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-kuliahs"
+          }
+        ]
+      },
+      {
+        "label": "Sidang",
+        "items": [
+          {
+            "label": "Persyaratan Sidang",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-requirements"
+          },
+          {
+            "label": "Pendaftaran Sidang",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations"
+          },
+          {
+            "label": "Jadwal Sidang",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-schedules"
+          },
+          {
+            "label": "Hasil Sidang",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-results"
+          },
+          {
+            "label": "Revisi Sidang",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-revisions"
+          },
+          {
+            "label": "Berita Acara",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/sidang-minutes"
+          }
+        ]
+      },
+      {
+        "label": "Dokumen TA",
+        "items": [
+          {
+            "label": "Tugas Akhir Saya",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/tugas-akhirs"
+          },
+          {
+            "label": "Dokumen per Bab",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+          },
+          {
+            "label": "Riwayat Versi",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/ta-document-versions"
+          },
+          {
+            "label": "Komentar Pembimbing",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/ta-comments"
+          },
+          {
+            "label": "Repositori TA",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/repository-items"
+          },
+          {
+            "label": "Jadwal Konsultasi Dosen",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-konsultasis"
+          }
+        ]
+      },
+      {
+        "label": "Surat",
+        "items": [
+          {
+            "label": "Pengajuan Surat",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/surats"
+          },
+          {
+            "label": "Dokumen Surat",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/generated-letters"
+          }
+        ]
+      },
+      {
+        "label": "Monitoring",
+        "items": [
+          {
+            "label": "Peringatan Akademik",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/alerts"
+          },
+          {
+            "label": "Riwayat Evaluasi",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/monitoring-snapshots"
+          }
+        ]
+      },
+      {
+        "label": "Profil & Rekomendasi",
+        "items": [
+          {
+            "label": "Profil Saya",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-profiles"
+          },
+          {
+            "label": "Minat",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-interests"
+          },
+          {
+            "label": "Sertifikasi",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-certifications"
+          },
+          {
+            "label": "Portofolio",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-portfolios"
+          },
+          {
+            "label": "Organisasi",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-organizations"
+          },
+          {
+            "label": "MBKM / Magang",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-mbkms"
+          },
+          {
+            "label": "Skor CPL",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-cpl-scores"
+          },
+          {
+            "label": "Skor Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-graduate-profile-scores"
+          },
+          {
+            "label": "Gap Kompetensi",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/competency-gaps"
+          },
+          {
+            "label": "Rekomendasi Untuk Saya",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/student-recommendations"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/mahasiswa/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Mahasiswa FASILKOM",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 404,
+          "errors": [
+            "Failed to load resource: the server responded with a status of 404 (Not Found)",
+            "HTTP 404"
+          ]
+        }
+      },
+      {
+        "group": "Akademik",
+        "label": "KRS Saya",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/krs",
+        "status": 200,
+        "errors": [],
+        "title": "KRS",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Validasi",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Akademik",
+        "label": "Mata Kuliah Diambil",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/krs-details",
+        "status": 200,
+        "errors": [],
+        "title": "Rincian KRS",
+        "hasCreate": true,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Akademik",
+        "label": "Hasil Validasi KRS",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/krs-validation-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Validasi KRS",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Akademik",
+        "label": "Jadwal Kuliah",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Kuliah",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Cek Konflik"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "label": "Persyaratan Sidang",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-requirements",
+        "status": 200,
+        "errors": [],
+        "title": "Persyaratan Sidang",
+        "hasCreate": false,
+        "rows": 9,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Pendaftaran Sidang",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-registrations",
+        "status": 200,
+        "errors": [],
+        "title": "Pendaftaran Sidang",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Sidang",
+        "label": "Jadwal Sidang",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-schedules",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Sidang",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Hasil Sidang",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Sidang",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Revisi Sidang",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-revisions",
+        "status": 200,
+        "errors": [],
+        "title": "Revisi Sidang",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Berita Acara",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/sidang-minutes",
+        "status": 200,
+        "errors": [],
+        "title": "Berita Acara",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Tugas Akhir Saya",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/tugas-akhirs",
+        "status": 200,
+        "errors": [],
+        "title": "Tugas Akhir",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Buat Struktur",
+          "Hitung Progress",
+          "Checklist",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Dokumen per Bab",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents",
+        "status": 200,
+        "errors": [],
+        "title": "Dokumen TA",
+        "hasCreate": true,
+        "rows": 8,
+        "rowActions": [
+          "Upload Versi",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Riwayat Versi",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-document-versions",
+        "status": 200,
+        "errors": [],
+        "title": "Versi Dokumen TA",
+        "hasCreate": true,
+        "rows": 9,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Komentar Pembimbing",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-comments",
+        "status": 200,
+        "errors": [],
+        "title": "Komentar TA",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Repositori TA",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/repository-items",
+        "status": 200,
+        "errors": [],
+        "title": "Repositori TA",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Jadwal Konsultasi Dosen",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/jadwal-konsultasis",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Konsultasi",
+        "hasCreate": false,
+        "rows": 6,
+        "rowActions": []
+      },
+      {
+        "group": "Surat",
+        "label": "Pengajuan Surat",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/surats",
+        "status": 200,
+        "errors": [],
+        "title": "Surat",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Download",
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Surat",
+        "label": "Dokumen Surat",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/generated-letters",
+        "status": 200,
+        "errors": [],
+        "title": "Dokumen Surat",
+        "hasCreate": false,
+        "rows": 3,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Peringatan Akademik",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Tindak lanjut",
+          "Resolve",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "label": "Riwayat Evaluasi",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/monitoring-snapshots",
+        "status": 200,
+        "errors": [],
+        "title": "Snapshot Evaluasi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Profil Saya",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Mahasiswa",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Minat",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-interests",
+        "status": 200,
+        "errors": [],
+        "title": "Minat Mahasiswa",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Sertifikasi",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-certifications",
+        "status": 200,
+        "errors": [],
+        "title": "Sertifikasi Mahasiswa",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Portofolio",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-portfolios",
+        "status": 200,
+        "errors": [],
+        "title": "Portofolio",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Organisasi",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-organizations",
+        "status": 200,
+        "errors": [],
+        "title": "Organisasi Mahasiswa",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "MBKM / Magang",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-mbkms",
+        "status": 200,
+        "errors": [],
+        "title": "MBKM / Magang",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Skor CPL",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-cpl-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Skor Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/mahasiswa-graduate-profile-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Gap Kompetensi",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/competency-gaps",
+        "status": 200,
+        "errors": [],
+        "title": "Gap Kompetensi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profil & Rekomendasi",
+        "label": "Rekomendasi Untuk Saya",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/student-recommendations",
+        "status": 200,
+        "errors": [],
+        "title": "Rekomendasi Mahasiswa",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/mahasiswa/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "kaprodi": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "pimpinan",
+      "email": "kaprodi.fasilkom@sifak.local",
+      "name": "Kaprodi",
+      "role": "kaprodi"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/pimpinan"
+          }
+        ]
+      },
+      {
+        "label": "Sidang",
+        "items": [
+          {
+            "label": "Pendaftaran Sidang",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/sidang-registrations"
+          },
+          {
+            "label": "Plotting Penguji",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/sidang-assignments"
+          },
+          {
+            "label": "Jadwal Sidang",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/sidang-schedules"
+          },
+          {
+            "label": "Hasil Sidang",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/sidang-results"
+          },
+          {
+            "label": "Revisi Sidang",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/sidang-revisions"
+          }
+        ]
+      },
+      {
+        "label": "Dokumen TA",
+        "items": [
+          {
+            "label": "Tugas Akhir",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/tugas-akhirs"
+          },
+          {
+            "label": "Dokumen TA",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/ta-documents"
+          },
+          {
+            "label": "Progres TA",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/ta-progress-logs"
+          }
+        ]
+      },
+      {
+        "label": "Surat",
+        "items": [
+          {
+            "label": "Approval Surat",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/surats"
+          },
+          {
+            "label": "Riwayat Approval",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/surat-approvals"
+          }
+        ]
+      },
+      {
+        "label": "Monitoring",
+        "items": [
+          {
+            "label": "Alert Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/alerts"
+          },
+          {
+            "label": "Eskalasi Masuk",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/alert-escalations"
+          },
+          {
+            "label": "Snapshot Evaluasi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots"
+          },
+          {
+            "label": "Override Status",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/monitoring-overrides"
+          }
+        ]
+      },
+      {
+        "label": "KRS & Penjadwalan",
+        "items": [
+          {
+            "label": "Monitoring KRS",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/krs"
+          },
+          {
+            "label": "Jadwal Kuliah",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/jadwal-kuliahs"
+          },
+          {
+            "label": "Plotting Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/plotting-dosens"
+          },
+          {
+            "label": "Konflik Jadwal",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/jadwal-conflicts"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Dosen",
+        "items": [
+          {
+            "label": "Profil Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils"
+          },
+          {
+            "label": "Beban Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens"
+          },
+          {
+            "label": "Matriks Kesesuaian",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians"
+          },
+          {
+            "label": "Rekomendasi Pengampu",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/rekomendasi-pengampus"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Mahasiswa",
+        "items": [
+          {
+            "label": "Profil Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles"
+          },
+          {
+            "label": "Skor CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores"
+          },
+          {
+            "label": "Skor PLO",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-plo-scores"
+          },
+          {
+            "label": "Skor Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores"
+          },
+          {
+            "label": "Gap Kompetensi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/competency-gaps"
+          },
+          {
+            "label": "Rekomendasi Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/student-recommendations"
+          }
+        ]
+      },
+      {
+        "label": "CPL & Profil Lulusan",
+        "items": [
+          {
+            "label": "CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/cpls"
+          },
+          {
+            "label": "PLO",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/plos"
+          },
+          {
+            "label": "Pemetaan MK–CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/pemetaan-mk-cpls"
+          },
+          {
+            "label": "Pemetaan CPL–PLO",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/pemetaan-cpl-plos"
+          },
+          {
+            "label": "Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/graduate-profiles"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/pimpinan",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Kaprodi Informatika",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Pendaftaran Sidang",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-registrations",
+        "status": 200,
+        "errors": [],
+        "title": "Pendaftaran Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "label": "Plotting Penguji",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-assignments",
+        "status": 200,
+        "errors": [],
+        "title": "Penugasan Sidang",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": [
+          "Set Assignment",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "label": "Jadwal Sidang",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-schedules",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Hasil Sidang",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Sidang",
+        "label": "Revisi Sidang",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-revisions",
+        "status": 200,
+        "errors": [],
+        "title": "Revisi Sidang",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Tugas Akhir",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/tugas-akhirs",
+        "status": 200,
+        "errors": [],
+        "title": "Tugas Akhir",
+        "hasCreate": false,
+        "rows": 3,
+        "rowActions": [
+          "Buat Struktur",
+          "Hitung Progress",
+          "Checklist"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Dokumen TA",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/ta-documents",
+        "status": 200,
+        "errors": [],
+        "title": "Dokumen TA",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Progres TA",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/ta-progress-logs",
+        "status": 200,
+        "errors": [],
+        "title": "Progres TA",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "Surat",
+        "label": "Approval Surat",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/surats",
+        "status": 200,
+        "errors": [],
+        "title": "Surat",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": [
+          "Download"
+        ]
+      },
+      {
+        "group": "Surat",
+        "label": "Riwayat Approval",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/surat-approvals",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Approval Surat",
+        "hasCreate": false,
+        "rows": 6,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Alert Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Tindak lanjut",
+          "Resolve",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "label": "Eskalasi Masuk",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/alert-escalations",
+        "status": 200,
+        "errors": [],
+        "title": "Eskalasi Alert",
+        "hasCreate": true,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Monitoring",
+        "label": "Snapshot Evaluasi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots",
+        "status": 200,
+        "errors": [],
+        "title": "Snapshot Evaluasi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Override Status",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/monitoring-overrides",
+        "status": 200,
+        "errors": [],
+        "title": "Override Status",
+        "hasCreate": true,
+        "rows": 0,
+        "rowActions": [],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Monitoring KRS",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/krs",
+        "status": 200,
+        "errors": [],
+        "title": "KRS",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Validasi"
+        ]
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Jadwal Kuliah",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/jadwal-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Jadwal Kuliah",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Cek Konflik",
+          "Final",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Plotting Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/plotting-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Plotting Dosen",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "KRS & Penjadwalan",
+        "label": "Konflik Jadwal",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/jadwal-conflicts",
+        "status": 200,
+        "errors": [],
+        "title": "Konflik Jadwal",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Profil Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Dosen",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Beban Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Beban Dosen",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Matriks Kesesuaian",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians",
+        "status": 200,
+        "errors": [],
+        "title": "Matriks Kesesuaian",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Rekomendasi Pengampu",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/rekomendasi-pengampus",
+        "status": 200,
+        "errors": [],
+        "title": "Rekomendasi Pengampu",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Profil Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Mahasiswa",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Skor CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Skor PLO",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-plo-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor PLO",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Skor Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Gap Kompetensi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/competency-gaps",
+        "status": 200,
+        "errors": [],
+        "title": "Gap Kompetensi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Rekomendasi Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/student-recommendations",
+        "status": 200,
+        "errors": [],
+        "title": "Rekomendasi Mahasiswa",
+        "hasCreate": false,
+        "rows": 10,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/cpls",
+        "status": 200,
+        "errors": [],
+        "title": "CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "PLO",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/plos",
+        "status": 200,
+        "errors": [],
+        "title": "PLO",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Pemetaan MK–CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/pemetaan-mk-cpls",
+        "status": 200,
+        "errors": [],
+        "title": "Pemetaan MK–CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Pemetaan CPL–PLO",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/pemetaan-cpl-plos",
+        "status": 200,
+        "errors": [],
+        "title": "Pemetaan CPL–PLO",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/graduate-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "dekan": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "pimpinan",
+      "email": "dekan.fasilkom@sifak.local",
+      "name": "Dekan",
+      "role": "dekan"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/pimpinan"
+          }
+        ]
+      },
+      {
+        "label": "Surat",
+        "items": [
+          {
+            "label": "Approval Surat",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/surats"
+          },
+          {
+            "label": "Riwayat Approval",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/surat-approvals"
+          }
+        ]
+      },
+      {
+        "label": "Monitoring",
+        "items": [
+          {
+            "label": "Monitoring Risiko",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/alerts"
+          },
+          {
+            "label": "Snapshot Evaluasi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Dosen",
+        "items": [
+          {
+            "label": "Profil Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils"
+          },
+          {
+            "label": "Peta Keahlian",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/keahlians"
+          },
+          {
+            "label": "Peta Beban Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens"
+          },
+          {
+            "label": "Matriks Kesesuaian",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Mahasiswa",
+        "items": [
+          {
+            "label": "Profil Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles"
+          },
+          {
+            "label": "Sebaran Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores"
+          },
+          {
+            "label": "Capaian CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores"
+          }
+        ]
+      },
+      {
+        "label": "CPL & Profil Lulusan",
+        "items": [
+          {
+            "label": "CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/cpls"
+          },
+          {
+            "label": "PLO",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/plos"
+          },
+          {
+            "label": "Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/graduate-profiles"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/pimpinan",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Dekan FASILKOM",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Surat",
+        "label": "Approval Surat",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/surats",
+        "status": 200,
+        "errors": [],
+        "title": "Surat",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": [
+          "Download",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Surat",
+        "label": "Riwayat Approval",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/surat-approvals",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Approval Surat",
+        "hasCreate": false,
+        "rows": 6,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Monitoring Risiko",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Snapshot Evaluasi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots",
+        "status": 200,
+        "errors": [],
+        "title": "Snapshot Evaluasi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Profil Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Dosen",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Peta Keahlian",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/keahlians",
+        "status": 200,
+        "errors": [],
+        "title": "Keahlian",
+        "hasCreate": false,
+        "rows": 5,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Peta Beban Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Beban Dosen",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Matriks Kesesuaian",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians",
+        "status": 200,
+        "errors": [],
+        "title": "Matriks Kesesuaian",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Profil Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Mahasiswa",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Sebaran Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Capaian CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/cpls",
+        "status": 200,
+        "errors": [],
+        "title": "CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "PLO",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/plos",
+        "status": 200,
+        "errors": [],
+        "title": "PLO",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/graduate-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "wd": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "pimpinan",
+      "email": "wd.fasilkom@sifak.local",
+      "name": "Wakil Dekan",
+      "role": "wd"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/pimpinan"
+          }
+        ]
+      },
+      {
+        "label": "Surat",
+        "items": [
+          {
+            "label": "Approval Surat",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/surats"
+          },
+          {
+            "label": "Riwayat Approval",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/surat-approvals"
+          }
+        ]
+      },
+      {
+        "label": "Monitoring",
+        "items": [
+          {
+            "label": "Monitoring Risiko",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/alerts"
+          },
+          {
+            "label": "Snapshot Evaluasi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Dosen",
+        "items": [
+          {
+            "label": "Profil Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils"
+          },
+          {
+            "label": "Peta Keahlian",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/keahlians"
+          },
+          {
+            "label": "Peta Beban Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens"
+          },
+          {
+            "label": "Matriks Kesesuaian",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Mahasiswa",
+        "items": [
+          {
+            "label": "Profil Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles"
+          },
+          {
+            "label": "Sebaran Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores"
+          },
+          {
+            "label": "Capaian CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores"
+          }
+        ]
+      },
+      {
+        "label": "CPL & Profil Lulusan",
+        "items": [
+          {
+            "label": "CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/cpls"
+          },
+          {
+            "label": "PLO",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/plos"
+          },
+          {
+            "label": "Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/graduate-profiles"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/pimpinan",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Wakil Dekan FASILKOM",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Surat",
+        "label": "Approval Surat",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/surats",
+        "status": 200,
+        "errors": [],
+        "title": "Surat",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": [
+          "Download",
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Surat",
+        "label": "Riwayat Approval",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/surat-approvals",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Approval Surat",
+        "hasCreate": false,
+        "rows": 6,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Monitoring Risiko",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Snapshot Evaluasi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots",
+        "status": 200,
+        "errors": [],
+        "title": "Snapshot Evaluasi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Profil Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Dosen",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Peta Keahlian",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/keahlians",
+        "status": 200,
+        "errors": [],
+        "title": "Keahlian",
+        "hasCreate": false,
+        "rows": 5,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Peta Beban Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Beban Dosen",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Matriks Kesesuaian",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians",
+        "status": 200,
+        "errors": [],
+        "title": "Matriks Kesesuaian",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Profil Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Mahasiswa",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Sebaran Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Capaian CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/cpls",
+        "status": 200,
+        "errors": [],
+        "title": "CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "PLO",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/plos",
+        "status": 200,
+        "errors": [],
+        "title": "PLO",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/graduate-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "kbk": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "pimpinan",
+      "email": "kbk.fasilkom@sifak.local",
+      "name": "Koordinator KBK",
+      "role": "kbk"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/pimpinan"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Dosen",
+        "items": [
+          {
+            "label": "Profil Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils"
+          },
+          {
+            "label": "Keahlian",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/keahlians"
+          },
+          {
+            "label": "Pendidikan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-pendidikans"
+          },
+          {
+            "label": "Sertifikasi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-sertifikasis"
+          },
+          {
+            "label": "Publikasi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-publikasis"
+          },
+          {
+            "label": "Pengalaman Industri",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-pengalaman-industris"
+          },
+          {
+            "label": "Riwayat Mengajar",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/riwayat-mengajars"
+          },
+          {
+            "label": "Beban Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens"
+          },
+          {
+            "label": "Matriks Kesesuaian",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians"
+          },
+          {
+            "label": "Rekomendasi Pengampu",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/rekomendasi-pengampus"
+          }
+        ]
+      },
+      {
+        "label": "Data Master",
+        "items": [
+          {
+            "label": "Rumpun Ilmu",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/rumpun-ilmus"
+          },
+          {
+            "label": "KBK",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/kbks"
+          },
+          {
+            "label": "Mata Kuliah",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mata-kuliahs"
+          },
+          {
+            "label": "Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosens"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/pimpinan",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Koordinator KBK Sistem Informasi",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Profil Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Dosen",
+        "hasCreate": true,
+        "rows": 4,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Keahlian",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/keahlians",
+        "status": 200,
+        "errors": [],
+        "title": "Keahlian",
+        "hasCreate": true,
+        "rows": 5,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Pendidikan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-pendidikans",
+        "status": 200,
+        "errors": [],
+        "title": "Pendidikan Dosen",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Sertifikasi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-sertifikasis",
+        "status": 200,
+        "errors": [],
+        "title": "Sertifikasi Dosen",
+        "hasCreate": false,
+        "rows": 7,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Publikasi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-publikasis",
+        "status": 200,
+        "errors": [],
+        "title": "Publikasi Dosen",
+        "hasCreate": false,
+        "rows": 7,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Pengalaman Industri",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-pengalaman-industris",
+        "status": 200,
+        "errors": [],
+        "title": "Pengalaman Industri",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Riwayat Mengajar",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/riwayat-mengajars",
+        "status": 200,
+        "errors": [],
+        "title": "Riwayat Mengajar",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Beban Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Beban Dosen",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Matriks Kesesuaian",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/matriks-kesesuaians",
+        "status": 200,
+        "errors": [],
+        "title": "Matriks Kesesuaian",
+        "hasCreate": true,
+        "rows": 8,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Rekomendasi Pengampu",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/rekomendasi-pengampus",
+        "status": 200,
+        "errors": [],
+        "title": "Rekomendasi Pengampu",
+        "hasCreate": true,
+        "rows": 10,
+        "rowActions": [
+          "Ubah"
+        ],
+        "create": {
+          "status": 200,
+          "errors": []
+        }
+      },
+      {
+        "group": "Data Master",
+        "label": "Rumpun Ilmu",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/rumpun-ilmus",
+        "status": 200,
+        "errors": [],
+        "title": "Rumpun Ilmu",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "label": "KBK",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/kbks",
+        "status": 200,
+        "errors": [],
+        "title": "KBK",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": [
+          "Ubah"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "label": "Mata Kuliah",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mata-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Mata Kuliah",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Hitung rekomendasi"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "label": "Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Dosen",
+        "hasCreate": false,
+        "rows": 7,
+        "rowActions": []
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "lpm": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "pimpinan",
+      "email": "lpm.fasilkom@sifak.local",
+      "name": "LPM / Gugus Mutu",
+      "role": "lpm"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/pimpinan"
+          }
+        ]
+      },
+      {
+        "label": "Dokumen TA",
+        "items": [
+          {
+            "label": "Repositori TA",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/repository-items"
+          },
+          {
+            "label": "Tugas Akhir",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/tugas-akhirs"
+          }
+        ]
+      },
+      {
+        "label": "Monitoring",
+        "items": [
+          {
+            "label": "Alert Akademik",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/alerts"
+          },
+          {
+            "label": "Snapshot Evaluasi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Mahasiswa",
+        "items": [
+          {
+            "label": "Capaian CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores"
+          },
+          {
+            "label": "Capaian PLO",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-plo-scores"
+          },
+          {
+            "label": "Skor Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores"
+          },
+          {
+            "label": "Gap CPL / Kompetensi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/competency-gaps"
+          },
+          {
+            "label": "Profil Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles"
+          }
+        ]
+      },
+      {
+        "label": "CPL & Profil Lulusan",
+        "items": [
+          {
+            "label": "CPL",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/cpls"
+          },
+          {
+            "label": "PLO",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/plos"
+          },
+          {
+            "label": "Profil Lulusan",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/graduate-profiles"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/pimpinan",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, LPM FASILKOM",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Repositori TA",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/repository-items",
+        "status": 200,
+        "errors": [],
+        "title": "Repositori TA",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Tugas Akhir",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/tugas-akhirs",
+        "status": 200,
+        "errors": [],
+        "title": "Tugas Akhir",
+        "hasCreate": false,
+        "rows": 3,
+        "rowActions": [
+          "Buat Struktur",
+          "Hitung Progress",
+          "Checklist"
+        ]
+      },
+      {
+        "group": "Monitoring",
+        "label": "Alert Akademik",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Snapshot Evaluasi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots",
+        "status": 200,
+        "errors": [],
+        "title": "Snapshot Evaluasi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Capaian CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-cpl-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Capaian PLO",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-plo-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor PLO",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Skor Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-graduate-profile-scores",
+        "status": 200,
+        "errors": [],
+        "title": "Skor Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Gap CPL / Kompetensi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/competency-gaps",
+        "status": 200,
+        "errors": [],
+        "title": "Gap Kompetensi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Profil Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Mahasiswa",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "CPL",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/cpls",
+        "status": 200,
+        "errors": [],
+        "title": "CPL",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "PLO",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/plos",
+        "status": 200,
+        "errors": [],
+        "title": "PLO",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "CPL & Profil Lulusan",
+        "label": "Profil Lulusan",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/graduate-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Lulusan",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "baak": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "pimpinan",
+      "email": "baak.fasilkom@sifak.local",
+      "name": "BAAK",
+      "role": "baak"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/pimpinan"
+          }
+        ]
+      },
+      {
+        "label": "Sidang",
+        "items": [
+          {
+            "label": "Rekap Sidang",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/sidang-registrations"
+          },
+          {
+            "label": "Hasil Sidang",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/sidang-results"
+          },
+          {
+            "label": "Berita Acara",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/sidang-minutes"
+          }
+        ]
+      },
+      {
+        "label": "Dokumen TA",
+        "items": [
+          {
+            "label": "Status Tugas Akhir",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/tugas-akhirs"
+          },
+          {
+            "label": "Repositori Final",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/repository-items"
+          }
+        ]
+      },
+      {
+        "label": "Monitoring",
+        "items": [
+          {
+            "label": "Alert Akademik",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/alerts"
+          },
+          {
+            "label": "Snapshot Evaluasi",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Mahasiswa",
+        "items": [
+          {
+            "label": "Rekap Profil Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles"
+          }
+        ]
+      },
+      {
+        "label": "Data Master",
+        "items": [
+          {
+            "label": "Rekap Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswas"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/pimpinan",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, BAAK FASILKOM",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Rekap Sidang",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-registrations",
+        "status": 200,
+        "errors": [],
+        "title": "Pendaftaran Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Hasil Sidang",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-results",
+        "status": 200,
+        "errors": [],
+        "title": "Hasil Sidang",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Sidang",
+        "label": "Berita Acara",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/sidang-minutes",
+        "status": 200,
+        "errors": [],
+        "title": "Berita Acara",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Status Tugas Akhir",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/tugas-akhirs",
+        "status": 200,
+        "errors": [],
+        "title": "Tugas Akhir",
+        "hasCreate": false,
+        "rows": 3,
+        "rowActions": [
+          "Buat Struktur",
+          "Hitung Progress",
+          "Checklist"
+        ]
+      },
+      {
+        "group": "Dokumen TA",
+        "label": "Repositori Final",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/repository-items",
+        "status": 200,
+        "errors": [],
+        "title": "Repositori TA",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Alert Akademik",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/alerts",
+        "status": 200,
+        "errors": [],
+        "title": "Alert Akademik",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": []
+      },
+      {
+        "group": "Monitoring",
+        "label": "Snapshot Evaluasi",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/monitoring-snapshots",
+        "status": 200,
+        "errors": [],
+        "title": "Snapshot Evaluasi",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Mahasiswa",
+        "label": "Rekap Profil Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswa-profiles",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Mahasiswa",
+        "hasCreate": false,
+        "rows": 1,
+        "rowActions": []
+      },
+      {
+        "group": "Data Master",
+        "label": "Rekap Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswas",
+        "status": 200,
+        "errors": [],
+        "title": "Mahasiswa",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": [
+          "Evaluasi alert"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  },
+  "kalab": {
+    "account": {
+      "base": "https://fasilkom.sifakueu.test",
+      "panel": "pimpinan",
+      "email": "kalab.fasilkom@sifak.local",
+      "name": "Kepala Laboratorium",
+      "role": "kepala_laboratorium"
+    },
+    "nav": [
+      {
+        "label": "(Tanpa grup)",
+        "items": [
+          {
+            "label": "Beranda",
+            "href": "https://fasilkom.sifakueu.test/pimpinan"
+          }
+        ]
+      },
+      {
+        "label": "Profiling Dosen",
+        "items": [
+          {
+            "label": "Profil Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils"
+          },
+          {
+            "label": "Keahlian",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/keahlians"
+          },
+          {
+            "label": "Publikasi & Riset",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosen-publikasis"
+          },
+          {
+            "label": "Beban Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens"
+          }
+        ]
+      },
+      {
+        "label": "Data Master",
+        "items": [
+          {
+            "label": "Dosen",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/dosens"
+          },
+          {
+            "label": "Mahasiswa",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mahasiswas"
+          },
+          {
+            "label": "Mata Kuliah",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/mata-kuliahs"
+          }
+        ]
+      },
+      {
+        "label": "Bantuan",
+        "items": [
+          {
+            "label": "Modul & Hak Akses",
+            "href": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses"
+          }
+        ]
+      }
+    ],
+    "pages": [
+      {
+        "group": "(Tanpa grup)",
+        "label": "Beranda",
+        "url": "https://fasilkom.sifakueu.test/pimpinan",
+        "status": 200,
+        "errors": [],
+        "title": "Selamat sore, Kepala Laboratorium Komputasi",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Profil Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-profils",
+        "status": 200,
+        "errors": [],
+        "title": "Profil Dosen",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Keahlian",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/keahlians",
+        "status": 200,
+        "errors": [],
+        "title": "Keahlian",
+        "hasCreate": false,
+        "rows": 5,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Publikasi & Riset",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosen-publikasis",
+        "status": 200,
+        "errors": [],
+        "title": "Publikasi Dosen",
+        "hasCreate": false,
+        "rows": 7,
+        "rowActions": []
+      },
+      {
+        "group": "Profiling Dosen",
+        "label": "Beban Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/beban-dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Beban Dosen",
+        "hasCreate": false,
+        "rows": 8,
+        "rowActions": []
+      },
+      {
+        "group": "Data Master",
+        "label": "Dosen",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/dosens",
+        "status": 200,
+        "errors": [],
+        "title": "Dosen",
+        "hasCreate": false,
+        "rows": 7,
+        "rowActions": []
+      },
+      {
+        "group": "Data Master",
+        "label": "Mahasiswa",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mahasiswas",
+        "status": 200,
+        "errors": [],
+        "title": "Mahasiswa",
+        "hasCreate": false,
+        "rows": 4,
+        "rowActions": [
+          "Evaluasi alert"
+        ]
+      },
+      {
+        "group": "Data Master",
+        "label": "Mata Kuliah",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/mata-kuliahs",
+        "status": 200,
+        "errors": [],
+        "title": "Mata Kuliah",
+        "hasCreate": false,
+        "rows": 2,
+        "rowActions": [
+          "Hitung rekomendasi"
+        ]
+      },
+      {
+        "group": "Bantuan",
+        "label": "Modul & Hak Akses",
+        "url": "https://fasilkom.sifakueu.test/pimpinan/modul-hak-akses",
+        "status": 200,
+        "errors": [],
+        "title": "Modul & Hak Akses",
+        "hasCreate": false,
+        "rows": 0,
+        "rowActions": []
+      }
+    ]
+  }
+}

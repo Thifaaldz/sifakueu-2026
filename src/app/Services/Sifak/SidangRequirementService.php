@@ -21,6 +21,16 @@ class SidangRequirementService
             ->get();
 
         foreach ($requirements as $requirement) {
+            $existing = SidangRequirementResult::query()
+                ->where('sidang_registration_id', $registration->id)
+                ->where('sidang_requirement_id', $requirement->id)
+                ->first();
+
+            if ($requirement->requirement_type === 'manual' && in_array($existing?->status, ['valid', 'waived'], true)) {
+                $results[] = $existing;
+                continue;
+            }
+
             [$status, $note, $sourceType, $sourceId] = $this->evaluate($registration, $requirement);
 
             $result = SidangRequirementResult::updateOrCreate(
@@ -61,7 +71,7 @@ class SidangRequirementService
 
     private function missingRequired(SidangRegistration $registration, bool $ignoreManual = false)
     {
-        return ! $registration->type
+        return $registration->type
             ->requirements()
             ->where('required', true)
             ->where('active', true)

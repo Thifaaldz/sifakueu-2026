@@ -73,7 +73,14 @@ class KrsService
         $this->validator->validate($krs);
 
         if ($this->validator->hasBlockingErrors($krs)) {
-            throw ValidationException::withMessages(['krs' => 'KRS masih memiliki error validasi.']);
+            $reasons = $krs->validationResults()
+                ->where('passed', false)
+                ->where('severity', 'error')
+                ->pluck('message')
+                ->unique()
+                ->implode(' ');
+
+            throw ValidationException::withMessages(['krs' => trim('KRS masih memiliki error validasi. ' . $reasons)]);
         }
 
         $old = $krs->toArray();

@@ -1,0 +1,344 @@
+{
+  "code": "M7",
+  "title": "Manajemen Dokumen TA & Repositori Digital",
+  "purpose": "Mengelola dokumen tugas akhir per bab dengan versioning, review dan permintaan revisi dari pembimbing, approval bab, perhitungan progres, checklist finalisasi, kompilasi dokumen final, hingga publikasi ke repositori digital dengan metadata dan hak akses.",
+  "actors": [
+    "Mahasiswa",
+    "Dosen Pembimbing",
+    "Admin Fakultas / TU",
+    "BAAK"
+  ],
+  "testCase": "Budi Demo QA (NIM 2026001003) mengunggah Bab 1 versi 1, pembimbing Dr. Dosen FASILKOM meminta revisi, Budi mengunggah versi 2 dan disetujui. Bab lain disetujui dengan langkah yang sama, lalu Admin Fakultas memfinalisasi TA dan mempublikasikannya ke repositori.",
+  "id": "m7",
+  "steps": [
+    {
+      "n": 1,
+      "title": "Login sebagai Mahasiswa (Budi Demo QA)",
+      "desc": "Buka https://fasilkom.sifakueu.test/mahasiswa/login, isi email mahasiswa.demo2@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m7-01.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/login"
+    },
+    {
+      "n": 2,
+      "title": "Buka M7 Dokumen TA > Tugas Akhirs",
+      "desc": "Metadata TA: judul, pembimbing, status.",
+      "file": "m7-02.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa"
+    },
+    {
+      "n": 3,
+      "title": "Data tugas akhir",
+      "desc": "Judul, pembimbing, dan status TA mahasiswa.",
+      "file": "m7-03.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/tugas-akhirs"
+    },
+    {
+      "n": 4,
+      "title": "Buka Ta Documents",
+      "desc": "Dokumen TA per bab (Halaman Awal, Bab 1–5, Daftar Pustaka, Lampiran).",
+      "file": "m7-04.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/tugas-akhirs"
+    },
+    {
+      "n": 5,
+      "title": "Struktur dokumen TA",
+      "desc": "Setiap bab memiliki status dan versi sendiri.",
+      "file": "m7-05.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 6,
+      "title": "Klik Upload Versi pada Bab 1",
+      "desc": "Unggah file bab.",
+      "file": "m7-06.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 7,
+      "title": "Klik Upload Versi pada Bab 1 — pilih file & isi ringkasan",
+      "desc": "Format PDF/DOC/DOCX, maksimal 10 MB. Isi ringkasan perubahan lalu Submit.",
+      "file": "m7-07.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 8,
+      "title": "Klik Submit pada Bab 1",
+      "desc": "Bab dikirim ke pembimbing untuk direview; pembimbing menerima notifikasi.",
+      "file": "m7-08.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 9,
+      "title": "Bab 1 berstatus submitted (versi 1)",
+      "desc": "Menunggu review pembimbing.",
+      "file": "m7-09.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 10,
+      "title": "Login sebagai Dosen (PA, Pembimbing, Penguji)",
+      "desc": "Buka https://fasilkom.sifakueu.test/dosen/login, isi email dosen.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m7-10.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/login"
+    },
+    {
+      "n": 11,
+      "title": "Pembimbing membuka Ta Documents",
+      "desc": "Dokumen mahasiswa bimbingan.",
+      "file": "m7-11.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen"
+    },
+    {
+      "n": 12,
+      "title": "Klik Minta Revisi",
+      "desc": "Tuliskan poin revisi.",
+      "file": "m7-12.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/ta-documents"
+    },
+    {
+      "n": 13,
+      "title": "Klik Minta Revisi — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m7-13.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/ta-documents"
+    },
+    {
+      "n": 14,
+      "title": "Buka Ta Reviews",
+      "desc": "Riwayat review/revisi.",
+      "file": "m7-14.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/ta-documents"
+    },
+    {
+      "n": 15,
+      "title": "Review revisi tersimpan",
+      "desc": "Status review revision_required beserta catatan.",
+      "file": "m7-15.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/ta-reviews"
+    },
+    {
+      "n": 16,
+      "title": "Bab 1 berstatus revision_required",
+      "desc": "Mahasiswa melihat permintaan revisi.",
+      "file": "m7-16.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 17,
+      "title": "Upload Versi 2 (revisi)",
+      "desc": "Unggah file hasil revisi.",
+      "file": "m7-17.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 18,
+      "title": "Upload Versi 2 (revisi) — pilih file & isi ringkasan",
+      "desc": "Format PDF/DOC/DOCX, maksimal 10 MB. Isi ringkasan perubahan lalu Submit.",
+      "file": "m7-18.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 19,
+      "title": "Submit versi 2",
+      "desc": "Versi 2 dikirim ke pembimbing.",
+      "file": "m7-19.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 20,
+      "title": "Buka Ta Document Versions",
+      "desc": "Histori versi dokumen.",
+      "file": "m7-20.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-documents"
+    },
+    {
+      "n": 21,
+      "title": "Histori versi",
+      "desc": "Versi 1 dan versi 2 tersimpan lengkap (versioning).",
+      "file": "m7-21.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/ta-document-versions"
+    },
+    {
+      "n": 22,
+      "title": "Pembimbing klik Approve Bab 1",
+      "desc": "Bab 1 disetujui.",
+      "file": "m7-22.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/ta-documents"
+    },
+    {
+      "n": 23,
+      "title": "Pembimbing klik Approve Bab 1 — konfirmasi",
+      "desc": "Isi catatan bila diminta lalu klik tombol konfirmasi pada dialog.",
+      "file": "m7-23.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/ta-documents"
+    },
+    {
+      "n": 24,
+      "title": "Buka Ta Approvals",
+      "desc": "Riwayat approval bab.",
+      "file": "m7-24.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/ta-documents"
+    },
+    {
+      "n": 25,
+      "title": "Approval bab",
+      "desc": "Bab 1 approved oleh pembimbing.",
+      "file": "m7-25.png",
+      "role": "dosen",
+      "url": "https://fasilkom.sifakueu.test/dosen/ta-approvals"
+    },
+    {
+      "n": 26,
+      "title": "Login sebagai Admin Fakultas / TU",
+      "desc": "Buka https://fasilkom.sifakueu.test/admin/login, isi email admin.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m7-26.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/login"
+    },
+    {
+      "n": 27,
+      "title": "Admin Fakultas membuka Tugas Akhirs",
+      "desc": "Kelola finalisasi TA.",
+      "file": "m7-27.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin"
+    },
+    {
+      "n": 28,
+      "title": "Klik Hitung Progress",
+      "desc": "Progres dihitung dari jumlah bab wajib yang sudah approved.",
+      "file": "m7-28.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/tugas-akhirs"
+    },
+    {
+      "n": 29,
+      "title": "Klik Checklist",
+      "desc": "Checklist finalisasi: judul, pembimbing, semua bab wajib approved, metadata, tidak ada komentar terbuka.",
+      "file": "m7-29.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/tugas-akhirs"
+    },
+    {
+      "n": 30,
+      "title": "Hasil checklist",
+      "desc": "Semua item checklist terpenuhi.",
+      "file": "m7-30.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/tugas-akhirs"
+    },
+    {
+      "n": 31,
+      "title": "Klik Finalisasi",
+      "desc": "Dokumen final dikompilasi; status TA finalized.",
+      "file": "m7-31.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/tugas-akhirs"
+    },
+    {
+      "n": 32,
+      "title": "Klik Buat Repository",
+      "desc": "Item repositori dibuat dari dokumen final beserta metadata.",
+      "file": "m7-32.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/tugas-akhirs"
+    },
+    {
+      "n": 33,
+      "title": "Buka Repository Items",
+      "desc": "Daftar item repositori digital.",
+      "file": "m7-33.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/tugas-akhirs"
+    },
+    {
+      "n": 34,
+      "title": "Klik Publish",
+      "desc": "Item repositori dipublikasikan sesuai hak akses.",
+      "file": "m7-34.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/repository-items"
+    },
+    {
+      "n": 35,
+      "title": "Repositori terpublikasi",
+      "desc": "Status published.",
+      "file": "m7-35.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/repository-items"
+    },
+    {
+      "n": 36,
+      "title": "Buka Ta Progress Logs",
+      "desc": "Log progres TA.",
+      "file": "m7-36.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/repository-items"
+    },
+    {
+      "n": 37,
+      "title": "Log progres TA",
+      "desc": "Setiap perubahan status tercatat (audit).",
+      "file": "m7-37.png",
+      "role": "admin_fakultas",
+      "url": "https://fasilkom.sifakueu.test/admin/ta-progress-logs"
+    },
+    {
+      "n": 38,
+      "title": "Mahasiswa melihat repositori TA",
+      "desc": "TA sudah terpublikasi di repositori.",
+      "file": "m7-38.png",
+      "role": "mahasiswa_demo2",
+      "url": "https://fasilkom.sifakueu.test/mahasiswa/repository-items"
+    },
+    {
+      "n": 39,
+      "title": "Login sebagai BAAK",
+      "desc": "Buka https://fasilkom.sifakueu.test/pimpinan/login, isi email baak.fasilkom@sifak.local dan password \"password\", lalu klik Sign in.",
+      "file": "m7-39.png",
+      "role": "baak",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/login"
+    },
+    {
+      "n": 40,
+      "title": "BAAK membuka Repository Items",
+      "desc": "Rekap repositori final untuk keperluan yudisium.",
+      "file": "m7-40.png",
+      "role": "baak",
+      "url": "https://fasilkom.sifakueu.test/pimpinan"
+    },
+    {
+      "n": 41,
+      "title": "Repositori final (BAAK)",
+      "desc": "BAAK memverifikasi TA mahasiswa sudah masuk repositori.",
+      "file": "m7-41.png",
+      "role": "baak",
+      "url": "https://fasilkom.sifakueu.test/pimpinan/repository-items"
+    }
+  ],
+  "issues": []
+}

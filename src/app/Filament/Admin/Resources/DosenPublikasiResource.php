@@ -6,6 +6,7 @@ use App\Filament\Admin\Resources\DosenPublikasiResource\Pages;
 use App\Filament\Admin\Resources\DosenPublikasiResource\RelationManagers;
 use App\Filament\Concerns\AppliesSifakResourceScope;
 use App\Models\DosenPublikasi;
+use App\Filament\Support\DosenOwnership;
 use Filament\Forms;
 use Filament\Forms\Form;
 use Filament\Resources\Resource;
@@ -30,7 +31,7 @@ class DosenPublikasiResource extends Resource
     {
         return $form
             ->schema([
-                Forms\Components\Select::make('dosen_id')->relationship('dosen', 'name')->searchable()->preload()->required(),
+                DosenOwnership::field(),
                 Forms\Components\TextInput::make('title')->label('Judul')->required()->maxLength(255)->columnSpanFull(),
                 Forms\Components\TextInput::make('year')->label('Tahun')->numeric()->minValue(1950)->maxValue(2100),
                 Forms\Components\TextInput::make('type')->label('Jenis')->maxLength(60),
